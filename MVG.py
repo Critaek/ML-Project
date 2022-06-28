@@ -54,7 +54,11 @@ def Tied(DTR, LTR, DTE):
     N0 = DTR[:, LTR == 0].shape[1]            #Queste sarebbero le mie Nc, dove a c è sostituito il numero della classe
     N1 = DTR[:, LTR == 1].shape[1]
     N = DTR.shape[1]                          #Prendo la grandezza del mio traning set, quindi quanti sample contiene
-    C = (1/N) * (N0 * C0 + N1 * C1)
+    nC0 = N0*C0
+    nC1 = N1*C1
+    C = numpy.add(nC0, nC1)
+    C = C/N
+
     S0 = logpdf_GAU_ND(DTE, mu0, C)
     S1 = logpdf_GAU_ND(DTE, mu1, C)
     LLRs = S1 - S0
