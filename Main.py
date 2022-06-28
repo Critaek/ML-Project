@@ -16,7 +16,7 @@ def mcol(v):
 def vrow(vect):
     return vect.reshape(1, vect.size)
 
-def kFold(D, L, K):
+def kFold(D, L, K, model):
     numpy.random.seed(0)
     idx = numpy.random.permutation(D.shape[1])
 
@@ -32,22 +32,14 @@ def kFold(D, L, K):
         LTR = L[idxTrain]
         DTE = D[:, idxTest]
         LTE = L[idxTest]
-        Return = mvg.MultiV(DTR, LTR, DTE)
+        Return = model(DTR, LTR, DTE)
         LLRs.append(Return)
 
     LLRs = numpy.hstack(LLRs)
 
     return LLRs
 
-
-if __name__ == "__main__":
-    D, L = l.load()
-    
-    PCA9 = dr.PCA(D, L, 9)
-    LLRs = kFold(PCA9, L, 10)
-
-    #-------------------------------------------------------------------------------------------------#
-
+def printDCFs(L, LLRs):
     numpy.random.seed(0)
     idx = numpy.random.permutation(D.shape[1])
 
@@ -97,16 +89,53 @@ if __name__ == "__main__":
     minDCF=min(minDCF)
     print("minDCF:" , minDCF)
 
+def tryMVG(model, D, L, NormD):
+    print("Raw")
+    for i in range(7):
+        if(i==6):
+            print("----------------No PCA", "----------------")
+        else:    
+            print("----------------PCA", 5+i, "----------------")
+        PCA = dr.PCA(D, L, 5+i)
+        start = time.time()
+        LLRs = kFold(PCA, L, 5, model)
+        end = time.time()
+        printDCFs(L, LLRs)
+        print(end-start, "seconds\n")  
+
+    print("\n")
+    
+    print("Normalized")
+    for i in range(7):
+        if(i==6):
+            print("----------------No PCA", "----------------")
+        else:    
+            print("----------------PCA", 5+i, "----------------")
+        PCA = dr.PCA(NormD, L, 5+i)
+        start = time.time()
+        LLRs = kFold(PCA, L, 5, model)
+        end = time.time()    
+        printDCFs(L, LLRs)
+        print(end-start, "seconds\n") 
+
+if __name__ == "__main__":
+    D, L = l.load()
+    NormD = n.Normalization(D)
+
+    #Full-Covariance MVG
+    print("Full-Cov MVG")
+    tryMVG(mvg.MultiV, D, L, NormD)
+    print("\n")
+    print("Bayes-Cov MVG")
+    tryMVG(mvg.Bayes, D, L, NormD)
+    print("\n")
+    print("Tied-Cov MVG")
+    tryMVG(mvg.Tied, D, L, NormD)
+
     #-------------------------------------------------------------------------------------------------#
-
-
-
     
     #plt.HeatMapPearson(D, "Raw")
     #plt.plotHist(D, L, "Raw")
-
-    #NormD = n.Normalization(D)
-    #kFold(NormD, L, 5)
 
     #plt.HeatMapPearson(NormD, "Normalized")
     #plt.plotHist(NormD, L, "Normalized")
