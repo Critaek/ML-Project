@@ -35,8 +35,17 @@ def LinearRegression(DTR, LTR, DTE, l, prior):
     x, f, d = scipy.optimize.fmin_l_bfgs_b(logreg_obj, x0, args=(DTR, LTR, l, prior), approx_grad = True)
     w = x[0:DTR.shape[0]]
     b = x[-1]
-    LLRs = numpy.dot(w.T, DTE) + b
-    Predictions = LLRs > 0
+    scores = numpy.dot(w.T, DTE) + b
+
+    LTR0 = LTR[LTR == 0]
+    LTR1 = LTR[LTR == 1]
+
+    nF = len(LTR0)
+    nT = len(LTR1)
+
+    LLRs = scores - numpy.log(nT/nF)
+
+    Predictions = scores > 0
 
     return Predictions, LLRs
 
