@@ -79,7 +79,7 @@ def kFold(D, L, K, l, model):
 
 
 
-def tryRegression(model, D, L, NormD, lSet):
+def trainRegression(model, D, L, NormD, lSet):
     for l in lSet:
         print("Lambda =", l)
         print("Raw")

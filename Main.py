@@ -8,6 +8,7 @@ import Load as l
 import MVG as mvg
 import ModelEvaluation as me
 import LinearRegression as lr
+import SVM
 
 def mcol(v):
     return v.reshape(v.size, 1)
@@ -23,17 +24,28 @@ if __name__ == "__main__":
 
     #Full-Covariance MVG
     print("Full-Cov MVG")
-    #mvg.tryMVG(mvg.MultiV, D, L, NormD)
+    #mvg.trainMVG(mvg.MultiV, D, L, NormD)
     print("\n")
+
     print("Bayes-Cov MVG")
-    #mvg.tryMVG(mvg.Bayes, D, L, NormD)
+    #mvg.trainMVG(mvg.Bayes, D, L, NormD)
     print("\n")
+
     print("Tied-Cov MVG")
-    #mvg.tryMVG(mvg.Tied, D, L, NormD)
+    #mvg.trainMVG(mvg.Tied, D, L, NormD)
     print("\n")
+
     print("Liner Regression")
     lSet = numpy.array([1e-5, 1e-4, 1e-3, 1e-2, 1e-1, 1])
-    lr.tryRegression(lr.LinearRegression, D, L, NormD, lSet)
+    #lr.trainRegression(lr.LinearRegression, D, L, NormD, lSet)
+    print("\n")
+
+    print("SVM Linear")
+    K_Set = numpy.array([1.0])
+    C_Set = numpy.array([1.0])
+    SVM.trainSVMLinear(D, L, NormD, K_Set, C_Set)
+
+    
 
     end = time.time()
     print("Total time", end - start)

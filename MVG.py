@@ -130,7 +130,7 @@ def kFold(D, L, K, model):
 
     return Predictions, LLRs
 
-def tryMVG(model, D, L, NormD):
+def trainMVG(model, D, L, NormD):
     print("Raw")
     for i in range(7):
         if(i==6):
