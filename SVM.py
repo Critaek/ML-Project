@@ -216,3 +216,144 @@ def trainSVMLinear(D, L, NormD, K_Set, C_Set): #K relativo al modello, non k_fol
                 me.printDCFs(D, L, Predictions, Scores)
                 print(end-start, "seconds\n")
             
+
+def kFoldPoly(D, L, K, KModel, C, d, c): #KModel è il K relativo al modello
+    numpy.random.seed(0)
+    idx = numpy.random.permutation(D.shape[1])
+
+    N = D.shape[1]
+    M = round(N/K)
+
+    Scores = []
+    Predictions = []
+
+    for i in range(K): #K=5 -> 0,1,2,3,4
+        idxTrain = numpy.concatenate([idx[0:i*M], idx[(i+1)*M:N]])
+        idxTest = idx[i*M:(i+1)*M]
+        DTR = D[:, idxTrain]
+        LTR = L[idxTrain]
+        DTE = D[:, idxTest]
+        LTE = L[idxTest]
+        PredRet, Scores_Ret = SVMPoly(DTR, LTR, DTE, LTE, KModel, C, d, c)
+        Scores.append(Scores_Ret)
+        Predictions.append(PredRet)
+
+    Scores = numpy.hstack(Scores)
+    Predictions = numpy.hstack(Predictions)
+
+    return Predictions, Scores
+
+
+def trainSVMPoly(D, L, NormD, K_Set, C_Set, d_Set, c_Set): #K relativo al modello, non k_fold
+    
+    print("Raw")
+    for K in K_Set:
+        print("K =", K)
+        for C in C_Set:
+            print("C =", C)
+            for d in d_Set:
+                print("d =", d)
+                for c in c_Set:
+                    print("c =", c)
+                    for i in range(7):
+                        if(i==6):
+                            print("----------------No PCA", "----------------")
+                        else:    
+                            print("----------------PCA", 5+i, "----------------")
+                        PCA = dr.PCA(D, L, 5+i)
+                        start = time.time()
+                        Predictions, Scores = kFoldPoly(PCA, L, 5, K, C, d, c)
+                        end = time.time()
+                        #Still called LLRs in the printDCFs function, but they are scores with no probabilistic interpretation
+                        #We use the same function for every model
+                        me.printDCFs(D, L, Predictions, Scores) 
+                        print(end-start, "seconds\n")
+
+    print("Normalized")
+    for K in K_Set:
+        print("K =", K)
+        for C in C_Set:
+            print("C =", C)
+            for d in d_Set:
+                print("d =", d)
+                for c in c_Set:
+                    print("c =", c)
+                    for i in range(7):
+                        if(i==6):
+                            print("----------------No PCA", "----------------")
+                        else:    
+                            print("----------------PCA", 5+i, "----------------")
+                        PCA = dr.PCA(NormD, L, 5+i)
+                        start = time.time()
+                        Predictions, Scores = kFoldPoly(PCA, L, 5, K, C, d, c)
+                        end = time.time()
+                        me.printDCFs(D, L, Predictions, Scores)
+                        print(end-start, "seconds\n")
+
+def kFold_RBF(D, L, K, KModel, C, gamma): #KModel è il K relativo al modello
+    numpy.random.seed(0)
+    idx = numpy.random.permutation(D.shape[1])
+
+    N = D.shape[1]
+    M = round(N/K)
+
+    Scores = []
+    Predictions = []
+
+    for i in range(K): #K=5 -> 0,1,2,3,4
+        idxTrain = numpy.concatenate([idx[0:i*M], idx[(i+1)*M:N]])
+        idxTest = idx[i*M:(i+1)*M]
+        DTR = D[:, idxTrain]
+        LTR = L[idxTrain]
+        DTE = D[:, idxTest]
+        LTE = L[idxTest]
+        PredRet, Scores_Ret = SVM_RBF(DTR, LTR, DTE, LTE, KModel, C, gamma)
+        Scores.append(Scores_Ret)
+        Predictions.append(PredRet)
+
+    Scores = numpy.hstack(Scores)
+    Predictions = numpy.hstack(Predictions)
+
+    return Predictions, Scores
+
+def trainSVM_RBF(D, L, NormD, K_Set, C_Set, gamma_Set): #K relativo al modello, non k_fold
+    
+    print("Raw")
+    for K in K_Set:
+        print("K =", K)
+        for C in C_Set:
+            print("C =", C)
+            for gamma in gamma_Set:
+                print("gamma =", gamma)
+                for i in range(7):
+                    if(i==6):
+                        print("----------------No PCA", "----------------")
+                    else:    
+                        print("----------------PCA", 5+i, "----------------")
+                    PCA = dr.PCA(D, L, 5+i)
+                    start = time.time()
+                    Predictions, Scores = kFold_RBF(PCA, L, 5, K, C, gamma)
+                    end = time.time()
+                    #Still called LLRs in the printDCFs function, but they are scores with no probabilistic interpretation
+                    #We use the same function for every model
+                    me.printDCFs(D, L, Predictions, Scores) 
+                    print(end-start, "seconds\n")
+
+    print("Normalized")
+    for K in K_Set:
+        print("K =", K)
+        for C in C_Set:
+            print("C =", C)
+            for gamma in gamma_Set:
+                print("gamma =", gamma)
+                for i in range(7):
+                    if(i==6):
+                        print("----------------No PCA", "----------------")
+                    else:    
+                        print("----------------PCA", 5+i, "----------------")
+                    PCA = dr.PCA(NormD, L, 5+i)
+                    start = time.time()
+                    Predictions, Scores = kFold_RBF(PCA, L, 5, K, C, gamma)
+                    end = time.time()
+                    me.printDCFs(D, L, Predictions, Scores)
+                    print(end-start, "seconds\n")

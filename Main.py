@@ -1,3 +1,4 @@
+from asyncio.constants import DEBUG_STACK_DEPTH
 import scipy.stats as st
 import numpy
 import time
@@ -45,6 +46,18 @@ if __name__ == "__main__":
     C_Set = numpy.array([1.0])
     SVM.trainSVMLinear(D, L, NormD, K_Set, C_Set)
 
+    print("SVM Poly")
+    K_Set = numpy.array([1.0])
+    C_Set = numpy.array([1.0])
+    d_Set = numpy.array([2.0])
+    c_Set = numpy.array([1.0])
+    SVM.trainSVMPoly(D, L, NormD, K_Set, C_Set, d_Set, c_Set)
+
+    print("SVM RBF")
+    K_Set = numpy.array([1.0])
+    C_Set = numpy.array([1.0])
+    gamma_Set = numpy.array([1.0])
+    SVM.trainSVM_RBF(D, L, NormD, K_Set, C_Set, gamma_Set)
     
 
     end = time.time()
