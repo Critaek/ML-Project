@@ -4,7 +4,7 @@ def mcol(v):
     return v.reshape(v.size, 1)
 
 def load():
-    train = open("Train.txt")
+    train = open("data/Train.txt")
     DList = []
     LabelsList = []
     for line in train:
