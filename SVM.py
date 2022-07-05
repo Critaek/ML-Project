@@ -84,11 +84,11 @@ def SVMPoly(DTR, LTR, DTE, LTE, K, C, d, c):
     for x_t in DTE.T:
         score = 0
         for i in range(DTR.shape[1]):
-            Kernel = (numpy.dot(DTR.T[i].T, x_t) + c)**d
+            Kernel = (numpy.dot(DTR.T[i].T, x_t) + c)**d + epsilon
             score += alphaStar[i] * Z[i] * Kernel
         scores.append(score)
     
-    scores = numpy.vstack(scores)
+    scores = numpy.hstack(scores)
      
     Predictions = scores > 0
     Predictions = numpy.hstack(Predictions)
@@ -144,7 +144,7 @@ def SVM_RBF(DTR, LTR, DTE, LTE, K, C, gamma):
             score += alphaStar[i] * Z[i] * Kernel
         scores.append(score)
     
-    scores = numpy.vstack(scores)
+    scores = numpy.hstack(scores)
      
     Predictions = scores > 0
     Predictions = numpy.hstack(Predictions)
