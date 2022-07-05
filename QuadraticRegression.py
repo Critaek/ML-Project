@@ -9,6 +9,15 @@ import Plot
 def mcol(v):
     return v.reshape(v.size, 1)
 
+def expandFeature(dataset):
+    def vecxxT(x):
+        x = x[:, None]
+        xxT = x.dot(x.T).reshape(x.size**2)
+        return xxT
+    expanded = numpy.apply_along_axis(vecxxT, 0, dataset)
+    return numpy.vstack([expanded, dataset])
+
+
 def logreg_obj(v, DTR, LTR, l, prior):
     w, b = mcol(v[0:-1]), v[-1]
 
@@ -17,6 +26,8 @@ def logreg_obj(v, DTR, LTR, l, prior):
 
     Z0 = LTR0 * 2.0 - 1.0
     Z1 = LTR1 * 2.0 - 1.0
+
+    Z = LTR * 2.0 - 1.0
 
     S0 = numpy.dot(w.T, DTR[:, LTR == 0]) + b
     S1 = numpy.dot(w.T, DTR[:, LTR == 1]) + b
@@ -29,7 +40,7 @@ def logreg_obj(v, DTR, LTR, l, prior):
 
     return l/2 * numpy.linalg.norm(w)**2 + cxeT + cxeF
 
-def LinearRegression(DTR, LTR, DTE, l, prior):
+def QuadraticRegression(DTR, LTR, DTE, l, prior):
     x0 = numpy.zeros(DTR.shape[0] + 1)
     x, f, d = scipy.optimize.fmin_l_bfgs_b(logreg_obj, x0, args=(DTR, LTR, l, prior), approx_grad = True)
     w = x[0:DTR.shape[0]]
@@ -63,11 +74,11 @@ def kFold(D, L, K, l):
     for i in range(K): #K=3 -> 0,1,2
         idxTrain = numpy.concatenate([idx[0:i*M], idx[(i+1)*M:N]])
         idxTest = idx[i*M:(i+1)*M]
-        DTR = D[:, idxTrain]
+        DTR = expandFeature(D[:, idxTrain])
         LTR = L[idxTrain]
-        DTE = D[:, idxTest]
+        DTE = expandFeature(D[:, idxTest])
         LTE = L[idxTest]
-        PredRet, LLRsRet = LinearRegression(DTR, LTR, DTE, l, 0.5)
+        PredRet, LLRsRet = QuadraticRegression(DTR, LTR, DTE, l, 0.5)
         LLRs.append(LLRsRet)
         Predictions.append(PredRet)
 
@@ -78,16 +89,16 @@ def kFold(D, L, K, l):
 
 
 
-def trainLinearRegression(D, L, NormD, lSet):
+def trainQuadraticRegression(D, L, NormD, lSet):
     for l in lSet:
         for i in range(7):
             PCA = dr.PCA(D, L, 5+i)
             Predictions, LLRs = kFold(PCA, L, 5, l)
             ActDCF, minDCF = me.printDCFs(D, L, Predictions, LLRs)
-            print("Linear Regression | Lambda ={:.2e}".format(l), "| Raw | PCA =", 5+i, "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF)) 
+            print("Quadratic Regression | Lambda ={:.2e}".format(l), "| Raw | PCA =", 5+i, "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF)) 
         
         for i in range(7):
             PCA = dr.PCA(NormD, L, 5+i)
             Predictions, LLRs = kFold(PCA, L, 5, l)    
             ActDCF, minDCF = me.printDCFs(D, L, Predictions, LLRs)
-            print("Linear Regression | Lambda ={:.2e}".format(l), "| Normalized | PCA =", 5+i, "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF))
+            print("Quadratic Regression | Lambda ={:.2e}".format(l), "| Normalized | PCA =", 5+i, "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF))

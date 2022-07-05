@@ -10,6 +10,7 @@ import MVG as mvg
 import ModelEvaluation as me
 import LinearRegression as lr
 import SVM
+import QuadraticRegression as qr
 
 def mcol(v):
     return v.reshape(v.size, 1)
@@ -38,38 +39,28 @@ if __name__ == "__main__":
     NormD = n.Normalization(D)
 
     #Full-Covariance MVG
-    print("Full-Cov MVG")
-    mvg.trainMVG(mvg.MultiV, D, L, NormD)
-    print("\n")
+    mvg.trainMVG(mvg.MultiV, D, L, NormD, "Full")
 
-    print("Bayes-Cov MVG")
-    mvg.trainMVG(mvg.Bayes, D, L, NormD)
-    print("\n")
+    mvg.trainMVG(mvg.Bayes, D, L, NormD, "Bayes")
 
-    print("Tied-Cov MVG")
-    mvg.trainMVG(mvg.Tied, D, L, NormD)
-    print("\n")
+    mvg.trainMVG(mvg.Tied, D, L, NormD, "Tied")
 
-    print("Linear Regression")
-    lSet = numpy.array([1e-5, 1e-4, 1e-3, 1e-2, 1e-1, 1, 10])
-    lr.trainRegression(lr.LinearRegression, D, L, NormD, lSet)
-    print("\n")
-
-    print("SVM Linear")
+    lSet = numpy.logspace(-5,2, num = 20) #20 values between 1e-5 and 1e2
+    lr.trainLinearRegression(D, L, NormD, lSet)
+    qr.trainQuadraticRegression(D, L, NormD, lSet)
+    
     K_Set = numpy.array([0.0, 1.0, 10.0])
     C_Set = numpy.array([0.1, 1.0, 10.0])
     SVM.trainSVMLinear(D, L, NormD, K_Set, C_Set)
-    print("\n")
 
-    print("SVM Poly")
+    
     K_Set = numpy.array([0.0, 1.0, 10.0])
     C_Set = numpy.array([0.5, 1.0])
     d_Set = numpy.array([2.0, 3.0])
     c_Set = numpy.array([0.0, 1.0])
     SVM.trainSVMPoly(D, L, NormD, K_Set, C_Set, d_Set, c_Set)
-    print("\n")
 
-    print("SVM RBF")
+    
     K_Set = numpy.array([0.0, 1.0, 10.0])
     C_Set = numpy.array([0.5, 1.0])
     gamma_Set = numpy.array([1.0, 10.0])

@@ -46,3 +46,10 @@ def HeatMapPearson(D, string):
     plt.xlabel(string)
     plt.savefig(string + "HeatMap.pdf")
     plt.close()
+
+def plotDCF(x, y):
+    #x = numpy.linspace(min(x), max(x), 7)
+    plt.plot(x, y, label = "DCF")
+    plt.xscale("log")
+
+    plt.savefig("Plot_LR.pdf")

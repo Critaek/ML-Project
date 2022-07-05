@@ -130,31 +130,16 @@ def kFold(D, L, K, model):
 
     return Predictions, LLRs
 
-def trainMVG(model, D, L, NormD):
-    print("Raw")
-    for i in range(7):
-        if(i==6):
-            print("----------------No PCA", "----------------")
-        else:    
-            print("----------------PCA", 5+i, "----------------")
-        PCA = dr.PCA(D, L, 5+i)
-        start = time.time()
-        Predictions, LLRs = kFold(PCA, L, 5, model)
-        end = time.time()
-        me.printDCFs(D, L, Predictions, LLRs)
-        print(end-start, "seconds\n")  
+def trainMVG(model, D, L, NormD, type):
 
-    print("\n")
-    
-    print("Normalized")
     for i in range(7):
-        if(i==6):
-            print("----------------No PCA", "----------------")
-        else:    
-            print("----------------PCA", 5+i, "----------------")
-        PCA = dr.PCA(NormD, L, 5+i)
-        start = time.time()
+        PCA = dr.PCA(D, L, 5+i)
         Predictions, LLRs = kFold(PCA, L, 5, model)
-        end = time.time()    
-        me.printDCFs(D, L, Predictions, LLRs)
-        print(end-start, "seconds\n") 
+        ActDCF, minDCF = me.printDCFs(D, L, Predictions, LLRs)  
+        print(type, "| Raw | PCA =", 5+i, "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF))
+    
+    for i in range(7):
+        PCA = dr.PCA(NormD, L, 5+i)
+        Predictions, LLRs = kFold(PCA, L, 5, model)   
+        ActDCF, minDCF = me.printDCFs(D, L, Predictions, LLRs) 
+        print(type, "| Normalized | PCA =", 5+i, "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF))

@@ -85,9 +85,7 @@ def printDCFs(D, L, pred, LLRs):
     (DCFu,FPRi,TPRi) = BiasRisk(pi1,Cfn,Cfp,confusionMatrix)
         
     minDummy = MinDummy(pi1,Cfn,Cfp)
-    normalizedDCF = DCFu/minDummy
-    
-    print("DCF:", normalizedDCF)
+    ActDCF = DCFu/minDummy
 
     #minDCF
     comm = sorted(LLRs) #aggiungere -inf, inf
@@ -110,5 +108,6 @@ def printDCFs(D, L, pred, LLRs):
         minDCF.append(normalizedDCF)
 
     minDCF=min(minDCF)
-    print("minDCF:" , minDCF)
+
+    return ActDCF, minDCF
 #-------------------------------------------------------------------------------------------------#
