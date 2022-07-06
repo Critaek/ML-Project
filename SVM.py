@@ -10,7 +10,7 @@ def mcol(vect):
 def vrow(vect):
     return vect.reshape(1, vect.size)
 
-def SVMLinear(DTR, LTR, DTE, LTE, K, C):
+def SVMLinear(DTR, LTR, DTE, LTE, K, C, prior_t):
     expandedD = numpy.vstack([DTR, K * numpy.ones(DTR.shape[1])])
 
     Z = numpy.zeros(LTR.shape)
@@ -31,9 +31,19 @@ def SVMLinear(DTR, LTR, DTE, LTE, K, C):
         loss, grad = JDual(alpha)
         return -loss, -grad
 
+    ##
+        
+    boundaries = numpy.empty(LTR.shape, dtype = 'f,f')
+    Pi_T_Emp = LTR[LTR == 1].size / LTR.size
+    Pi_F_Emp = LTR[LTR == 0].size / LTR.size
+    Ct = C * prior_t / Pi_T_Emp
+    Cf = C * (1 - prior_t) / Pi_F_Emp
+    boundaries[LTR == 0] = (0, Cf)
+    boundaries[LTR == 1] = (0, Ct)
+        
     alphaStar, x, y = scipy.optimize.fmin_l_bfgs_b(LDual,
                                                    numpy.zeros(DTR.shape[1]),
-                                                   bounds=[(0, C)] * DTR.shape[1],
+                                                   bounds = boundaries,
                                                    factr = 1.0,
                                                    maxiter=100000,
                                                    maxfun=100000
@@ -50,7 +60,7 @@ def SVMLinear(DTR, LTR, DTE, LTE, K, C):
 
 
 
-def SVMPoly(DTR, LTR, DTE, LTE, K, C, d, c):
+def SVMPoly(DTR, LTR, DTE, LTE, K, C, d, c, prior_t):
     Z = numpy.zeros(LTR.shape)
     Z[LTR == 1] = 1
     Z[LTR == 0] = -1
@@ -72,9 +82,19 @@ def SVMPoly(DTR, LTR, DTE, LTE, K, C, d, c):
         loss, grad = JDual(alpha)
         return -loss, -grad
 
+    ##
+    
+    boundaries = numpy.empty(LTR.shape, dtype = 'f,f')
+    Pi_T_Emp = (LTR == 1).size / LTR.size
+    Pi_F_Emp = (LTR == 0).size / LTR.size
+
+    Ct = C * prior_t / Pi_T_Emp
+    Cf = C * (1 - prior_t) / Pi_F_Emp
+    boundaries[LTR == 0] = (0, Cf)
+    boundaries[LTR == 1] = (0, Ct)
     alphaStar, x, y = scipy.optimize.fmin_l_bfgs_b(LDual,
                                                    numpy.zeros(DTR.shape[1]),
-                                                   bounds=[(0, C)] * DTR.shape[1],
+                                                   bounds = boundaries,
                                                    factr = 1.0,
                                                    maxiter=100000,
                                                    maxfun=100000
@@ -98,7 +118,7 @@ def SVMPoly(DTR, LTR, DTE, LTE, K, C, d, c):
 
 
 
-def SVM_RBF(DTR, LTR, DTE, LTE, K, C, gamma):
+def SVM_RBF(DTR, LTR, DTE, LTE, K, C, gamma, prior_t):
     Z = numpy.zeros(LTR.shape)
     Z[LTR == 1] = 1
     Z[LTR == 0] = -1
@@ -127,9 +147,19 @@ def SVM_RBF(DTR, LTR, DTE, LTE, K, C, gamma):
         loss, grad = JDual(alpha)
         return -loss, -grad
 
+    ##
+    
+    boundaries = numpy.empty(LTR.shape, dtype = 'f,f')
+    Pi_T_Emp = (LTR == 1).size / LTR.size
+    Pi_F_Emp = (LTR == 0).size / LTR.size
+
+    Ct = C * prior_t / Pi_T_Emp
+    Cf = C * (1 - prior_t) / Pi_F_Emp
+    boundaries[LTR == 0] = (0, Cf)
+    boundaries[LTR == 1] = (0, Ct)
     alphaStar, x, y = scipy.optimize.fmin_l_bfgs_b(LDual,
                                                    numpy.zeros(DTR.shape[1]),
-                                                   bounds=[(0, C)] * DTR.shape[1],
+                                                   bounds=boundaries,
                                                    factr = 1.0,
                                                    maxiter=100000,
                                                    maxfun=100000
@@ -152,7 +182,7 @@ def SVM_RBF(DTR, LTR, DTE, LTE, K, C, gamma):
     return Predictions, scores
 
 
-def kFoldLinear(D, L, K, KModel, C): #KModel è il K relativo al modello
+def kFoldLinear(D, L, K, KModel, C, prior_t): #KModel è il K relativo al modello
     numpy.random.seed(0)
     idx = numpy.random.permutation(D.shape[1])
 
@@ -169,7 +199,7 @@ def kFoldLinear(D, L, K, KModel, C): #KModel è il K relativo al modello
         LTR = L[idxTrain]
         DTE = D[:, idxTest]
         LTE = L[idxTest]
-        PredRet, Scores_Ret = SVMLinear(DTR, LTR, DTE, LTE, KModel, C)
+        PredRet, Scores_Ret = SVMLinear(DTR, LTR, DTE, LTE, KModel, C, prior_t)
         Scores.append(Scores_Ret)
         Predictions.append(PredRet)
 
@@ -178,30 +208,32 @@ def kFoldLinear(D, L, K, KModel, C): #KModel è il K relativo al modello
 
     return Predictions, Scores
 
-def trainSVMLinear(D, L, NormD, K_Set, C_Set): #K relativo al modello, non k_fold
+def trainSVMLinear(D, L, NormD, K_Set, C_Set, prior_t): #K relativo al modello, non k_fold
+    i = 5
+    prior_tilde_set = [0.33, 0.5, 0.66]
 
     for K in K_Set:
         for C in C_Set:
-            for i in range(7):
-                PCA = dr.PCA(D, L, 5+i)
-                Predictions, Scores = kFoldLinear(PCA, L, 5, K, C)
-                #Still called LLRs in the printDCFs function, but they are scores with no probabilistic interpretation
-                #We use the same function for every model
-                ActDCF, minDCF = me.printDCFs(D, L, Predictions, Scores) 
-                print("SVM Linear | K =", K, "| C =", C, "| Raw | PCA =", 5+i,
+            PCA = dr.PCA(D, L, 5+i)
+            Predictions, Scores = kFoldLinear(PCA, L, 5, K, C, prior_t)
+            #Still called LLRs in the printDCFs function, but they are scores with no probabilistic interpretation
+            #We use the same function for every model
+            for prior_tilde in prior_tilde_set:
+                ActDCF, minDCF = me.printDCFs(D, L, Predictions, Scores, prior_tilde) 
+                print(prior_t, "|" ,prior_tilde, "| SVM Linear | K =", K, "| C =", C, "| Raw | PCA =", 5+i,
                       "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF))            
 
     for K in K_Set:
         for C in C_Set:
-            for i in range(7):
-                PCA = dr.PCA(NormD, L, 5+i)
-                Predictions, Scores = kFoldLinear(PCA, L, 5, K, C)
-                ActDCF, minDCF = me.printDCFs(D, L, Predictions, Scores)
-                print("SVM Linear | K =", K, "| C =", C, "| Normalized | PCA =", 5+i,
+            PCA = dr.PCA(NormD, L, 5+i)
+            Predictions, Scores = kFoldLinear(PCA, L, 5, K, C, prior_t)
+            for prior_tilde in prior_tilde_set:
+                ActDCF, minDCF = me.printDCFs(D, L, Predictions, Scores, prior_tilde)
+                print(prior_t, "|" ,prior_tilde, "| SVM Linear | K =", K, "| C =", C, "| Normalized | PCA =", 5+i,
                       "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF)) 
             
 
-def kFoldPoly(D, L, K, KModel, C, d, c): #KModel è il K relativo al modello
+def kFoldPoly(D, L, K, KModel, C, d, c, prior_t): #KModel è il K relativo al modello
     numpy.random.seed(0)
     idx = numpy.random.permutation(D.shape[1])
 
@@ -218,7 +250,7 @@ def kFoldPoly(D, L, K, KModel, C, d, c): #KModel è il K relativo al modello
         LTR = L[idxTrain]
         DTE = D[:, idxTest]
         LTE = L[idxTest]
-        PredRet, Scores_Ret = SVMPoly(DTR, LTR, DTE, LTE, KModel, C, d, c)
+        PredRet, Scores_Ret = SVMPoly(DTR, LTR, DTE, LTE, KModel, C, d, c,prior_t)
         Scores.append(Scores_Ret)
         Predictions.append(PredRet)
 
@@ -228,19 +260,21 @@ def kFoldPoly(D, L, K, KModel, C, d, c): #KModel è il K relativo al modello
     return Predictions, Scores
 
 
-def trainSVMPoly(D, L, NormD, K_Set, C_Set, d_Set, c_Set): #K relativo al modello, non k_fold
+def trainSVMPoly(D, L, NormD, K_Set, C_Set, d_Set, c_Set, prior_t): #K relativo al modello, non k_fold
+    i = 5
+    prior_tilde_set = [0.33, 0.5, 0.66]
 
     for K in K_Set:
         for C in C_Set:
             for d in d_Set:
                 for c in c_Set:
-                    for i in range(7):
-                        PCA = dr.PCA(D, L, 5+i)
-                        Predictions, Scores = kFoldPoly(PCA, L, 5, K, C, d, c)
-                        #Still called LLRs in the printDCFs function, but they are scores with no probabilistic interpretation
-                        #We use the same function for every model
+                    PCA = dr.PCA(D, L, 5+i)
+                    Predictions, Scores = kFoldPoly(PCA, L, 5, K, C, d, c, prior_t)
+                    #Still called LLRs in the printDCFs function, but they are scores with no probabilistic interpretation
+                    #We use the same function for every model
+                    for prior_tilde in prior_tilde_set: 
                         ActDCF, minDCF = me.printDCFs(D, L, Predictions, Scores)
-                        print("SVM Poly | K =", K, "| C =", C, "| d =", d, "| c =", c, "| Raw | PCA =", 5+i,
+                        print(prior_t, "|" ,prior_tilde, "| SVM Poly | K =", K, "| C =", C, "| d =", d, "| c =", c, "| Raw | PCA =", 5+i,
                               "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF)) 
 
     
@@ -248,15 +282,15 @@ def trainSVMPoly(D, L, NormD, K_Set, C_Set, d_Set, c_Set): #K relativo al modell
         for C in C_Set:
             for d in d_Set:
                 for c in c_Set:
-                    for i in range(7):
-                        PCA = dr.PCA(NormD, L, 5+i)
-                        Predictions, Scores = kFoldPoly(PCA, L, 5, K, C, d, c)
+                    PCA = dr.PCA(NormD, L, 5+i)
+                    Predictions, Scores = kFoldPoly(PCA, L, 5, K, C, d, c, prior_t)
+                    for prior_tilde in prior_tilde_set: 
                         ActDCF, minDCF = me.printDCFs(D, L, Predictions, Scores)
-                        print("SVM Poly | K =", K, "| C =", C, "| d =", d, "| c =", c, "| Normalized | PCA =", 5+i,
+                        print(prior_t, "|" ,prior_tilde, "| SVM Poly | K =", K, "| C =", C, "| d =", d, "| c =", c, "| Normalized | PCA =", 5+i,
                               "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF)) 
                         
 
-def kFold_RBF(D, L, K, KModel, C, gamma): #KModel è il K relativo al modello
+def kFold_RBF(D, L, K, KModel, C, gamma, prior_t): #KModel è il K relativo al modello
     numpy.random.seed(0)
     idx = numpy.random.permutation(D.shape[1])
 
@@ -273,7 +307,7 @@ def kFold_RBF(D, L, K, KModel, C, gamma): #KModel è il K relativo al modello
         LTR = L[idxTrain]
         DTE = D[:, idxTest]
         LTE = L[idxTest]
-        PredRet, Scores_Ret = SVM_RBF(DTR, LTR, DTE, LTE, KModel, C, gamma)
+        PredRet, Scores_Ret = SVM_RBF(DTR, LTR, DTE, LTE, KModel, C, gamma, prior_t)
         Scores.append(Scores_Ret)
         Predictions.append(PredRet)
 
@@ -282,28 +316,29 @@ def kFold_RBF(D, L, K, KModel, C, gamma): #KModel è il K relativo al modello
 
     return Predictions, Scores
 
-def trainSVM_RBF(D, L, NormD, K_Set, C_Set, gamma_Set): #K relativo al modello, non k_fold
+def trainSVM_RBF(D, L, NormD, K_Set, C_Set, gamma_Set, prior_t): #K relativo al modello, non k_fold
+    prior_tilde_set = [0.33, 0.5, 0.66]
+    i = 5
 
     for K in K_Set:
         for C in C_Set:
             for gamma in gamma_Set:
-                for i in range(7):
-                    PCA = dr.PCA(D, L, 5+i)
-                    Predictions, Scores = kFold_RBF(PCA, L, 5, K, C, gamma)
+                PCA = dr.PCA(D, L, 5+i)
+                Predictions, Scores = kFold_RBF(PCA, L, 5, K, C, gamma, prior_t)
                     #Still called LLRs in the printDCFs function, but they are scores with no probabilistic interpretation
                     #We use the same function for every model
-                    ActDCF, minDCF = me.printDCFs(D, L, Predictions, Scores)
-                    print("SVM RBF | K =", K, "| C =", C, "| gamma =", gamma, "| Raw | PCA =", 5+i,
+                for prior_tilde in prior_tilde_set: 
+                    ActDCF, minDCF = me.printDCFs(D, L, Predictions, Scores, prior_tilde)
+                    print(prior_t, "|", prior_tilde, "| SVM RBF | K =", K, "| C =", C, "| gamma =", gamma, "| Raw | PCA =", 5+i,
                               "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF)) 
 
    
     for K in K_Set:
         for C in C_Set:
             for gamma in gamma_Set:
-                for i in range(7):
-                    PCA = dr.PCA(NormD, L, 5+i)
-                    start = time.time()
-                    Predictions, Scores = kFold_RBF(PCA, L, 5, K, C, gamma)
-                    ActDCF, minDCF = me.printDCFs(D, L, Predictions, Scores)
-                    print("SVM RBF | K =", K, "| C =", C, "| gamma =", gamma, "| Normalized | PCA =", 5+i,
+                PCA = dr.PCA(NormD, L, 5+i)
+                Predictions, Scores = kFold_RBF(PCA, L, 5, K, C, gamma, prior_t)
+                for prior_tilde in prior_tilde_set: 
+                    ActDCF, minDCF = me.printDCFs(D, L, Predictions, Scores, prior_tilde)
+                    print(prior_t, "|", prior_tilde, "| SVM RBF | K =", K, "| C =", C, "| gamma =", gamma, "| Normalized | PCA =", 5+i,
                               "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF))

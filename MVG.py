@@ -104,7 +104,7 @@ def meanAndCovMat(X):
     C = (1/N) * numpy.dot( (XC), (XC).T )
     return mu, C
 
-def kFold(D, L, K, model):
+def kFold(D, L, K, model, prior_t):
     numpy.random.seed(0)
     idx = numpy.random.permutation(D.shape[1])
 
@@ -121,7 +121,7 @@ def kFold(D, L, K, model):
         LTR = L[idxTrain]
         DTE = D[:, idxTest]
         LTE = L[idxTest]
-        PredRet, LLRsRet = model(DTR, LTR, DTE, 0.5)
+        PredRet, LLRsRet = model(DTR, LTR, DTE, prior_t)
         LLRs.append(LLRsRet)
         Predictions.append(PredRet)
 
@@ -130,16 +130,20 @@ def kFold(D, L, K, model):
 
     return Predictions, LLRs
 
-def trainMVG(model, D, L, NormD, type):
+def trainMVG(model, D, L, NormD, type, prior_t):
+    prior_tilde_set = [0.33, 0.5, 0.66]
 
+    print("result[0] = prior_t | result[1] = prior_tilde | result[2] = model_name | result[3] = pre-processing | result[4] = PCA | result[5] = ActDCF | result[6] = MinDCF")
     for i in range(7):
         PCA = dr.PCA(D, L, 5+i)
-        Predictions, LLRs = kFold(PCA, L, 5, model)
-        ActDCF, minDCF = me.printDCFs(D, L, Predictions, LLRs)  
-        print(type, "| Raw | PCA =", 5+i, "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF))
+        Predictions, LLRs = kFold(PCA, L, 5, model, prior_t)
+        for prior_tilde in prior_tilde_set:
+            ActDCF, minDCF = me.printDCFs(D, L, Predictions, LLRs, prior_tilde)  
+            print(prior_t, "|", prior_tilde, "|", type, "| Raw | PCA =", 5+i, "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF))
     
     for i in range(7):
         PCA = dr.PCA(NormD, L, 5+i)
-        Predictions, LLRs = kFold(PCA, L, 5, model)   
-        ActDCF, minDCF = me.printDCFs(D, L, Predictions, LLRs) 
-        print(type, "| Normalized | PCA =", 5+i, "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF))
+        Predictions, LLRs = kFold(PCA, L, 5, model, prior_t)   
+        for prior_tilde in prior_tilde_set:
+            ActDCF, minDCF = me.printDCFs(D, L, Predictions, LLRs, prior_tilde)  
+            print(prior_t, "|", prior_tilde, "|", type, "| Normalized | PCA =", 5+i, "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF))

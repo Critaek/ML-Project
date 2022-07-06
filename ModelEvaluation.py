@@ -61,14 +61,14 @@ def MinDummy(pi1,Cfn,Cfp):
 
 #-------------------------------------------------------------------------------------------------#
 
-def printDCFs(D, L, pred, LLRs):
+def printDCFs(D, L, pred, LLRs, pi_tilde):
     numpy.random.seed(0)
     idx = numpy.random.permutation(D.shape[1])
 
     L = L[idx]
 
-    pi1 = 0.5
-    pi0 = 1-pi1
+    pi1 = pi_tilde
+    pi0 = 1- pi_tilde
     Cfn = 1
     Cfp = 1
     classPriors = numpy.array([pi1,pi0]) #[0.5, 0.5]

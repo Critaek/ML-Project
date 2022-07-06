@@ -41,33 +41,35 @@ if __name__ == "__main__":
     #NormD = n.Normalization(D)
     #numpy.save("data/normalizedD.npy", NormD)
 
-    #Full-Covariance MVG
-    #mvg.trainMVG(mvg.MultiV, D, L, NormD, "Full")
 
-    #mvg.trainMVG(mvg.Bayes, D, L, NormD, "Bayes")
+    different_Application=[0.5,0.33,0.66]
+    for different_prior in different_Application:
+        #mvg.trainMVG(mvg.MultiV, D, L, NormD, "Full", different_prior)
 
-    #mvg.trainMVG(mvg.Tied, D, L, NormD, "Tied")
+        #mvg.trainMVG(mvg.Bayes, D, L, NormD, "Bayes", different_prior)
 
-    lSet = numpy.logspace(-5,2, num = 20) #20 values between 1e-5 and 1e2
-    lr.trainLinearRegression(D, L, NormD, lSet)
-    qr.trainQuadraticRegression(D, L, NormD, lSet)
-    
-    K_Set = numpy.array([0.0, 1.0, 10.0])
-    C_Set = numpy.array([0.1, 1.0, 10.0])
-    #SVM.trainSVMLinear(D, L, NormD, K_Set, C_Set)
+        #mvg.trainMVG(mvg.Tied, D, L, NormD, "Tied", different_prior)
 
-    
-    K_Set = numpy.array([0.0, 1.0, 10.0])
-    C_Set = numpy.array([0.5, 1.0])
-    d_Set = numpy.array([2.0, 3.0])
-    c_Set = numpy.array([0.0, 1.0])
-    #SVM.trainSVMPoly(D, L, NormD, K_Set, C_Set, d_Set, c_Set)
+        lSet = numpy.logspace(-5,2, num = 20) #20 values between 1e-5 and 1e2
+        #lr.trainLinearRegression(D, L, NormD, lSet, different_prior)
+        #qr.trainQuadraticRegression(D, L, NormD, lSet, different_prior)
+        
+        K_Set = numpy.array([0.0, 1.0, 10.0])
+        C_Set = numpy.array([0.1, 1.0, 10.0])
+        SVM.trainSVMLinear(D, L, NormD, K_Set, C_Set, different_prior)
 
-    
-    K_Set = numpy.array([0.0, 1.0, 10.0])
-    C_Set = numpy.array([0.5, 1.0])
-    gamma_Set = numpy.array([1.0, 10.0])
-    #SVM.trainSVM_RBF(D, L, NormD, K_Set, C_Set, gamma_Set)
+        
+        K_Set = numpy.array([0.0, 1.0, 10.0])
+        C_Set = numpy.array([0.5, 1.0])
+        d_Set = numpy.array([2.0, 3.0])
+        c_Set = numpy.array([0.0, 1.0])
+        #SVM.trainSVMPoly(D, L, NormD, K_Set, C_Set, d_Set, c_Set, different_prior)
+
+        
+        K_Set = numpy.array([0.0, 1.0, 10.0])
+        C_Set = numpy.array([0.5, 1.0])
+        gamma_Set = numpy.array([1.0, 10.0])
+        #SVM.trainSVM_RBF(D, L, NormD, K_Set, C_Set, gamma_Set, different_prior)
     
 
     end = time.time()

@@ -40,9 +40,9 @@ def logreg_obj(v, DTR, LTR, l, prior):
 
     return l/2 * numpy.linalg.norm(w)**2 + cxeT + cxeF
 
-def QuadraticRegression(DTR, LTR, DTE, l, prior):
+def QuadraticRegression(DTR, LTR, DTE, l, prior_t):
     x0 = numpy.zeros(DTR.shape[0] + 1)
-    x, f, d = scipy.optimize.fmin_l_bfgs_b(logreg_obj, x0, args=(DTR, LTR, l, prior), approx_grad = True)
+    x, f, d = scipy.optimize.fmin_l_bfgs_b(logreg_obj, x0, args=(DTR, LTR, l, prior_t), approx_grad = True)
     w = x[0:DTR.shape[0]]
     b = x[-1]
     scores = numpy.dot(w.T, DTE) + b
@@ -53,7 +53,7 @@ def QuadraticRegression(DTR, LTR, DTE, l, prior):
 
 
 
-def kFold(D, L, K, l):
+def kFold(D, L, K, l, prior_t):
     numpy.random.seed(0)
     idx = numpy.random.permutation(D.shape[1])
 
@@ -70,7 +70,7 @@ def kFold(D, L, K, l):
         LTR = L[idxTrain]
         DTE = expandFeature(D[:, idxTest])
         LTE = L[idxTest]
-        PredRet, LLRsRet = QuadraticRegression(DTR, LTR, DTE, l, 0.5)
+        PredRet, LLRsRet = QuadraticRegression(DTR, LTR, DTE, l, prior_t)
         LLRs.append(LLRsRet)
         Predictions.append(PredRet)
 
@@ -81,16 +81,19 @@ def kFold(D, L, K, l):
 
 
 
-def trainQuadraticRegression(D, L, NormD, lSet):
+def trainQuadraticRegression(D, L, NormD, lSet, prior_t):
+    prior_tilde_set = [0.33, 0.5, 0.66]
+
     for l in lSet:
-        for i in range(7):
-            PCA = dr.PCA(D, L, 5+i)
-            Predictions, LLRs = kFold(PCA, L, 5, l)
-            ActDCF, minDCF = me.printDCFs(D, L, Predictions, LLRs)
-            print("Quadratic Regression | Lambda ={:.2e}".format(l), "| Raw | PCA =", 5+i, "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF)) 
+        i = 5
+        PCA = dr.PCA(D, L, 5+i)
+        Predictions, LLRs = kFold(PCA, L, 5, l, prior_t)
+        for prior_tilde in prior_tilde_set:
+            ActDCF, minDCF = me.printDCFs(D, L, Predictions, LLRs, prior_tilde)
+            print(prior_t, "|" ,prior_tilde, "| Quadratic Regression | Lambda ={:.2e}".format(l), "| Raw | PCA =", 5+i, "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF)) 
         
-        for i in range(7):
-            PCA = dr.PCA(NormD, L, 5+i)
-            Predictions, LLRs = kFold(PCA, L, 5, l)    
-            ActDCF, minDCF = me.printDCFs(D, L, Predictions, LLRs)
-            print("Quadratic Regression | Lambda ={:.2e}".format(l), "| Normalized | PCA =", 5+i, "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF))
+        PCA = dr.PCA(NormD, L, 5+i)
+        Predictions, LLRs = kFold(PCA, L, 5, l, prior_t)
+        for prior_tilde in prior_tilde_set:    
+            ActDCF, minDCF = me.printDCFs(D, L, Predictions, LLRs, prior_tilde)
+            print(prior_t, "|" ,prior_tilde, "| Quadratic Regression | Lambda ={:.2e}".format(l), "| Normalized | PCA =", 5+i, "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF))
