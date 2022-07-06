@@ -36,17 +36,9 @@ def LinearRegression(DTR, LTR, DTE, l, prior):
     b = x[-1]
     scores = numpy.dot(w.T, DTE) + b
 
-    LTR0 = LTR[LTR == 0]
-    LTR1 = LTR[LTR == 1]
-
-    nF = len(LTR0)
-    nT = len(LTR1)
-
-    LLRs = scores - numpy.log(nT/nF)
-
     Predictions = scores > 0
 
-    return Predictions, LLRs
+    return Predictions, scores
 
 
 

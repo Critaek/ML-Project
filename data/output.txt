@@ -1,0 +1,1233 @@
+Full | Raw | PCA = 5 | ActDCF =0.397 | MinDCF =0.394
+Full | Raw | PCA = 6 | ActDCF =0.399 | MinDCF =0.384
+Full | Raw | PCA = 7 | ActDCF =0.364 | MinDCF =0.352
+Full | Raw | PCA = 8 | ActDCF =0.357 | MinDCF =0.345
+Full | Raw | PCA = 9 | ActDCF =0.321 | MinDCF =0.321
+Full | Raw | PCA = 10 | ActDCF =0.370 | MinDCF =0.327
+Full | Raw | PCA = 11 | ActDCF =0.362 | MinDCF =0.312
+Full | Normalized | PCA = 5 | ActDCF =0.426 | MinDCF =0.384
+Full | Normalized | PCA = 6 | ActDCF =0.390 | MinDCF =0.365
+Full | Normalized | PCA = 7 | ActDCF =0.333 | MinDCF =0.325
+Full | Normalized | PCA = 8 | ActDCF =0.315 | MinDCF =0.308
+Full | Normalized | PCA = 9 | ActDCF =0.319 | MinDCF =0.307
+Full | Normalized | PCA = 10 | ActDCF =0.316 | MinDCF =0.299
+Full | Normalized | PCA = 11 | ActDCF =0.320 | MinDCF =0.304
+Bayes | Raw | PCA = 5 | ActDCF =0.433 | MinDCF =0.414
+Bayes | Raw | PCA = 6 | ActDCF =0.422 | MinDCF =0.414
+Bayes | Raw | PCA = 7 | ActDCF =0.400 | MinDCF =0.396
+Bayes | Raw | PCA = 8 | ActDCF =0.395 | MinDCF =0.389
+Bayes | Raw | PCA = 9 | ActDCF =0.393 | MinDCF =0.383
+Bayes | Raw | PCA = 10 | ActDCF =0.424 | MinDCF =0.387
+Bayes | Raw | PCA = 11 | ActDCF =0.422 | MinDCF =0.384
+Bayes | Normalized | PCA = 5 | ActDCF =0.473 | MinDCF =0.450
+Bayes | Normalized | PCA = 6 | ActDCF =0.428 | MinDCF =0.423
+Bayes | Normalized | PCA = 7 | ActDCF =0.437 | MinDCF =0.432
+Bayes | Normalized | PCA = 8 | ActDCF =0.427 | MinDCF =0.420
+Bayes | Normalized | PCA = 9 | ActDCF =0.429 | MinDCF =0.421
+Bayes | Normalized | PCA = 10 | ActDCF =0.421 | MinDCF =0.411
+Bayes | Normalized | PCA = 11 | ActDCF =0.415 | MinDCF =0.400
+Tied | Raw | PCA = 5 | ActDCF =0.425 | MinDCF =0.420
+Tied | Raw | PCA = 6 | ActDCF =0.407 | MinDCF =0.397
+Tied | Raw | PCA = 7 | ActDCF =0.375 | MinDCF =0.371
+Tied | Raw | PCA = 8 | ActDCF =0.368 | MinDCF =0.362
+Tied | Raw | PCA = 9 | ActDCF =0.347 | MinDCF =0.338
+Tied | Raw | PCA = 10 | ActDCF =0.351 | MinDCF =0.337
+Tied | Raw | PCA = 11 | ActDCF =0.341 | MinDCF =0.334
+Tied | Normalized | PCA = 5 | ActDCF =0.421 | MinDCF =0.384
+Tied | Normalized | PCA = 6 | ActDCF =0.397 | MinDCF =0.368
+Tied | Normalized | PCA = 7 | ActDCF =0.391 | MinDCF =0.380
+Tied | Normalized | PCA = 8 | ActDCF =0.386 | MinDCF =0.383
+Tied | Normalized | PCA = 9 | ActDCF =0.364 | MinDCF =0.356
+Tied | Normalized | PCA = 10 | ActDCF =0.364 | MinDCF =0.354
+Tied | Normalized | PCA = 11 | ActDCF =0.360 | MinDCF =0.356
+Linear Regression | Lambda =1.00e-05 | Raw | PCA = 5 | ActDCF =0.436 | MinDCF =0.427
+Linear Regression | Lambda =1.00e-05 | Raw | PCA = 6 | ActDCF =0.396 | MinDCF =0.394
+Linear Regression | Lambda =1.00e-05 | Raw | PCA = 7 | ActDCF =0.389 | MinDCF =0.383
+Linear Regression | Lambda =1.00e-05 | Raw | PCA = 8 | ActDCF =0.376 | MinDCF =0.371
+Linear Regression | Lambda =1.00e-05 | Raw | PCA = 9 | ActDCF =0.356 | MinDCF =0.356
+Linear Regression | Lambda =1.00e-05 | Raw | PCA = 10 | ActDCF =0.363 | MinDCF =0.357
+Linear Regression | Lambda =1.00e-05 | Raw | PCA = 11 | ActDCF =0.357 | MinDCF =0.354
+Linear Regression | Lambda =1.00e-05 | Normalized | PCA = 5 | ActDCF =0.431 | MinDCF =0.404
+Linear Regression | Lambda =1.00e-05 | Normalized | PCA = 6 | ActDCF =0.396 | MinDCF =0.377
+Linear Regression | Lambda =1.00e-05 | Normalized | PCA = 7 | ActDCF =0.392 | MinDCF =0.387
+Linear Regression | Lambda =1.00e-05 | Normalized | PCA = 8 | ActDCF =0.398 | MinDCF =0.381
+Linear Regression | Lambda =1.00e-05 | Normalized | PCA = 9 | ActDCF =0.376 | MinDCF =0.367
+Linear Regression | Lambda =1.00e-05 | Normalized | PCA = 10 | ActDCF =0.376 | MinDCF =0.368
+Linear Regression | Lambda =1.00e-05 | Normalized | PCA = 11 | ActDCF =0.374 | MinDCF =0.359
+Linear Regression | Lambda =2.34e-05 | Raw | PCA = 5 | ActDCF =0.436 | MinDCF =0.427
+Linear Regression | Lambda =2.34e-05 | Raw | PCA = 6 | ActDCF =0.400 | MinDCF =0.397
+Linear Regression | Lambda =2.34e-05 | Raw | PCA = 7 | ActDCF =0.389 | MinDCF =0.384
+Linear Regression | Lambda =2.34e-05 | Raw | PCA = 8 | ActDCF =0.375 | MinDCF =0.371
+Linear Regression | Lambda =2.34e-05 | Raw | PCA = 9 | ActDCF =0.356 | MinDCF =0.354
+Linear Regression | Lambda =2.34e-05 | Raw | PCA = 10 | ActDCF =0.361 | MinDCF =0.357
+Linear Regression | Lambda =2.34e-05 | Raw | PCA = 11 | ActDCF =0.357 | MinDCF =0.353
+Linear Regression | Lambda =2.34e-05 | Normalized | PCA = 5 | ActDCF =0.431 | MinDCF =0.404
+Linear Regression | Lambda =2.34e-05 | Normalized | PCA = 6 | ActDCF =0.396 | MinDCF =0.377
+Linear Regression | Lambda =2.34e-05 | Normalized | PCA = 7 | ActDCF =0.392 | MinDCF =0.387
+Linear Regression | Lambda =2.34e-05 | Normalized | PCA = 8 | ActDCF =0.398 | MinDCF =0.381
+Linear Regression | Lambda =2.34e-05 | Normalized | PCA = 9 | ActDCF =0.376 | MinDCF =0.367
+Linear Regression | Lambda =2.34e-05 | Normalized | PCA = 10 | ActDCF =0.376 | MinDCF =0.368
+Linear Regression | Lambda =2.34e-05 | Normalized | PCA = 11 | ActDCF =0.374 | MinDCF =0.359
+Linear Regression | Lambda =5.46e-05 | Raw | PCA = 5 | ActDCF =0.436 | MinDCF =0.427
+Linear Regression | Lambda =5.46e-05 | Raw | PCA = 6 | ActDCF =0.396 | MinDCF =0.393
+Linear Regression | Lambda =5.46e-05 | Raw | PCA = 7 | ActDCF =0.389 | MinDCF =0.384
+Linear Regression | Lambda =5.46e-05 | Raw | PCA = 8 | ActDCF =0.374 | MinDCF =0.370
+Linear Regression | Lambda =5.46e-05 | Raw | PCA = 9 | ActDCF =0.360 | MinDCF =0.355
+Linear Regression | Lambda =5.46e-05 | Raw | PCA = 10 | ActDCF =0.360 | MinDCF =0.356
+Linear Regression | Lambda =5.46e-05 | Raw | PCA = 11 | ActDCF =0.357 | MinDCF =0.352
+Linear Regression | Lambda =5.46e-05 | Normalized | PCA = 5 | ActDCF =0.431 | MinDCF =0.404
+Linear Regression | Lambda =5.46e-05 | Normalized | PCA = 6 | ActDCF =0.396 | MinDCF =0.377
+Linear Regression | Lambda =5.46e-05 | Normalized | PCA = 7 | ActDCF =0.392 | MinDCF =0.387
+Linear Regression | Lambda =5.46e-05 | Normalized | PCA = 8 | ActDCF =0.398 | MinDCF =0.381
+Linear Regression | Lambda =5.46e-05 | Normalized | PCA = 9 | ActDCF =0.376 | MinDCF =0.367
+Linear Regression | Lambda =5.46e-05 | Normalized | PCA = 10 | ActDCF =0.375 | MinDCF =0.368
+Linear Regression | Lambda =5.46e-05 | Normalized | PCA = 11 | ActDCF =0.374 | MinDCF =0.359
+Linear Regression | Lambda =1.27e-04 | Raw | PCA = 5 | ActDCF =0.436 | MinDCF =0.427
+Linear Regression | Lambda =1.27e-04 | Raw | PCA = 6 | ActDCF =0.396 | MinDCF =0.392
+Linear Regression | Lambda =1.27e-04 | Raw | PCA = 7 | ActDCF =0.391 | MinDCF =0.383
+Linear Regression | Lambda =1.27e-04 | Raw | PCA = 8 | ActDCF =0.377 | MinDCF =0.368
+Linear Regression | Lambda =1.27e-04 | Raw | PCA = 9 | ActDCF =0.358 | MinDCF =0.353
+Linear Regression | Lambda =1.27e-04 | Raw | PCA = 10 | ActDCF =0.356 | MinDCF =0.352
+Linear Regression | Lambda =1.27e-04 | Raw | PCA = 11 | ActDCF =0.361 | MinDCF =0.356
+Linear Regression | Lambda =1.27e-04 | Normalized | PCA = 5 | ActDCF =0.431 | MinDCF =0.404
+Linear Regression | Lambda =1.27e-04 | Normalized | PCA = 6 | ActDCF =0.396 | MinDCF =0.377
+Linear Regression | Lambda =1.27e-04 | Normalized | PCA = 7 | ActDCF =0.392 | MinDCF =0.387
+Linear Regression | Lambda =1.27e-04 | Normalized | PCA = 8 | ActDCF =0.398 | MinDCF =0.381
+Linear Regression | Lambda =1.27e-04 | Normalized | PCA = 9 | ActDCF =0.376 | MinDCF =0.367
+Linear Regression | Lambda =1.27e-04 | Normalized | PCA = 10 | ActDCF =0.375 | MinDCF =0.367
+Linear Regression | Lambda =1.27e-04 | Normalized | PCA = 11 | ActDCF =0.374 | MinDCF =0.359
+Linear Regression | Lambda =2.98e-04 | Raw | PCA = 5 | ActDCF =0.436 | MinDCF =0.427
+Linear Regression | Lambda =2.98e-04 | Raw | PCA = 6 | ActDCF =0.396 | MinDCF =0.395
+Linear Regression | Lambda =2.98e-04 | Raw | PCA = 7 | ActDCF =0.382 | MinDCF =0.381
+Linear Regression | Lambda =2.98e-04 | Raw | PCA = 8 | ActDCF =0.373 | MinDCF =0.369
+Linear Regression | Lambda =2.98e-04 | Raw | PCA = 9 | ActDCF =0.355 | MinDCF =0.352
+Linear Regression | Lambda =2.98e-04 | Raw | PCA = 10 | ActDCF =0.356 | MinDCF =0.352
+Linear Regression | Lambda =2.98e-04 | Raw | PCA = 11 | ActDCF =0.358 | MinDCF =0.351
+Linear Regression | Lambda =2.98e-04 | Normalized | PCA = 5 | ActDCF =0.431 | MinDCF =0.404
+Linear Regression | Lambda =2.98e-04 | Normalized | PCA = 6 | ActDCF =0.396 | MinDCF =0.378
+Linear Regression | Lambda =2.98e-04 | Normalized | PCA = 7 | ActDCF =0.392 | MinDCF =0.387
+Linear Regression | Lambda =2.98e-04 | Normalized | PCA = 8 | ActDCF =0.399 | MinDCF =0.381
+Linear Regression | Lambda =2.98e-04 | Normalized | PCA = 9 | ActDCF =0.376 | MinDCF =0.367
+Linear Regression | Lambda =2.98e-04 | Normalized | PCA = 10 | ActDCF =0.375 | MinDCF =0.366
+Linear Regression | Lambda =2.98e-04 | Normalized | PCA = 11 | ActDCF =0.374 | MinDCF =0.361
+Linear Regression | Lambda =6.95e-04 | Raw | PCA = 5 | ActDCF =0.436 | MinDCF =0.427
+Linear Regression | Lambda =6.95e-04 | Raw | PCA = 6 | ActDCF =0.403 | MinDCF =0.396
+Linear Regression | Lambda =6.95e-04 | Raw | PCA = 7 | ActDCF =0.383 | MinDCF =0.381
+Linear Regression | Lambda =6.95e-04 | Raw | PCA = 8 | ActDCF =0.374 | MinDCF =0.372
+Linear Regression | Lambda =6.95e-04 | Raw | PCA = 9 | ActDCF =0.361 | MinDCF =0.353
+Linear Regression | Lambda =6.95e-04 | Raw | PCA = 10 | ActDCF =0.361 | MinDCF =0.349
+Linear Regression | Lambda =6.95e-04 | Raw | PCA = 11 | ActDCF =0.358 | MinDCF =0.352
+Linear Regression | Lambda =6.95e-04 | Normalized | PCA = 5 | ActDCF =0.431 | MinDCF =0.403
+Linear Regression | Lambda =6.95e-04 | Normalized | PCA = 6 | ActDCF =0.395 | MinDCF =0.378
+Linear Regression | Lambda =6.95e-04 | Normalized | PCA = 7 | ActDCF =0.394 | MinDCF =0.388
+Linear Regression | Lambda =6.95e-04 | Normalized | PCA = 8 | ActDCF =0.401 | MinDCF =0.381
+Linear Regression | Lambda =6.95e-04 | Normalized | PCA = 9 | ActDCF =0.374 | MinDCF =0.368
+Linear Regression | Lambda =6.95e-04 | Normalized | PCA = 10 | ActDCF =0.377 | MinDCF =0.366
+Linear Regression | Lambda =6.95e-04 | Normalized | PCA = 11 | ActDCF =0.375 | MinDCF =0.361
+Linear Regression | Lambda =1.62e-03 | Raw | PCA = 5 | ActDCF =0.436 | MinDCF =0.426
+Linear Regression | Lambda =1.62e-03 | Raw | PCA = 6 | ActDCF =0.404 | MinDCF =0.398
+Linear Regression | Lambda =1.62e-03 | Raw | PCA = 7 | ActDCF =0.385 | MinDCF =0.378
+Linear Regression | Lambda =1.62e-03 | Raw | PCA = 8 | ActDCF =0.375 | MinDCF =0.369
+Linear Regression | Lambda =1.62e-03 | Raw | PCA = 9 | ActDCF =0.362 | MinDCF =0.354
+Linear Regression | Lambda =1.62e-03 | Raw | PCA = 10 | ActDCF =0.361 | MinDCF =0.355
+Linear Regression | Lambda =1.62e-03 | Raw | PCA = 11 | ActDCF =0.362 | MinDCF =0.354
+Linear Regression | Lambda =1.62e-03 | Normalized | PCA = 5 | ActDCF =0.429 | MinDCF =0.403
+Linear Regression | Lambda =1.62e-03 | Normalized | PCA = 6 | ActDCF =0.395 | MinDCF =0.376
+Linear Regression | Lambda =1.62e-03 | Normalized | PCA = 7 | ActDCF =0.396 | MinDCF =0.388
+Linear Regression | Lambda =1.62e-03 | Normalized | PCA = 8 | ActDCF =0.400 | MinDCF =0.382
+Linear Regression | Lambda =1.62e-03 | Normalized | PCA = 9 | ActDCF =0.367 | MinDCF =0.365
+Linear Regression | Lambda =1.62e-03 | Normalized | PCA = 10 | ActDCF =0.372 | MinDCF =0.365
+Linear Regression | Lambda =1.62e-03 | Normalized | PCA = 11 | ActDCF =0.371 | MinDCF =0.361
+Linear Regression | Lambda =3.79e-03 | Raw | PCA = 5 | ActDCF =0.436 | MinDCF =0.426
+Linear Regression | Lambda =3.79e-03 | Raw | PCA = 6 | ActDCF =0.412 | MinDCF =0.405
+Linear Regression | Lambda =3.79e-03 | Raw | PCA = 7 | ActDCF =0.400 | MinDCF =0.389
+Linear Regression | Lambda =3.79e-03 | Raw | PCA = 8 | ActDCF =0.392 | MinDCF =0.384
+Linear Regression | Lambda =3.79e-03 | Raw | PCA = 9 | ActDCF =0.372 | MinDCF =0.365
+Linear Regression | Lambda =3.79e-03 | Raw | PCA = 10 | ActDCF =0.372 | MinDCF =0.366
+Linear Regression | Lambda =3.79e-03 | Raw | PCA = 11 | ActDCF =0.371 | MinDCF =0.367
+Linear Regression | Lambda =3.79e-03 | Normalized | PCA = 5 | ActDCF =0.427 | MinDCF =0.404
+Linear Regression | Lambda =3.79e-03 | Normalized | PCA = 6 | ActDCF =0.394 | MinDCF =0.374
+Linear Regression | Lambda =3.79e-03 | Normalized | PCA = 7 | ActDCF =0.395 | MinDCF =0.388
+Linear Regression | Lambda =3.79e-03 | Normalized | PCA = 8 | ActDCF =0.401 | MinDCF =0.382
+Linear Regression | Lambda =3.79e-03 | Normalized | PCA = 9 | ActDCF =0.372 | MinDCF =0.365
+Linear Regression | Lambda =3.79e-03 | Normalized | PCA = 10 | ActDCF =0.371 | MinDCF =0.365
+Linear Regression | Lambda =3.79e-03 | Normalized | PCA = 11 | ActDCF =0.371 | MinDCF =0.365
+Linear Regression | Lambda =8.86e-03 | Raw | PCA = 5 | ActDCF =0.435 | MinDCF =0.426
+Linear Regression | Lambda =8.86e-03 | Raw | PCA = 6 | ActDCF =0.422 | MinDCF =0.415
+Linear Regression | Lambda =8.86e-03 | Raw | PCA = 7 | ActDCF =0.409 | MinDCF =0.407
+Linear Regression | Lambda =8.86e-03 | Raw | PCA = 8 | ActDCF =0.409 | MinDCF =0.404
+Linear Regression | Lambda =8.86e-03 | Raw | PCA = 9 | ActDCF =0.406 | MinDCF =0.396
+Linear Regression | Lambda =8.86e-03 | Raw | PCA = 10 | ActDCF =0.406 | MinDCF =0.397
+Linear Regression | Lambda =8.86e-03 | Raw | PCA = 11 | ActDCF =0.406 | MinDCF =0.396
+Linear Regression | Lambda =8.86e-03 | Normalized | PCA = 5 | ActDCF =0.430 | MinDCF =0.403
+Linear Regression | Lambda =8.86e-03 | Normalized | PCA = 6 | ActDCF =0.393 | MinDCF =0.377
+Linear Regression | Lambda =8.86e-03 | Normalized | PCA = 7 | ActDCF =0.400 | MinDCF =0.387
+Linear Regression | Lambda =8.86e-03 | Normalized | PCA = 8 | ActDCF =0.392 | MinDCF =0.383
+Linear Regression | Lambda =8.86e-03 | Normalized | PCA = 9 | ActDCF =0.370 | MinDCF =0.366
+Linear Regression | Lambda =8.86e-03 | Normalized | PCA = 10 | ActDCF =0.368 | MinDCF =0.367
+Linear Regression | Lambda =8.86e-03 | Normalized | PCA = 11 | ActDCF =0.371 | MinDCF =0.367
+Linear Regression | Lambda =2.07e-02 | Raw | PCA = 5 | ActDCF =0.436 | MinDCF =0.425
+Linear Regression | Lambda =2.07e-02 | Raw | PCA = 6 | ActDCF =0.432 | MinDCF =0.418
+Linear Regression | Lambda =2.07e-02 | Raw | PCA = 7 | ActDCF =0.423 | MinDCF =0.413
+Linear Regression | Lambda =2.07e-02 | Raw | PCA = 8 | ActDCF =0.419 | MinDCF =0.412
+Linear Regression | Lambda =2.07e-02 | Raw | PCA = 9 | ActDCF =0.417 | MinDCF =0.408
+Linear Regression | Lambda =2.07e-02 | Raw | PCA = 10 | ActDCF =0.418 | MinDCF =0.409
+Linear Regression | Lambda =2.07e-02 | Raw | PCA = 11 | ActDCF =0.418 | MinDCF =0.409
+Linear Regression | Lambda =2.07e-02 | Normalized | PCA = 5 | ActDCF =0.429 | MinDCF =0.405
+Linear Regression | Lambda =2.07e-02 | Normalized | PCA = 6 | ActDCF =0.396 | MinDCF =0.375
+Linear Regression | Lambda =2.07e-02 | Normalized | PCA = 7 | ActDCF =0.396 | MinDCF =0.386
+Linear Regression | Lambda =2.07e-02 | Normalized | PCA = 8 | ActDCF =0.392 | MinDCF =0.389
+Linear Regression | Lambda =2.07e-02 | Normalized | PCA = 9 | ActDCF =0.371 | MinDCF =0.369
+Linear Regression | Lambda =2.07e-02 | Normalized | PCA = 10 | ActDCF =0.376 | MinDCF =0.367
+Linear Regression | Lambda =2.07e-02 | Normalized | PCA = 11 | ActDCF =0.372 | MinDCF =0.369
+Linear Regression | Lambda =4.83e-02 | Raw | PCA = 5 | ActDCF =0.436 | MinDCF =0.421
+Linear Regression | Lambda =4.83e-02 | Raw | PCA = 6 | ActDCF =0.425 | MinDCF =0.420
+Linear Regression | Lambda =4.83e-02 | Raw | PCA = 7 | ActDCF =0.422 | MinDCF =0.413
+Linear Regression | Lambda =4.83e-02 | Raw | PCA = 8 | ActDCF =0.418 | MinDCF =0.412
+Linear Regression | Lambda =4.83e-02 | Raw | PCA = 9 | ActDCF =0.418 | MinDCF =0.412
+Linear Regression | Lambda =4.83e-02 | Raw | PCA = 10 | ActDCF =0.418 | MinDCF =0.412
+Linear Regression | Lambda =4.83e-02 | Raw | PCA = 11 | ActDCF =0.418 | MinDCF =0.412
+Linear Regression | Lambda =4.83e-02 | Normalized | PCA = 5 | ActDCF =0.432 | MinDCF =0.400
+Linear Regression | Lambda =4.83e-02 | Normalized | PCA = 6 | ActDCF =0.399 | MinDCF =0.380
+Linear Regression | Lambda =4.83e-02 | Normalized | PCA = 7 | ActDCF =0.392 | MinDCF =0.386
+Linear Regression | Lambda =4.83e-02 | Normalized | PCA = 8 | ActDCF =0.393 | MinDCF =0.387
+Linear Regression | Lambda =4.83e-02 | Normalized | PCA = 9 | ActDCF =0.376 | MinDCF =0.373
+Linear Regression | Lambda =4.83e-02 | Normalized | PCA = 10 | ActDCF =0.383 | MinDCF =0.377
+Linear Regression | Lambda =4.83e-02 | Normalized | PCA = 11 | ActDCF =0.383 | MinDCF =0.374
+Linear Regression | Lambda =1.13e-01 | Raw | PCA = 5 | ActDCF =0.426 | MinDCF =0.417
+Linear Regression | Lambda =1.13e-01 | Raw | PCA = 6 | ActDCF =0.423 | MinDCF =0.417
+Linear Regression | Lambda =1.13e-01 | Raw | PCA = 7 | ActDCF =0.422 | MinDCF =0.415
+Linear Regression | Lambda =1.13e-01 | Raw | PCA = 8 | ActDCF =0.423 | MinDCF =0.415
+Linear Regression | Lambda =1.13e-01 | Raw | PCA = 9 | ActDCF =0.423 | MinDCF =0.414
+Linear Regression | Lambda =1.13e-01 | Raw | PCA = 10 | ActDCF =0.423 | MinDCF =0.414
+Linear Regression | Lambda =1.13e-01 | Raw | PCA = 11 | ActDCF =0.423 | MinDCF =0.414
+Linear Regression | Lambda =1.13e-01 | Normalized | PCA = 5 | ActDCF =0.433 | MinDCF =0.404
+Linear Regression | Lambda =1.13e-01 | Normalized | PCA = 6 | ActDCF =0.399 | MinDCF =0.386
+Linear Regression | Lambda =1.13e-01 | Normalized | PCA = 7 | ActDCF =0.406 | MinDCF =0.399
+Linear Regression | Lambda =1.13e-01 | Normalized | PCA = 8 | ActDCF =0.405 | MinDCF =0.390
+Linear Regression | Lambda =1.13e-01 | Normalized | PCA = 9 | ActDCF =0.392 | MinDCF =0.377
+Linear Regression | Lambda =1.13e-01 | Normalized | PCA = 10 | ActDCF =0.385 | MinDCF =0.376
+Linear Regression | Lambda =1.13e-01 | Normalized | PCA = 11 | ActDCF =0.388 | MinDCF =0.376
+Linear Regression | Lambda =2.64e-01 | Raw | PCA = 5 | ActDCF =0.427 | MinDCF =0.415
+Linear Regression | Lambda =2.64e-01 | Raw | PCA = 6 | ActDCF =0.427 | MinDCF =0.412
+Linear Regression | Lambda =2.64e-01 | Raw | PCA = 7 | ActDCF =0.427 | MinDCF =0.409
+Linear Regression | Lambda =2.64e-01 | Raw | PCA = 8 | ActDCF =0.427 | MinDCF =0.409
+Linear Regression | Lambda =2.64e-01 | Raw | PCA = 9 | ActDCF =0.427 | MinDCF =0.409
+Linear Regression | Lambda =2.64e-01 | Raw | PCA = 10 | ActDCF =0.427 | MinDCF =0.409
+Linear Regression | Lambda =2.64e-01 | Raw | PCA = 11 | ActDCF =0.427 | MinDCF =0.409
+Linear Regression | Lambda =2.64e-01 | Normalized | PCA = 5 | ActDCF =0.431 | MinDCF =0.408
+Linear Regression | Lambda =2.64e-01 | Normalized | PCA = 6 | ActDCF =0.409 | MinDCF =0.388
+Linear Regression | Lambda =2.64e-01 | Normalized | PCA = 7 | ActDCF =0.411 | MinDCF =0.405
+Linear Regression | Lambda =2.64e-01 | Normalized | PCA = 8 | ActDCF =0.414 | MinDCF =0.403
+Linear Regression | Lambda =2.64e-01 | Normalized | PCA = 9 | ActDCF =0.409 | MinDCF =0.392
+Linear Regression | Lambda =2.64e-01 | Normalized | PCA = 10 | ActDCF =0.411 | MinDCF =0.386
+Linear Regression | Lambda =2.64e-01 | Normalized | PCA = 11 | ActDCF =0.409 | MinDCF =0.386
+Linear Regression | Lambda =6.16e-01 | Raw | PCA = 5 | ActDCF =0.439 | MinDCF =0.435
+Linear Regression | Lambda =6.16e-01 | Raw | PCA = 6 | ActDCF =0.439 | MinDCF =0.435
+Linear Regression | Lambda =6.16e-01 | Raw | PCA = 7 | ActDCF =0.437 | MinDCF =0.433
+Linear Regression | Lambda =6.16e-01 | Raw | PCA = 8 | ActDCF =0.437 | MinDCF =0.433
+Linear Regression | Lambda =6.16e-01 | Raw | PCA = 9 | ActDCF =0.437 | MinDCF =0.433
+Linear Regression | Lambda =6.16e-01 | Raw | PCA = 10 | ActDCF =0.437 | MinDCF =0.433
+Linear Regression | Lambda =6.16e-01 | Raw | PCA = 11 | ActDCF =0.437 | MinDCF =0.433
+Linear Regression | Lambda =6.16e-01 | Normalized | PCA = 5 | ActDCF =0.449 | MinDCF =0.432
+Linear Regression | Lambda =6.16e-01 | Normalized | PCA = 6 | ActDCF =0.425 | MinDCF =0.411
+Linear Regression | Lambda =6.16e-01 | Normalized | PCA = 7 | ActDCF =0.421 | MinDCF =0.416
+Linear Regression | Lambda =6.16e-01 | Normalized | PCA = 8 | ActDCF =0.422 | MinDCF =0.413
+Linear Regression | Lambda =6.16e-01 | Normalized | PCA = 9 | ActDCF =0.416 | MinDCF =0.413
+Linear Regression | Lambda =6.16e-01 | Normalized | PCA = 10 | ActDCF =0.420 | MinDCF =0.411
+Linear Regression | Lambda =6.16e-01 | Normalized | PCA = 11 | ActDCF =0.419 | MinDCF =0.410
+Linear Regression | Lambda =1.44e+00 | Raw | PCA = 5 | ActDCF =0.538 | MinDCF =0.518
+Linear Regression | Lambda =1.44e+00 | Raw | PCA = 6 | ActDCF =0.539 | MinDCF =0.517
+Linear Regression | Lambda =1.44e+00 | Raw | PCA = 7 | ActDCF =0.536 | MinDCF =0.516
+Linear Regression | Lambda =1.44e+00 | Raw | PCA = 8 | ActDCF =0.536 | MinDCF =0.516
+Linear Regression | Lambda =1.44e+00 | Raw | PCA = 9 | ActDCF =0.536 | MinDCF =0.516
+Linear Regression | Lambda =1.44e+00 | Raw | PCA = 10 | ActDCF =0.536 | MinDCF =0.516
+Linear Regression | Lambda =1.44e+00 | Raw | PCA = 11 | ActDCF =0.536 | MinDCF =0.516
+Linear Regression | Lambda =1.44e+00 | Normalized | PCA = 5 | ActDCF =0.463 | MinDCF =0.449
+Linear Regression | Lambda =1.44e+00 | Normalized | PCA = 6 | ActDCF =0.443 | MinDCF =0.438
+Linear Regression | Lambda =1.44e+00 | Normalized | PCA = 7 | ActDCF =0.437 | MinDCF =0.435
+Linear Regression | Lambda =1.44e+00 | Normalized | PCA = 8 | ActDCF =0.438 | MinDCF =0.436
+Linear Regression | Lambda =1.44e+00 | Normalized | PCA = 9 | ActDCF =0.441 | MinDCF =0.432
+Linear Regression | Lambda =1.44e+00 | Normalized | PCA = 10 | ActDCF =0.442 | MinDCF =0.432
+Linear Regression | Lambda =1.44e+00 | Normalized | PCA = 11 | ActDCF =0.443 | MinDCF =0.431
+Linear Regression | Lambda =3.36e+00 | Raw | PCA = 5 | ActDCF =0.663 | MinDCF =0.634
+Linear Regression | Lambda =3.36e+00 | Raw | PCA = 6 | ActDCF =0.663 | MinDCF =0.635
+Linear Regression | Lambda =3.36e+00 | Raw | PCA = 7 | ActDCF =0.663 | MinDCF =0.634
+Linear Regression | Lambda =3.36e+00 | Raw | PCA = 8 | ActDCF =0.663 | MinDCF =0.633
+Linear Regression | Lambda =3.36e+00 | Raw | PCA = 9 | ActDCF =0.663 | MinDCF =0.634
+Linear Regression | Lambda =3.36e+00 | Raw | PCA = 10 | ActDCF =0.663 | MinDCF =0.634
+Linear Regression | Lambda =3.36e+00 | Raw | PCA = 11 | ActDCF =0.663 | MinDCF =0.634
+Linear Regression | Lambda =3.36e+00 | Normalized | PCA = 5 | ActDCF =0.469 | MinDCF =0.466
+Linear Regression | Lambda =3.36e+00 | Normalized | PCA = 6 | ActDCF =0.458 | MinDCF =0.451
+Linear Regression | Lambda =3.36e+00 | Normalized | PCA = 7 | ActDCF =0.454 | MinDCF =0.451
+Linear Regression | Lambda =3.36e+00 | Normalized | PCA = 8 | ActDCF =0.454 | MinDCF =0.449
+Linear Regression | Lambda =3.36e+00 | Normalized | PCA = 9 | ActDCF =0.457 | MinDCF =0.443
+Linear Regression | Lambda =3.36e+00 | Normalized | PCA = 10 | ActDCF =0.456 | MinDCF =0.441
+Linear Regression | Lambda =3.36e+00 | Normalized | PCA = 11 | ActDCF =0.456 | MinDCF =0.442
+Linear Regression | Lambda =7.85e+00 | Raw | PCA = 5 | ActDCF =0.737 | MinDCF =0.710
+Linear Regression | Lambda =7.85e+00 | Raw | PCA = 6 | ActDCF =0.734 | MinDCF =0.709
+Linear Regression | Lambda =7.85e+00 | Raw | PCA = 7 | ActDCF =0.737 | MinDCF =0.710
+Linear Regression | Lambda =7.85e+00 | Raw | PCA = 8 | ActDCF =0.734 | MinDCF =0.709
+Linear Regression | Lambda =7.85e+00 | Raw | PCA = 9 | ActDCF =0.734 | MinDCF =0.708
+Linear Regression | Lambda =7.85e+00 | Raw | PCA = 10 | ActDCF =0.734 | MinDCF =0.709
+Linear Regression | Lambda =7.85e+00 | Raw | PCA = 11 | ActDCF =0.737 | MinDCF =0.710
+Linear Regression | Lambda =7.85e+00 | Normalized | PCA = 5 | ActDCF =0.478 | MinDCF =0.473
+Linear Regression | Lambda =7.85e+00 | Normalized | PCA = 6 | ActDCF =0.461 | MinDCF =0.465
+Linear Regression | Lambda =7.85e+00 | Normalized | PCA = 7 | ActDCF =0.463 | MinDCF =0.455
+Linear Regression | Lambda =7.85e+00 | Normalized | PCA = 8 | ActDCF =0.463 | MinDCF =0.450
+Linear Regression | Lambda =7.85e+00 | Normalized | PCA = 9 | ActDCF =0.458 | MinDCF =0.449
+Linear Regression | Lambda =7.85e+00 | Normalized | PCA = 10 | ActDCF =0.458 | MinDCF =0.449
+Linear Regression | Lambda =7.85e+00 | Normalized | PCA = 11 | ActDCF =0.458 | MinDCF =0.449
+Linear Regression | Lambda =1.83e+01 | Raw | PCA = 5 | ActDCF =0.782 | MinDCF =0.752
+Linear Regression | Lambda =1.83e+01 | Raw | PCA = 6 | ActDCF =0.781 | MinDCF =0.752
+Linear Regression | Lambda =1.83e+01 | Raw | PCA = 7 | ActDCF =0.781 | MinDCF =0.752
+Linear Regression | Lambda =1.83e+01 | Raw | PCA = 8 | ActDCF =0.781 | MinDCF =0.752
+Linear Regression | Lambda =1.83e+01 | Raw | PCA = 9 | ActDCF =0.781 | MinDCF =0.752
+Linear Regression | Lambda =1.83e+01 | Raw | PCA = 10 | ActDCF =0.781 | MinDCF =0.752
+Linear Regression | Lambda =1.83e+01 | Raw | PCA = 11 | ActDCF =0.781 | MinDCF =0.752
+Linear Regression | Lambda =1.83e+01 | Normalized | PCA = 5 | ActDCF =0.481 | MinDCF =0.483
+Linear Regression | Lambda =1.83e+01 | Normalized | PCA = 6 | ActDCF =0.470 | MinDCF =0.478
+Linear Regression | Lambda =1.83e+01 | Normalized | PCA = 7 | ActDCF =0.467 | MinDCF =0.471
+Linear Regression | Lambda =1.83e+01 | Normalized | PCA = 8 | ActDCF =0.464 | MinDCF =0.473
+Linear Regression | Lambda =1.83e+01 | Normalized | PCA = 9 | ActDCF =0.459 | MinDCF =0.469
+Linear Regression | Lambda =1.83e+01 | Normalized | PCA = 10 | ActDCF =0.462 | MinDCF =0.467
+Linear Regression | Lambda =1.83e+01 | Normalized | PCA = 11 | ActDCF =0.460 | MinDCF =0.468
+Linear Regression | Lambda =4.28e+01 | Raw | PCA = 5 | ActDCF =0.816 | MinDCF =0.776
+Linear Regression | Lambda =4.28e+01 | Raw | PCA = 6 | ActDCF =0.816 | MinDCF =0.776
+Linear Regression | Lambda =4.28e+01 | Raw | PCA = 7 | ActDCF =0.816 | MinDCF =0.776
+Linear Regression | Lambda =4.28e+01 | Raw | PCA = 8 | ActDCF =0.816 | MinDCF =0.776
+Linear Regression | Lambda =4.28e+01 | Raw | PCA = 9 | ActDCF =0.816 | MinDCF =0.776
+Linear Regression | Lambda =4.28e+01 | Raw | PCA = 10 | ActDCF =0.816 | MinDCF =0.776
+Linear Regression | Lambda =4.28e+01 | Raw | PCA = 11 | ActDCF =0.816 | MinDCF =0.776
+Linear Regression | Lambda =4.28e+01 | Normalized | PCA = 5 | ActDCF =0.481 | MinDCF =0.580
+Linear Regression | Lambda =4.28e+01 | Normalized | PCA = 6 | ActDCF =0.470 | MinDCF =0.577
+Linear Regression | Lambda =4.28e+01 | Normalized | PCA = 7 | ActDCF =0.469 | MinDCF =0.571
+Linear Regression | Lambda =4.28e+01 | Normalized | PCA = 8 | ActDCF =0.466 | MinDCF =0.564
+Linear Regression | Lambda =4.28e+01 | Normalized | PCA = 9 | ActDCF =0.461 | MinDCF =0.568
+Linear Regression | Lambda =4.28e+01 | Normalized | PCA = 10 | ActDCF =0.460 | MinDCF =0.566
+Linear Regression | Lambda =4.28e+01 | Normalized | PCA = 11 | ActDCF =0.459 | MinDCF =0.566
+Linear Regression | Lambda =1.00e+02 | Raw | PCA = 5 | ActDCF =0.850 | MinDCF =0.799
+Linear Regression | Lambda =1.00e+02 | Raw | PCA = 6 | ActDCF =0.850 | MinDCF =0.799
+Linear Regression | Lambda =1.00e+02 | Raw | PCA = 7 | ActDCF =0.850 | MinDCF =0.799
+Linear Regression | Lambda =1.00e+02 | Raw | PCA = 8 | ActDCF =0.850 | MinDCF =0.799
+Linear Regression | Lambda =1.00e+02 | Raw | PCA = 9 | ActDCF =0.850 | MinDCF =0.799
+Linear Regression | Lambda =1.00e+02 | Raw | PCA = 10 | ActDCF =0.850 | MinDCF =0.799
+Linear Regression | Lambda =1.00e+02 | Raw | PCA = 11 | ActDCF =0.850 | MinDCF =0.799
+Linear Regression | Lambda =1.00e+02 | Normalized | PCA = 5 | ActDCF =0.488 | MinDCF =0.782
+Linear Regression | Lambda =1.00e+02 | Normalized | PCA = 6 | ActDCF =0.467 | MinDCF =0.772
+Linear Regression | Lambda =1.00e+02 | Normalized | PCA = 7 | ActDCF =0.470 | MinDCF =0.772
+Linear Regression | Lambda =1.00e+02 | Normalized | PCA = 8 | ActDCF =0.468 | MinDCF =0.769
+Linear Regression | Lambda =1.00e+02 | Normalized | PCA = 9 | ActDCF =0.461 | MinDCF =0.766
+Linear Regression | Lambda =1.00e+02 | Normalized | PCA = 10 | ActDCF =0.460 | MinDCF =0.766
+Linear Regression | Lambda =1.00e+02 | Normalized | PCA = 11 | ActDCF =0.458 | MinDCF =0.765
+Quadratic Regression | Lambda =1.00e-05 | Raw | PCA = 5 | ActDCF =0.450 | MinDCF =0.450
+Quadratic Regression | Lambda =1.00e-05 | Raw | PCA = 6 | ActDCF =0.373 | MinDCF =0.365
+Quadratic Regression | Lambda =1.00e-05 | Raw | PCA = 7 | ActDCF =0.390 | MinDCF =0.367
+Quadratic Regression | Lambda =1.00e-05 | Raw | PCA = 8 | ActDCF =0.396 | MinDCF =0.378
+Quadratic Regression | Lambda =1.00e-05 | Raw | PCA = 9 | ActDCF =0.394 | MinDCF =0.379
+Quadratic Regression | Lambda =1.00e-05 | Raw | PCA = 10 | ActDCF =0.411 | MinDCF =0.398
+Quadratic Regression | Lambda =1.00e-05 | Raw | PCA = 11 | ActDCF =0.396 | MinDCF =0.382
+Quadratic Regression | Lambda =1.00e-05 | Normalized | PCA = 5 | ActDCF =0.354 | MinDCF =0.341
+Quadratic Regression | Lambda =1.00e-05 | Normalized | PCA = 6 | ActDCF =0.363 | MinDCF =0.348
+Quadratic Regression | Lambda =1.00e-05 | Normalized | PCA = 7 | ActDCF =0.325 | MinDCF =0.314
+Quadratic Regression | Lambda =1.00e-05 | Normalized | PCA = 8 | ActDCF =0.304 | MinDCF =0.299
+Quadratic Regression | Lambda =1.00e-05 | Normalized | PCA = 9 | ActDCF =0.298 | MinDCF =0.291
+Quadratic Regression | Lambda =1.00e-05 | Normalized | PCA = 10 | ActDCF =0.295 | MinDCF =0.285
+Quadratic Regression | Lambda =1.00e-05 | Normalized | PCA = 11 | ActDCF =0.302 | MinDCF =0.295
+Quadratic Regression | Lambda =2.34e-05 | Raw | PCA = 5 | ActDCF =0.445 | MinDCF =0.443
+Quadratic Regression | Lambda =2.34e-05 | Raw | PCA = 6 | ActDCF =0.385 | MinDCF =0.370
+Quadratic Regression | Lambda =2.34e-05 | Raw | PCA = 7 | ActDCF =0.392 | MinDCF =0.365
+Quadratic Regression | Lambda =2.34e-05 | Raw | PCA = 8 | ActDCF =0.390 | MinDCF =0.380
+Quadratic Regression | Lambda =2.34e-05 | Raw | PCA = 9 | ActDCF =0.378 | MinDCF =0.374
+Quadratic Regression | Lambda =2.34e-05 | Raw | PCA = 10 | ActDCF =0.383 | MinDCF =0.371
+Quadratic Regression | Lambda =2.34e-05 | Raw | PCA = 11 | ActDCF =0.384 | MinDCF =0.378
+Quadratic Regression | Lambda =2.34e-05 | Normalized | PCA = 5 | ActDCF =0.354 | MinDCF =0.341
+Quadratic Regression | Lambda =2.34e-05 | Normalized | PCA = 6 | ActDCF =0.363 | MinDCF =0.348
+Quadratic Regression | Lambda =2.34e-05 | Normalized | PCA = 7 | ActDCF =0.325 | MinDCF =0.314
+Quadratic Regression | Lambda =2.34e-05 | Normalized | PCA = 8 | ActDCF =0.304 | MinDCF =0.299
+Quadratic Regression | Lambda =2.34e-05 | Normalized | PCA = 9 | ActDCF =0.298 | MinDCF =0.291
+Quadratic Regression | Lambda =2.34e-05 | Normalized | PCA = 10 | ActDCF =0.295 | MinDCF =0.285
+Quadratic Regression | Lambda =2.34e-05 | Normalized | PCA = 11 | ActDCF =0.302 | MinDCF =0.295
+Quadratic Regression | Lambda =5.46e-05 | Raw | PCA = 5 | ActDCF =0.452 | MinDCF =0.438
+Quadratic Regression | Lambda =5.46e-05 | Raw | PCA = 6 | ActDCF =0.388 | MinDCF =0.375
+Quadratic Regression | Lambda =5.46e-05 | Raw | PCA = 7 | ActDCF =0.379 | MinDCF =0.366
+Quadratic Regression | Lambda =5.46e-05 | Raw | PCA = 8 | ActDCF =0.396 | MinDCF =0.365
+Quadratic Regression | Lambda =5.46e-05 | Raw | PCA = 9 | ActDCF =0.396 | MinDCF =0.388
+Quadratic Regression | Lambda =5.46e-05 | Raw | PCA = 10 | ActDCF =0.373 | MinDCF =0.371
+Quadratic Regression | Lambda =5.46e-05 | Raw | PCA = 11 | ActDCF =0.392 | MinDCF =0.379
+Quadratic Regression | Lambda =5.46e-05 | Normalized | PCA = 5 | ActDCF =0.354 | MinDCF =0.341
+Quadratic Regression | Lambda =5.46e-05 | Normalized | PCA = 6 | ActDCF =0.363 | MinDCF =0.347
+Quadratic Regression | Lambda =5.46e-05 | Normalized | PCA = 7 | ActDCF =0.325 | MinDCF =0.314
+Quadratic Regression | Lambda =5.46e-05 | Normalized | PCA = 8 | ActDCF =0.304 | MinDCF =0.299
+Quadratic Regression | Lambda =5.46e-05 | Normalized | PCA = 9 | ActDCF =0.298 | MinDCF =0.291
+Quadratic Regression | Lambda =5.46e-05 | Normalized | PCA = 10 | ActDCF =0.295 | MinDCF =0.285
+Quadratic Regression | Lambda =5.46e-05 | Normalized | PCA = 11 | ActDCF =0.303 | MinDCF =0.293
+Quadratic Regression | Lambda =1.27e-04 | Raw | PCA = 5 | ActDCF =0.455 | MinDCF =0.445
+Quadratic Regression | Lambda =1.27e-04 | Raw | PCA = 6 | ActDCF =0.383 | MinDCF =0.376
+Quadratic Regression | Lambda =1.27e-04 | Raw | PCA = 7 | ActDCF =0.382 | MinDCF =0.359
+Quadratic Regression | Lambda =1.27e-04 | Raw | PCA = 8 | ActDCF =0.402 | MinDCF =0.380
+Quadratic Regression | Lambda =1.27e-04 | Raw | PCA = 9 | ActDCF =0.386 | MinDCF =0.378
+Quadratic Regression | Lambda =1.27e-04 | Raw | PCA = 10 | ActDCF =0.395 | MinDCF =0.387
+Quadratic Regression | Lambda =1.27e-04 | Raw | PCA = 11 | ActDCF =0.405 | MinDCF =0.386
+Quadratic Regression | Lambda =1.27e-04 | Normalized | PCA = 5 | ActDCF =0.354 | MinDCF =0.341
+Quadratic Regression | Lambda =1.27e-04 | Normalized | PCA = 6 | ActDCF =0.362 | MinDCF =0.347
+Quadratic Regression | Lambda =1.27e-04 | Normalized | PCA = 7 | ActDCF =0.325 | MinDCF =0.314
+Quadratic Regression | Lambda =1.27e-04 | Normalized | PCA = 8 | ActDCF =0.306 | MinDCF =0.299
+Quadratic Regression | Lambda =1.27e-04 | Normalized | PCA = 9 | ActDCF =0.297 | MinDCF =0.291
+Quadratic Regression | Lambda =1.27e-04 | Normalized | PCA = 10 | ActDCF =0.294 | MinDCF =0.285
+Quadratic Regression | Lambda =1.27e-04 | Normalized | PCA = 11 | ActDCF =0.303 | MinDCF =0.293
+Quadratic Regression | Lambda =2.98e-04 | Raw | PCA = 5 | ActDCF =0.440 | MinDCF =0.439
+Quadratic Regression | Lambda =2.98e-04 | Raw | PCA = 6 | ActDCF =0.383 | MinDCF =0.364
+Quadratic Regression | Lambda =2.98e-04 | Raw | PCA = 7 | ActDCF =0.375 | MinDCF =0.358
+Quadratic Regression | Lambda =2.98e-04 | Raw | PCA = 8 | ActDCF =0.393 | MinDCF =0.367
+Quadratic Regression | Lambda =2.98e-04 | Raw | PCA = 9 | ActDCF =0.383 | MinDCF =0.375
+Quadratic Regression | Lambda =2.98e-04 | Raw | PCA = 10 | ActDCF =0.380 | MinDCF =0.370
+Quadratic Regression | Lambda =2.98e-04 | Raw | PCA = 11 | ActDCF =0.400 | MinDCF =0.395
+Quadratic Regression | Lambda =2.98e-04 | Normalized | PCA = 5 | ActDCF =0.356 | MinDCF =0.341
+Quadratic Regression | Lambda =2.98e-04 | Normalized | PCA = 6 | ActDCF =0.363 | MinDCF =0.347
+Quadratic Regression | Lambda =2.98e-04 | Normalized | PCA = 7 | ActDCF =0.326 | MinDCF =0.314
+Quadratic Regression | Lambda =2.98e-04 | Normalized | PCA = 8 | ActDCF =0.304 | MinDCF =0.299
+Quadratic Regression | Lambda =2.98e-04 | Normalized | PCA = 9 | ActDCF =0.299 | MinDCF =0.290
+Quadratic Regression | Lambda =2.98e-04 | Normalized | PCA = 10 | ActDCF =0.296 | MinDCF =0.287
+Quadratic Regression | Lambda =2.98e-04 | Normalized | PCA = 11 | ActDCF =0.299 | MinDCF =0.293
+Quadratic Regression | Lambda =6.95e-04 | Raw | PCA = 5 | ActDCF =0.454 | MinDCF =0.449
+Quadratic Regression | Lambda =6.95e-04 | Raw | PCA = 6 | ActDCF =0.380 | MinDCF =0.365
+Quadratic Regression | Lambda =6.95e-04 | Raw | PCA = 7 | ActDCF =0.386 | MinDCF =0.365
+Quadratic Regression | Lambda =6.95e-04 | Raw | PCA = 8 | ActDCF =0.391 | MinDCF =0.364
+Quadratic Regression | Lambda =6.95e-04 | Raw | PCA = 9 | ActDCF =0.383 | MinDCF =0.366
+Quadratic Regression | Lambda =6.95e-04 | Raw | PCA = 10 | ActDCF =0.379 | MinDCF =0.375
+Quadratic Regression | Lambda =6.95e-04 | Raw | PCA = 11 | ActDCF =0.415 | MinDCF =0.397
+Quadratic Regression | Lambda =6.95e-04 | Normalized | PCA = 5 | ActDCF =0.354 | MinDCF =0.340
+Quadratic Regression | Lambda =6.95e-04 | Normalized | PCA = 6 | ActDCF =0.362 | MinDCF =0.347
+Quadratic Regression | Lambda =6.95e-04 | Normalized | PCA = 7 | ActDCF =0.326 | MinDCF =0.313
+Quadratic Regression | Lambda =6.95e-04 | Normalized | PCA = 8 | ActDCF =0.306 | MinDCF =0.299
+Quadratic Regression | Lambda =6.95e-04 | Normalized | PCA = 9 | ActDCF =0.296 | MinDCF =0.290
+Quadratic Regression | Lambda =6.95e-04 | Normalized | PCA = 10 | ActDCF =0.295 | MinDCF =0.286
+Quadratic Regression | Lambda =6.95e-04 | Normalized | PCA = 11 | ActDCF =0.297 | MinDCF =0.292
+Quadratic Regression | Lambda =1.62e-03 | Raw | PCA = 5 | ActDCF =0.437 | MinDCF =0.436
+Quadratic Regression | Lambda =1.62e-03 | Raw | PCA = 6 | ActDCF =0.390 | MinDCF =0.366
+Quadratic Regression | Lambda =1.62e-03 | Raw | PCA = 7 | ActDCF =0.385 | MinDCF =0.354
+Quadratic Regression | Lambda =1.62e-03 | Raw | PCA = 8 | ActDCF =0.400 | MinDCF =0.371
+Quadratic Regression | Lambda =1.62e-03 | Raw | PCA = 9 | ActDCF =0.378 | MinDCF =0.373
+Quadratic Regression | Lambda =1.62e-03 | Raw | PCA = 10 | ActDCF =0.411 | MinDCF =0.396
+Quadratic Regression | Lambda =1.62e-03 | Raw | PCA = 11 | ActDCF =0.400 | MinDCF =0.391
+Quadratic Regression | Lambda =1.62e-03 | Normalized | PCA = 5 | ActDCF =0.352 | MinDCF =0.340
+Quadratic Regression | Lambda =1.62e-03 | Normalized | PCA = 6 | ActDCF =0.362 | MinDCF =0.347
+Quadratic Regression | Lambda =1.62e-03 | Normalized | PCA = 7 | ActDCF =0.325 | MinDCF =0.315
+Quadratic Regression | Lambda =1.62e-03 | Normalized | PCA = 8 | ActDCF =0.308 | MinDCF =0.299
+Quadratic Regression | Lambda =1.62e-03 | Normalized | PCA = 9 | ActDCF =0.297 | MinDCF =0.289
+Quadratic Regression | Lambda =1.62e-03 | Normalized | PCA = 10 | ActDCF =0.297 | MinDCF =0.285
+Quadratic Regression | Lambda =1.62e-03 | Normalized | PCA = 11 | ActDCF =0.299 | MinDCF =0.292
+Quadratic Regression | Lambda =3.79e-03 | Raw | PCA = 5 | ActDCF =0.451 | MinDCF =0.439
+Quadratic Regression | Lambda =3.79e-03 | Raw | PCA = 6 | ActDCF =0.378 | MinDCF =0.371
+Quadratic Regression | Lambda =3.79e-03 | Raw | PCA = 7 | ActDCF =0.384 | MinDCF =0.365
+Quadratic Regression | Lambda =3.79e-03 | Raw | PCA = 8 | ActDCF =0.379 | MinDCF =0.363
+Quadratic Regression | Lambda =3.79e-03 | Raw | PCA = 9 | ActDCF =0.398 | MinDCF =0.377
+Quadratic Regression | Lambda =3.79e-03 | Raw | PCA = 10 | ActDCF =0.389 | MinDCF =0.385
+Quadratic Regression | Lambda =3.79e-03 | Raw | PCA = 11 | ActDCF =0.391 | MinDCF =0.383
+Quadratic Regression | Lambda =3.79e-03 | Normalized | PCA = 5 | ActDCF =0.352 | MinDCF =0.339
+Quadratic Regression | Lambda =3.79e-03 | Normalized | PCA = 6 | ActDCF =0.363 | MinDCF =0.347
+Quadratic Regression | Lambda =3.79e-03 | Normalized | PCA = 7 | ActDCF =0.328 | MinDCF =0.313
+Quadratic Regression | Lambda =3.79e-03 | Normalized | PCA = 8 | ActDCF =0.306 | MinDCF =0.301
+Quadratic Regression | Lambda =3.79e-03 | Normalized | PCA = 9 | ActDCF =0.298 | MinDCF =0.284
+Quadratic Regression | Lambda =3.79e-03 | Normalized | PCA = 10 | ActDCF =0.288 | MinDCF =0.285
+Quadratic Regression | Lambda =3.79e-03 | Normalized | PCA = 11 | ActDCF =0.294 | MinDCF =0.290
+Quadratic Regression | Lambda =8.86e-03 | Raw | PCA = 5 | ActDCF =0.442 | MinDCF =0.440
+Quadratic Regression | Lambda =8.86e-03 | Raw | PCA = 6 | ActDCF =0.375 | MinDCF =0.365
+Quadratic Regression | Lambda =8.86e-03 | Raw | PCA = 7 | ActDCF =0.377 | MinDCF =0.354
+Quadratic Regression | Lambda =8.86e-03 | Raw | PCA = 8 | ActDCF =0.384 | MinDCF =0.376
+Quadratic Regression | Lambda =8.86e-03 | Raw | PCA = 9 | ActDCF =0.386 | MinDCF =0.374
+Quadratic Regression | Lambda =8.86e-03 | Raw | PCA = 10 | ActDCF =0.382 | MinDCF =0.379
+Quadratic Regression | Lambda =8.86e-03 | Raw | PCA = 11 | ActDCF =0.396 | MinDCF =0.382
+Quadratic Regression | Lambda =8.86e-03 | Normalized | PCA = 5 | ActDCF =0.344 | MinDCF =0.338
+Quadratic Regression | Lambda =8.86e-03 | Normalized | PCA = 6 | ActDCF =0.358 | MinDCF =0.348
+Quadratic Regression | Lambda =8.86e-03 | Normalized | PCA = 7 | ActDCF =0.326 | MinDCF =0.317
+Quadratic Regression | Lambda =8.86e-03 | Normalized | PCA = 8 | ActDCF =0.313 | MinDCF =0.299
+Quadratic Regression | Lambda =8.86e-03 | Normalized | PCA = 9 | ActDCF =0.289 | MinDCF =0.285
+Quadratic Regression | Lambda =8.86e-03 | Normalized | PCA = 10 | ActDCF =0.285 | MinDCF =0.285
+Quadratic Regression | Lambda =8.86e-03 | Normalized | PCA = 11 | ActDCF =0.293 | MinDCF =0.287
+Quadratic Regression | Lambda =2.07e-02 | Raw | PCA = 5 | ActDCF =0.437 | MinDCF =0.438
+Quadratic Regression | Lambda =2.07e-02 | Raw | PCA = 6 | ActDCF =0.380 | MinDCF =0.364
+Quadratic Regression | Lambda =2.07e-02 | Raw | PCA = 7 | ActDCF =0.381 | MinDCF =0.359
+Quadratic Regression | Lambda =2.07e-02 | Raw | PCA = 8 | ActDCF =0.406 | MinDCF =0.383
+Quadratic Regression | Lambda =2.07e-02 | Raw | PCA = 9 | ActDCF =0.373 | MinDCF =0.370
+Quadratic Regression | Lambda =2.07e-02 | Raw | PCA = 10 | ActDCF =0.387 | MinDCF =0.375
+Quadratic Regression | Lambda =2.07e-02 | Raw | PCA = 11 | ActDCF =0.409 | MinDCF =0.389
+Quadratic Regression | Lambda =2.07e-02 | Normalized | PCA = 5 | ActDCF =0.345 | MinDCF =0.336
+Quadratic Regression | Lambda =2.07e-02 | Normalized | PCA = 6 | ActDCF =0.356 | MinDCF =0.350
+Quadratic Regression | Lambda =2.07e-02 | Normalized | PCA = 7 | ActDCF =0.332 | MinDCF =0.318
+Quadratic Regression | Lambda =2.07e-02 | Normalized | PCA = 8 | ActDCF =0.314 | MinDCF =0.303
+Quadratic Regression | Lambda =2.07e-02 | Normalized | PCA = 9 | ActDCF =0.295 | MinDCF =0.291
+Quadratic Regression | Lambda =2.07e-02 | Normalized | PCA = 10 | ActDCF =0.290 | MinDCF =0.280
+Quadratic Regression | Lambda =2.07e-02 | Normalized | PCA = 11 | ActDCF =0.291 | MinDCF =0.288
+Quadratic Regression | Lambda =4.83e-02 | Raw | PCA = 5 | ActDCF =0.447 | MinDCF =0.443
+Quadratic Regression | Lambda =4.83e-02 | Raw | PCA = 6 | ActDCF =0.380 | MinDCF =0.368
+Quadratic Regression | Lambda =4.83e-02 | Raw | PCA = 7 | ActDCF =0.374 | MinDCF =0.362
+Quadratic Regression | Lambda =4.83e-02 | Raw | PCA = 8 | ActDCF =0.394 | MinDCF =0.376
+Quadratic Regression | Lambda =4.83e-02 | Raw | PCA = 9 | ActDCF =0.377 | MinDCF =0.374
+Quadratic Regression | Lambda =4.83e-02 | Raw | PCA = 10 | ActDCF =0.394 | MinDCF =0.386
+Quadratic Regression | Lambda =4.83e-02 | Raw | PCA = 11 | ActDCF =0.404 | MinDCF =0.387
+Quadratic Regression | Lambda =4.83e-02 | Normalized | PCA = 5 | ActDCF =0.348 | MinDCF =0.343
+Quadratic Regression | Lambda =4.83e-02 | Normalized | PCA = 6 | ActDCF =0.356 | MinDCF =0.349
+Quadratic Regression | Lambda =4.83e-02 | Normalized | PCA = 7 | ActDCF =0.329 | MinDCF =0.316
+Quadratic Regression | Lambda =4.83e-02 | Normalized | PCA = 8 | ActDCF =0.313 | MinDCF =0.308
+Quadratic Regression | Lambda =4.83e-02 | Normalized | PCA = 9 | ActDCF =0.308 | MinDCF =0.298
+Quadratic Regression | Lambda =4.83e-02 | Normalized | PCA = 10 | ActDCF =0.291 | MinDCF =0.289
+Quadratic Regression | Lambda =4.83e-02 | Normalized | PCA = 11 | ActDCF =0.294 | MinDCF =0.290
+Quadratic Regression | Lambda =1.13e-01 | Raw | PCA = 5 | ActDCF =0.440 | MinDCF =0.437
+Quadratic Regression | Lambda =1.13e-01 | Raw | PCA = 6 | ActDCF =0.376 | MinDCF =0.357
+Quadratic Regression | Lambda =1.13e-01 | Raw | PCA = 7 | ActDCF =0.382 | MinDCF =0.361
+Quadratic Regression | Lambda =1.13e-01 | Raw | PCA = 8 | ActDCF =0.397 | MinDCF =0.379
+Quadratic Regression | Lambda =1.13e-01 | Raw | PCA = 9 | ActDCF =0.367 | MinDCF =0.353
+Quadratic Regression | Lambda =1.13e-01 | Raw | PCA = 10 | ActDCF =0.383 | MinDCF =0.375
+Quadratic Regression | Lambda =1.13e-01 | Raw | PCA = 11 | ActDCF =0.389 | MinDCF =0.378
+Quadratic Regression | Lambda =1.13e-01 | Normalized | PCA = 5 | ActDCF =0.357 | MinDCF =0.343
+Quadratic Regression | Lambda =1.13e-01 | Normalized | PCA = 6 | ActDCF =0.356 | MinDCF =0.348
+Quadratic Regression | Lambda =1.13e-01 | Normalized | PCA = 7 | ActDCF =0.334 | MinDCF =0.327
+Quadratic Regression | Lambda =1.13e-01 | Normalized | PCA = 8 | ActDCF =0.321 | MinDCF =0.318
+Quadratic Regression | Lambda =1.13e-01 | Normalized | PCA = 9 | ActDCF =0.309 | MinDCF =0.306
+Quadratic Regression | Lambda =1.13e-01 | Normalized | PCA = 10 | ActDCF =0.305 | MinDCF =0.303
+Quadratic Regression | Lambda =1.13e-01 | Normalized | PCA = 11 | ActDCF =0.303 | MinDCF =0.294
+Quadratic Regression | Lambda =2.64e-01 | Raw | PCA = 5 | ActDCF =0.451 | MinDCF =0.446
+Quadratic Regression | Lambda =2.64e-01 | Raw | PCA = 6 | ActDCF =0.380 | MinDCF =0.358
+Quadratic Regression | Lambda =2.64e-01 | Raw | PCA = 7 | ActDCF =0.378 | MinDCF =0.366
+Quadratic Regression | Lambda =2.64e-01 | Raw | PCA = 8 | ActDCF =0.415 | MinDCF =0.376
+Quadratic Regression | Lambda =2.64e-01 | Raw | PCA = 9 | ActDCF =0.390 | MinDCF =0.373
+Quadratic Regression | Lambda =2.64e-01 | Raw | PCA = 10 | ActDCF =0.409 | MinDCF =0.396
+Quadratic Regression | Lambda =2.64e-01 | Raw | PCA = 11 | ActDCF =0.398 | MinDCF =0.383
+Quadratic Regression | Lambda =2.64e-01 | Normalized | PCA = 5 | ActDCF =0.362 | MinDCF =0.358
+Quadratic Regression | Lambda =2.64e-01 | Normalized | PCA = 6 | ActDCF =0.374 | MinDCF =0.362
+Quadratic Regression | Lambda =2.64e-01 | Normalized | PCA = 7 | ActDCF =0.341 | MinDCF =0.338
+Quadratic Regression | Lambda =2.64e-01 | Normalized | PCA = 8 | ActDCF =0.335 | MinDCF =0.332
+Quadratic Regression | Lambda =2.64e-01 | Normalized | PCA = 9 | ActDCF =0.331 | MinDCF =0.325
+Quadratic Regression | Lambda =2.64e-01 | Normalized | PCA = 10 | ActDCF =0.317 | MinDCF =0.313
+Quadratic Regression | Lambda =2.64e-01 | Normalized | PCA = 11 | ActDCF =0.321 | MinDCF =0.315
+Quadratic Regression | Lambda =6.16e-01 | Raw | PCA = 5 | ActDCF =0.452 | MinDCF =0.443
+Quadratic Regression | Lambda =6.16e-01 | Raw | PCA = 6 | ActDCF =0.374 | MinDCF =0.366
+Quadratic Regression | Lambda =6.16e-01 | Raw | PCA = 7 | ActDCF =0.380 | MinDCF =0.365
+Quadratic Regression | Lambda =6.16e-01 | Raw | PCA = 8 | ActDCF =0.400 | MinDCF =0.386
+Quadratic Regression | Lambda =6.16e-01 | Raw | PCA = 9 | ActDCF =0.384 | MinDCF =0.364
+Quadratic Regression | Lambda =6.16e-01 | Raw | PCA = 10 | ActDCF =0.397 | MinDCF =0.382
+Quadratic Regression | Lambda =6.16e-01 | Raw | PCA = 11 | ActDCF =0.393 | MinDCF =0.386
+Quadratic Regression | Lambda =6.16e-01 | Normalized | PCA = 5 | ActDCF =0.396 | MinDCF =0.381
+Quadratic Regression | Lambda =6.16e-01 | Normalized | PCA = 6 | ActDCF =0.387 | MinDCF =0.374
+Quadratic Regression | Lambda =6.16e-01 | Normalized | PCA = 7 | ActDCF =0.369 | MinDCF =0.357
+Quadratic Regression | Lambda =6.16e-01 | Normalized | PCA = 8 | ActDCF =0.352 | MinDCF =0.345
+Quadratic Regression | Lambda =6.16e-01 | Normalized | PCA = 9 | ActDCF =0.350 | MinDCF =0.338
+Quadratic Regression | Lambda =6.16e-01 | Normalized | PCA = 10 | ActDCF =0.343 | MinDCF =0.332
+Quadratic Regression | Lambda =6.16e-01 | Normalized | PCA = 11 | ActDCF =0.339 | MinDCF =0.331
+Quadratic Regression | Lambda =1.44e+00 | Raw | PCA = 5 | ActDCF =0.453 | MinDCF =0.449
+Quadratic Regression | Lambda =1.44e+00 | Raw | PCA = 6 | ActDCF =0.380 | MinDCF =0.366
+Quadratic Regression | Lambda =1.44e+00 | Raw | PCA = 7 | ActDCF =0.378 | MinDCF =0.367
+Quadratic Regression | Lambda =1.44e+00 | Raw | PCA = 8 | ActDCF =0.382 | MinDCF =0.377
+Quadratic Regression | Lambda =1.44e+00 | Raw | PCA = 9 | ActDCF =0.378 | MinDCF =0.368
+Quadratic Regression | Lambda =1.44e+00 | Raw | PCA = 10 | ActDCF =0.383 | MinDCF =0.382
+Quadratic Regression | Lambda =1.44e+00 | Raw | PCA = 11 | ActDCF =0.418 | MinDCF =0.404
+Quadratic Regression | Lambda =1.44e+00 | Normalized | PCA = 5 | ActDCF =0.427 | MinDCF =0.414
+Quadratic Regression | Lambda =1.44e+00 | Normalized | PCA = 6 | ActDCF =0.422 | MinDCF =0.392
+Quadratic Regression | Lambda =1.44e+00 | Normalized | PCA = 7 | ActDCF =0.406 | MinDCF =0.380
+Quadratic Regression | Lambda =1.44e+00 | Normalized | PCA = 8 | ActDCF =0.388 | MinDCF =0.372
+Quadratic Regression | Lambda =1.44e+00 | Normalized | PCA = 9 | ActDCF =0.392 | MinDCF =0.367
+Quadratic Regression | Lambda =1.44e+00 | Normalized | PCA = 10 | ActDCF =0.386 | MinDCF =0.361
+Quadratic Regression | Lambda =1.44e+00 | Normalized | PCA = 11 | ActDCF =0.387 | MinDCF =0.363
+Quadratic Regression | Lambda =3.36e+00 | Raw | PCA = 5 | ActDCF =0.450 | MinDCF =0.447
+Quadratic Regression | Lambda =3.36e+00 | Raw | PCA = 6 | ActDCF =0.375 | MinDCF =0.358
+Quadratic Regression | Lambda =3.36e+00 | Raw | PCA = 7 | ActDCF =0.376 | MinDCF =0.362
+Quadratic Regression | Lambda =3.36e+00 | Raw | PCA = 8 | ActDCF =0.396 | MinDCF =0.372
+Quadratic Regression | Lambda =3.36e+00 | Raw | PCA = 9 | ActDCF =0.391 | MinDCF =0.371
+Quadratic Regression | Lambda =3.36e+00 | Raw | PCA = 10 | ActDCF =0.393 | MinDCF =0.385
+Quadratic Regression | Lambda =3.36e+00 | Raw | PCA = 11 | ActDCF =0.402 | MinDCF =0.379
+Quadratic Regression | Lambda =3.36e+00 | Normalized | PCA = 5 | ActDCF =0.469 | MinDCF =0.437
+Quadratic Regression | Lambda =3.36e+00 | Normalized | PCA = 6 | ActDCF =0.442 | MinDCF =0.427
+Quadratic Regression | Lambda =3.36e+00 | Normalized | PCA = 7 | ActDCF =0.436 | MinDCF =0.418
+Quadratic Regression | Lambda =3.36e+00 | Normalized | PCA = 8 | ActDCF =0.429 | MinDCF =0.408
+Quadratic Regression | Lambda =3.36e+00 | Normalized | PCA = 9 | ActDCF =0.422 | MinDCF =0.405
+Quadratic Regression | Lambda =3.36e+00 | Normalized | PCA = 10 | ActDCF =0.419 | MinDCF =0.399
+Quadratic Regression | Lambda =3.36e+00 | Normalized | PCA = 11 | ActDCF =0.419 | MinDCF =0.403
+Quadratic Regression | Lambda =7.85e+00 | Raw | PCA = 5 | ActDCF =0.472 | MinDCF =0.467
+Quadratic Regression | Lambda =7.85e+00 | Raw | PCA = 6 | ActDCF =0.377 | MinDCF =0.361
+Quadratic Regression | Lambda =7.85e+00 | Raw | PCA = 7 | ActDCF =0.385 | MinDCF =0.365
+Quadratic Regression | Lambda =7.85e+00 | Raw | PCA = 8 | ActDCF =0.376 | MinDCF =0.363
+Quadratic Regression | Lambda =7.85e+00 | Raw | PCA = 9 | ActDCF =0.365 | MinDCF =0.357
+Quadratic Regression | Lambda =7.85e+00 | Raw | PCA = 10 | ActDCF =0.407 | MinDCF =0.400
+Quadratic Regression | Lambda =7.85e+00 | Raw | PCA = 11 | ActDCF =0.410 | MinDCF =0.392
+Quadratic Regression | Lambda =7.85e+00 | Normalized | PCA = 5 | ActDCF =0.492 | MinDCF =0.476
+Quadratic Regression | Lambda =7.85e+00 | Normalized | PCA = 6 | ActDCF =0.478 | MinDCF =0.456
+Quadratic Regression | Lambda =7.85e+00 | Normalized | PCA = 7 | ActDCF =0.454 | MinDCF =0.445
+Quadratic Regression | Lambda =7.85e+00 | Normalized | PCA = 8 | ActDCF =0.447 | MinDCF =0.437
+Quadratic Regression | Lambda =7.85e+00 | Normalized | PCA = 9 | ActDCF =0.449 | MinDCF =0.431
+Quadratic Regression | Lambda =7.85e+00 | Normalized | PCA = 10 | ActDCF =0.435 | MinDCF =0.423
+Quadratic Regression | Lambda =7.85e+00 | Normalized | PCA = 11 | ActDCF =0.435 | MinDCF =0.427
+Quadratic Regression | Lambda =1.83e+01 | Raw | PCA = 5 | ActDCF =0.492 | MinDCF =0.487
+Quadratic Regression | Lambda =1.83e+01 | Raw | PCA = 6 | ActDCF =0.379 | MinDCF =0.365
+Quadratic Regression | Lambda =1.83e+01 | Raw | PCA = 7 | ActDCF =0.380 | MinDCF =0.347
+Quadratic Regression | Lambda =1.83e+01 | Raw | PCA = 8 | ActDCF =0.391 | MinDCF =0.376
+Quadratic Regression | Lambda =1.83e+01 | Raw | PCA = 9 | ActDCF =0.372 | MinDCF =0.365
+Quadratic Regression | Lambda =1.83e+01 | Raw | PCA = 10 | ActDCF =0.382 | MinDCF =0.371
+Quadratic Regression | Lambda =1.83e+01 | Raw | PCA = 11 | ActDCF =0.410 | MinDCF =0.392
+Quadratic Regression | Lambda =1.83e+01 | Normalized | PCA = 5 | ActDCF =0.506 | MinDCF =0.493
+Quadratic Regression | Lambda =1.83e+01 | Normalized | PCA = 6 | ActDCF =0.486 | MinDCF =0.471
+Quadratic Regression | Lambda =1.83e+01 | Normalized | PCA = 7 | ActDCF =0.473 | MinDCF =0.462
+Quadratic Regression | Lambda =1.83e+01 | Normalized | PCA = 8 | ActDCF =0.471 | MinDCF =0.452
+Quadratic Regression | Lambda =1.83e+01 | Normalized | PCA = 9 | ActDCF =0.463 | MinDCF =0.451
+Quadratic Regression | Lambda =1.83e+01 | Normalized | PCA = 10 | ActDCF =0.454 | MinDCF =0.443
+Quadratic Regression | Lambda =1.83e+01 | Normalized | PCA = 11 | ActDCF =0.454 | MinDCF =0.440
+Quadratic Regression | Lambda =4.28e+01 | Raw | PCA = 5 | ActDCF =0.539 | MinDCF =0.508
+Quadratic Regression | Lambda =4.28e+01 | Raw | PCA = 6 | ActDCF =0.389 | MinDCF =0.379
+Quadratic Regression | Lambda =4.28e+01 | Raw | PCA = 7 | ActDCF =0.378 | MinDCF =0.369
+Quadratic Regression | Lambda =4.28e+01 | Raw | PCA = 8 | ActDCF =0.388 | MinDCF =0.371
+Quadratic Regression | Lambda =4.28e+01 | Raw | PCA = 9 | ActDCF =0.382 | MinDCF =0.369
+Quadratic Regression | Lambda =4.28e+01 | Raw | PCA = 10 | ActDCF =0.413 | MinDCF =0.396
+Quadratic Regression | Lambda =4.28e+01 | Raw | PCA = 11 | ActDCF =0.395 | MinDCF =0.382
+Quadratic Regression | Lambda =4.28e+01 | Normalized | PCA = 5 | ActDCF =0.516 | MinDCF =0.520
+Quadratic Regression | Lambda =4.28e+01 | Normalized | PCA = 6 | ActDCF =0.495 | MinDCF =0.512
+Quadratic Regression | Lambda =4.28e+01 | Normalized | PCA = 7 | ActDCF =0.480 | MinDCF =0.483
+Quadratic Regression | Lambda =4.28e+01 | Normalized | PCA = 8 | ActDCF =0.481 | MinDCF =0.480
+Quadratic Regression | Lambda =4.28e+01 | Normalized | PCA = 9 | ActDCF =0.480 | MinDCF =0.476
+Quadratic Regression | Lambda =4.28e+01 | Normalized | PCA = 10 | ActDCF =0.471 | MinDCF =0.471
+Quadratic Regression | Lambda =4.28e+01 | Normalized | PCA = 11 | ActDCF =0.469 | MinDCF =0.467
+Quadratic Regression | Lambda =1.00e+02 | Raw | PCA = 5 | ActDCF =0.569 | MinDCF =0.519
+Quadratic Regression | Lambda =1.00e+02 | Raw | PCA = 6 | ActDCF =0.405 | MinDCF =0.396
+Quadratic Regression | Lambda =1.00e+02 | Raw | PCA = 7 | ActDCF =0.402 | MinDCF =0.398
+Quadratic Regression | Lambda =1.00e+02 | Raw | PCA = 8 | ActDCF =0.404 | MinDCF =0.404
+Quadratic Regression | Lambda =1.00e+02 | Raw | PCA = 9 | ActDCF =0.395 | MinDCF =0.389
+Quadratic Regression | Lambda =1.00e+02 | Raw | PCA = 10 | ActDCF =0.405 | MinDCF =0.403
+Quadratic Regression | Lambda =1.00e+02 | Raw | PCA = 11 | ActDCF =0.414 | MinDCF =0.400
+Quadratic Regression | Lambda =1.00e+02 | Normalized | PCA = 5 | ActDCF =0.524 | MinDCF =0.597
+Quadratic Regression | Lambda =1.00e+02 | Normalized | PCA = 6 | ActDCF =0.499 | MinDCF =0.588
+Quadratic Regression | Lambda =1.00e+02 | Normalized | PCA = 7 | ActDCF =0.482 | MinDCF =0.565
+Quadratic Regression | Lambda =1.00e+02 | Normalized | PCA = 8 | ActDCF =0.485 | MinDCF =0.560
+Quadratic Regression | Lambda =1.00e+02 | Normalized | PCA = 9 | ActDCF =0.483 | MinDCF =0.560
+Quadratic Regression | Lambda =1.00e+02 | Normalized | PCA = 10 | ActDCF =0.473 | MinDCF =0.560
+Quadratic Regression | Lambda =1.00e+02 | Normalized | PCA = 11 | ActDCF =0.470 | MinDCF =0.557
+SVM Linear | K = 0.0 | C = 0.1 | Raw | PCA = 5 | ActDCF =0.699 | MinDCF =0.696
+SVM Linear | K = 0.0 | C = 0.1 | Raw | PCA = 6 | ActDCF =0.467 | MinDCF =0.436
+SVM Linear | K = 0.0 | C = 0.1 | Raw | PCA = 7 | ActDCF =0.600 | MinDCF =0.535
+SVM Linear | K = 0.0 | C = 0.1 | Raw | PCA = 8 | ActDCF =0.485 | MinDCF =0.420
+SVM Linear | K = 0.0 | C = 0.1 | Raw | PCA = 9 | ActDCF =0.521 | MinDCF =0.432
+SVM Linear | K = 0.0 | C = 0.1 | Raw | PCA = 10 | ActDCF =0.514 | MinDCF =0.429
+SVM Linear | K = 0.0 | C = 0.1 | Raw | PCA = 11 | ActDCF =0.465 | MinDCF =0.406
+SVM Linear | K = 0.0 | C = 1.0 | Raw | PCA = 5 | ActDCF =0.808 | MinDCF =0.735
+SVM Linear | K = 0.0 | C = 1.0 | Raw | PCA = 6 | ActDCF =0.538 | MinDCF =0.529
+SVM Linear | K = 0.0 | C = 1.0 | Raw | PCA = 7 | ActDCF =0.673 | MinDCF =0.635
+SVM Linear | K = 0.0 | C = 1.0 | Raw | PCA = 8 | ActDCF =0.687 | MinDCF =0.666
+SVM Linear | K = 0.0 | C = 1.0 | Raw | PCA = 9 | ActDCF =0.785 | MinDCF =0.763
+SVM Linear | K = 0.0 | C = 1.0 | Raw | PCA = 10 | ActDCF =0.615 | MinDCF =0.578
+SVM Linear | K = 0.0 | C = 1.0 | Raw | PCA = 11 | ActDCF =0.859 | MinDCF =0.768
+SVM Linear | K = 0.0 | C = 10.0 | Raw | PCA = 5 | ActDCF =0.989 | MinDCF =0.903
+SVM Linear | K = 0.0 | C = 10.0 | Raw | PCA = 6 | ActDCF =0.968 | MinDCF =0.845
+SVM Linear | K = 0.0 | C = 10.0 | Raw | PCA = 7 | ActDCF =0.773 | MinDCF =0.746
+SVM Linear | K = 0.0 | C = 10.0 | Raw | PCA = 8 | ActDCF =0.989 | MinDCF =0.932
+SVM Linear | K = 0.0 | C = 10.0 | Raw | PCA = 9 | ActDCF =0.918 | MinDCF =0.848
+SVM Linear | K = 0.0 | C = 10.0 | Raw | PCA = 10 | ActDCF =0.905 | MinDCF =0.863
+SVM Linear | K = 0.0 | C = 10.0 | Raw | PCA = 11 | ActDCF =0.909 | MinDCF =0.861
+SVM Linear | K = 1.0 | C = 0.1 | Raw | PCA = 5 | ActDCF =0.650 | MinDCF =0.598
+SVM Linear | K = 1.0 | C = 0.1 | Raw | PCA = 6 | ActDCF =0.458 | MinDCF =0.421
+SVM Linear | K = 1.0 | C = 0.1 | Raw | PCA = 7 | ActDCF =0.631 | MinDCF =0.577
+SVM Linear | K = 1.0 | C = 0.1 | Raw | PCA = 8 | ActDCF =0.546 | MinDCF =0.534
+SVM Linear | K = 1.0 | C = 0.1 | Raw | PCA = 9 | ActDCF =0.457 | MinDCF =0.402
+SVM Linear | K = 1.0 | C = 0.1 | Raw | PCA = 10 | ActDCF =0.455 | MinDCF =0.405
+SVM Linear | K = 1.0 | C = 0.1 | Raw | PCA = 11 | ActDCF =0.479 | MinDCF =0.436
+SVM Linear | K = 1.0 | C = 1.0 | Raw | PCA = 5 | ActDCF =0.570 | MinDCF =0.542
+SVM Linear | K = 1.0 | C = 1.0 | Raw | PCA = 6 | ActDCF =0.593 | MinDCF =0.550
+SVM Linear | K = 1.0 | C = 1.0 | Raw | PCA = 7 | ActDCF =0.717 | MinDCF =0.634
+SVM Linear | K = 1.0 | C = 1.0 | Raw | PCA = 8 | ActDCF =0.680 | MinDCF =0.653
+SVM Linear | K = 1.0 | C = 1.0 | Raw | PCA = 9 | ActDCF =0.655 | MinDCF =0.641
+SVM Linear | K = 1.0 | C = 1.0 | Raw | PCA = 10 | ActDCF =0.583 | MinDCF =0.555
+SVM Linear | K = 1.0 | C = 1.0 | Raw | PCA = 11 | ActDCF =0.680 | MinDCF =0.507
+SVM Linear | K = 1.0 | C = 10.0 | Raw | PCA = 5 | ActDCF =0.897 | MinDCF =0.888
+SVM Linear | K = 1.0 | C = 10.0 | Raw | PCA = 6 | ActDCF =0.917 | MinDCF =0.889
+SVM Linear | K = 1.0 | C = 10.0 | Raw | PCA = 7 | ActDCF =0.829 | MinDCF =0.821
+SVM Linear | K = 1.0 | C = 10.0 | Raw | PCA = 8 | ActDCF =0.777 | MinDCF =0.760
+SVM Linear | K = 1.0 | C = 10.0 | Raw | PCA = 9 | ActDCF =0.953 | MinDCF =0.892
+SVM Linear | K = 1.0 | C = 10.0 | Raw | PCA = 10 | ActDCF =0.759 | MinDCF =0.754
+SVM Linear | K = 1.0 | C = 10.0 | Raw | PCA = 11 | ActDCF =0.974 | MinDCF =0.869
+SVM Linear | K = 10.0 | C = 0.1 | Raw | PCA = 5 | ActDCF =0.505 | MinDCF =0.435
+SVM Linear | K = 10.0 | C = 0.1 | Raw | PCA = 6 | ActDCF =0.570 | MinDCF =0.524
+SVM Linear | K = 10.0 | C = 0.1 | Raw | PCA = 7 | ActDCF =0.447 | MinDCF =0.384
+SVM Linear | K = 10.0 | C = 0.1 | Raw | PCA = 8 | ActDCF =0.462 | MinDCF =0.382
+SVM Linear | K = 10.0 | C = 0.1 | Raw | PCA = 9 | ActDCF =0.418 | MinDCF =0.411
+SVM Linear | K = 10.0 | C = 0.1 | Raw | PCA = 10 | ActDCF =0.437 | MinDCF =0.370
+SVM Linear | K = 10.0 | C = 0.1 | Raw | PCA = 11 | ActDCF =0.467 | MinDCF =0.378
+SVM Linear | K = 10.0 | C = 1.0 | Raw | PCA = 5 | ActDCF =0.727 | MinDCF =0.712
+SVM Linear | K = 10.0 | C = 1.0 | Raw | PCA = 6 | ActDCF =0.661 | MinDCF =0.619
+SVM Linear | K = 10.0 | C = 1.0 | Raw | PCA = 7 | ActDCF =0.713 | MinDCF =0.653
+SVM Linear | K = 10.0 | C = 1.0 | Raw | PCA = 8 | ActDCF =0.559 | MinDCF =0.546
+SVM Linear | K = 10.0 | C = 1.0 | Raw | PCA = 9 | ActDCF =0.706 | MinDCF =0.688
+SVM Linear | K = 10.0 | C = 1.0 | Raw | PCA = 10 | ActDCF =0.559 | MinDCF =0.542
+SVM Linear | K = 10.0 | C = 1.0 | Raw | PCA = 11 | ActDCF =0.776 | MinDCF =0.683
+SVM Linear | K = 10.0 | C = 10.0 | Raw | PCA = 5 | ActDCF =0.969 | MinDCF =0.876
+SVM Linear | K = 10.0 | C = 10.0 | Raw | PCA = 6 | ActDCF =0.964 | MinDCF =0.883
+SVM Linear | K = 10.0 | C = 10.0 | Raw | PCA = 7 | ActDCF =0.931 | MinDCF =0.904
+SVM Linear | K = 10.0 | C = 10.0 | Raw | PCA = 8 | ActDCF =0.937 | MinDCF =0.875
+SVM Linear | K = 10.0 | C = 10.0 | Raw | PCA = 9 | ActDCF =0.918 | MinDCF =0.809
+SVM Linear | K = 10.0 | C = 10.0 | Raw | PCA = 10 | ActDCF =0.941 | MinDCF =0.858
+SVM Linear | K = 10.0 | C = 10.0 | Raw | PCA = 11 | ActDCF =0.892 | MinDCF =0.753
+SVM Linear | K = 0.0 | C = 0.1 | Normalized | PCA = 5 | ActDCF =0.452 | MinDCF =0.381
+SVM Linear | K = 0.0 | C = 0.1 | Normalized | PCA = 6 | ActDCF =0.417 | MinDCF =0.374
+SVM Linear | K = 0.0 | C = 0.1 | Normalized | PCA = 7 | ActDCF =0.424 | MinDCF =0.374
+SVM Linear | K = 0.0 | C = 0.1 | Normalized | PCA = 8 | ActDCF =0.421 | MinDCF =0.375
+SVM Linear | K = 0.0 | C = 0.1 | Normalized | PCA = 9 | ActDCF =0.393 | MinDCF =0.346
+SVM Linear | K = 0.0 | C = 0.1 | Normalized | PCA = 10 | ActDCF =0.391 | MinDCF =0.337
+SVM Linear | K = 0.0 | C = 0.1 | Normalized | PCA = 11 | ActDCF =0.367 | MinDCF =0.334
+SVM Linear | K = 0.0 | C = 1.0 | Normalized | PCA = 5 | ActDCF =0.454 | MinDCF =0.378
+SVM Linear | K = 0.0 | C = 1.0 | Normalized | PCA = 6 | ActDCF =0.418 | MinDCF =0.374
+SVM Linear | K = 0.0 | C = 1.0 | Normalized | PCA = 7 | ActDCF =0.423 | MinDCF =0.376
+SVM Linear | K = 0.0 | C = 1.0 | Normalized | PCA = 8 | ActDCF =0.425 | MinDCF =0.376
+SVM Linear | K = 0.0 | C = 1.0 | Normalized | PCA = 9 | ActDCF =0.394 | MinDCF =0.345
+SVM Linear | K = 0.0 | C = 1.0 | Normalized | PCA = 10 | ActDCF =0.390 | MinDCF =0.338
+SVM Linear | K = 0.0 | C = 1.0 | Normalized | PCA = 11 | ActDCF =0.366 | MinDCF =0.341
+SVM Linear | K = 0.0 | C = 10.0 | Normalized | PCA = 5 | ActDCF =0.453 | MinDCF =0.378
+SVM Linear | K = 0.0 | C = 10.0 | Normalized | PCA = 6 | ActDCF =0.414 | MinDCF =0.378
+SVM Linear | K = 0.0 | C = 10.0 | Normalized | PCA = 7 | ActDCF =0.423 | MinDCF =0.378
+SVM Linear | K = 0.0 | C = 10.0 | Normalized | PCA = 8 | ActDCF =0.423 | MinDCF =0.376
+SVM Linear | K = 0.0 | C = 10.0 | Normalized | PCA = 9 | ActDCF =0.396 | MinDCF =0.346
+SVM Linear | K = 0.0 | C = 10.0 | Normalized | PCA = 10 | ActDCF =0.391 | MinDCF =0.338
+SVM Linear | K = 0.0 | C = 10.0 | Normalized | PCA = 11 | ActDCF =0.364 | MinDCF =0.341
+SVM Linear | K = 1.0 | C = 0.1 | Normalized | PCA = 5 | ActDCF =0.414 | MinDCF =0.369
+SVM Linear | K = 1.0 | C = 0.1 | Normalized | PCA = 6 | ActDCF =0.389 | MinDCF =0.375
+SVM Linear | K = 1.0 | C = 0.1 | Normalized | PCA = 7 | ActDCF =0.388 | MinDCF =0.378
+SVM Linear | K = 1.0 | C = 0.1 | Normalized | PCA = 8 | ActDCF =0.393 | MinDCF =0.364
+SVM Linear | K = 1.0 | C = 0.1 | Normalized | PCA = 9 | ActDCF =0.379 | MinDCF =0.349
+SVM Linear | K = 1.0 | C = 0.1 | Normalized | PCA = 10 | ActDCF =0.369 | MinDCF =0.343
+SVM Linear | K = 1.0 | C = 0.1 | Normalized | PCA = 11 | ActDCF =0.376 | MinDCF =0.346
+SVM Linear | K = 1.0 | C = 1.0 | Normalized | PCA = 5 | ActDCF =0.414 | MinDCF =0.371
+SVM Linear | K = 1.0 | C = 1.0 | Normalized | PCA = 6 | ActDCF =0.390 | MinDCF =0.376
+SVM Linear | K = 1.0 | C = 1.0 | Normalized | PCA = 7 | ActDCF =0.397 | MinDCF =0.381
+SVM Linear | K = 1.0 | C = 1.0 | Normalized | PCA = 8 | ActDCF =0.403 | MinDCF =0.367
+SVM Linear | K = 1.0 | C = 1.0 | Normalized | PCA = 9 | ActDCF =0.382 | MinDCF =0.347
+SVM Linear | K = 1.0 | C = 1.0 | Normalized | PCA = 10 | ActDCF =0.372 | MinDCF =0.347
+SVM Linear | K = 1.0 | C = 1.0 | Normalized | PCA = 11 | ActDCF =0.374 | MinDCF =0.349
+SVM Linear | K = 1.0 | C = 10.0 | Normalized | PCA = 5 | ActDCF =0.415 | MinDCF =0.371
+SVM Linear | K = 1.0 | C = 10.0 | Normalized | PCA = 6 | ActDCF =0.392 | MinDCF =0.376
+SVM Linear | K = 1.0 | C = 10.0 | Normalized | PCA = 7 | ActDCF =0.401 | MinDCF =0.383
+SVM Linear | K = 1.0 | C = 10.0 | Normalized | PCA = 8 | ActDCF =0.400 | MinDCF =0.366
+SVM Linear | K = 1.0 | C = 10.0 | Normalized | PCA = 9 | ActDCF =0.381 | MinDCF =0.350
+SVM Linear | K = 1.0 | C = 10.0 | Normalized | PCA = 10 | ActDCF =0.374 | MinDCF =0.346
+SVM Linear | K = 1.0 | C = 10.0 | Normalized | PCA = 11 | ActDCF =0.376 | MinDCF =0.351
+SVM Linear | K = 10.0 | C = 0.1 | Normalized | PCA = 5 | ActDCF =0.418 | MinDCF =0.369
+SVM Linear | K = 10.0 | C = 0.1 | Normalized | PCA = 6 | ActDCF =0.396 | MinDCF =0.375
+SVM Linear | K = 10.0 | C = 0.1 | Normalized | PCA = 7 | ActDCF =0.393 | MinDCF =0.377
+SVM Linear | K = 10.0 | C = 0.1 | Normalized | PCA = 8 | ActDCF =0.401 | MinDCF =0.367
+SVM Linear | K = 10.0 | C = 0.1 | Normalized | PCA = 9 | ActDCF =0.383 | MinDCF =0.346
+SVM Linear | K = 10.0 | C = 0.1 | Normalized | PCA = 10 | ActDCF =0.374 | MinDCF =0.343
+SVM Linear | K = 10.0 | C = 0.1 | Normalized | PCA = 11 | ActDCF =0.373 | MinDCF =0.346
+SVM Linear | K = 10.0 | C = 1.0 | Normalized | PCA = 5 | ActDCF =0.414 | MinDCF =0.371
+SVM Linear | K = 10.0 | C = 1.0 | Normalized | PCA = 6 | ActDCF =0.392 | MinDCF =0.375
+SVM Linear | K = 10.0 | C = 1.0 | Normalized | PCA = 7 | ActDCF =0.399 | MinDCF =0.382
+SVM Linear | K = 10.0 | C = 1.0 | Normalized | PCA = 8 | ActDCF =0.397 | MinDCF =0.366
+SVM Linear | K = 10.0 | C = 1.0 | Normalized | PCA = 9 | ActDCF =0.383 | MinDCF =0.346
+SVM Linear | K = 10.0 | C = 1.0 | Normalized | PCA = 10 | ActDCF =0.371 | MinDCF =0.347
+SVM Linear | K = 10.0 | C = 1.0 | Normalized | PCA = 11 | ActDCF =0.376 | MinDCF =0.351
+SVM Linear | K = 10.0 | C = 10.0 | Normalized | PCA = 5 | ActDCF =0.411 | MinDCF =0.380
+SVM Linear | K = 10.0 | C = 10.0 | Normalized | PCA = 6 | ActDCF =0.395 | MinDCF =0.379
+SVM Linear | K = 10.0 | C = 10.0 | Normalized | PCA = 7 | ActDCF =0.400 | MinDCF =0.383
+SVM Linear | K = 10.0 | C = 10.0 | Normalized | PCA = 8 | ActDCF =0.397 | MinDCF =0.367
+SVM Linear | K = 10.0 | C = 10.0 | Normalized | PCA = 9 | ActDCF =0.488 | MinDCF =0.456
+SVM Linear | K = 10.0 | C = 10.0 | Normalized | PCA = 10 | ActDCF =0.378 | MinDCF =0.346
+SVM Linear | K = 10.0 | C = 10.0 | Normalized | PCA = 11 | ActDCF =0.378 | MinDCF =0.351
+SVM Poly | K = 0.0 | C = 0.5 | d = 2.0 | c = 0.0 | Raw | PCA = 5 | ActDCF =0.926 | MinDCF =0.898
+SVM Poly | K = 0.0 | C = 0.5 | d = 2.0 | c = 0.0 | Raw | PCA = 6 | ActDCF =0.983 | MinDCF =0.949
+SVM Poly | K = 0.0 | C = 0.5 | d = 2.0 | c = 0.0 | Raw | PCA = 7 | ActDCF =0.984 | MinDCF =0.858
+SVM Poly | K = 0.0 | C = 0.5 | d = 2.0 | c = 0.0 | Raw | PCA = 8 | ActDCF =0.890 | MinDCF =0.871
+SVM Poly | K = 0.0 | C = 0.5 | d = 2.0 | c = 0.0 | Raw | PCA = 9 | ActDCF =0.937 | MinDCF =0.898
+SVM Poly | K = 0.0 | C = 0.5 | d = 2.0 | c = 0.0 | Raw | PCA = 10 | ActDCF =0.968 | MinDCF =0.905
+SVM Poly | K = 0.0 | C = 0.5 | d = 2.0 | c = 0.0 | Raw | PCA = 11 | ActDCF =0.913 | MinDCF =0.852
+SVM Poly | K = 0.0 | C = 0.5 | d = 2.0 | c = 1.0 | Raw | PCA = 5 | ActDCF =1.057 | MinDCF =0.930
+SVM Poly | K = 0.0 | C = 0.5 | d = 2.0 | c = 1.0 | Raw | PCA = 6 | ActDCF =0.931 | MinDCF =0.895
+SVM Poly | K = 0.0 | C = 0.5 | d = 2.0 | c = 1.0 | Raw | PCA = 7 | ActDCF =0.971 | MinDCF =0.879
+SVM Poly | K = 0.0 | C = 0.5 | d = 2.0 | c = 1.0 | Raw | PCA = 8 | ActDCF =0.971 | MinDCF =0.902
+SVM Poly | K = 0.0 | C = 0.5 | d = 2.0 | c = 1.0 | Raw | PCA = 9 | ActDCF =0.989 | MinDCF =0.883
+SVM Poly | K = 0.0 | C = 0.5 | d = 2.0 | c = 1.0 | Raw | PCA = 10 | ActDCF =0.959 | MinDCF =0.932
+SVM Poly | K = 0.0 | C = 0.5 | d = 2.0 | c = 1.0 | Raw | PCA = 11 | ActDCF =0.976 | MinDCF =0.905
+SVM Poly | K = 0.0 | C = 0.5 | d = 3.0 | c = 0.0 | Raw | PCA = 5 | ActDCF =0.950 | MinDCF =0.885
+SVM Poly | K = 0.0 | C = 0.5 | d = 3.0 | c = 0.0 | Raw | PCA = 6 | ActDCF =0.968 | MinDCF =0.910
+SVM Poly | K = 0.0 | C = 0.5 | d = 3.0 | c = 0.0 | Raw | PCA = 7 | ActDCF =0.954 | MinDCF =0.936
+SVM Poly | K = 0.0 | C = 0.5 | d = 3.0 | c = 0.0 | Raw | PCA = 8 | ActDCF =0.896 | MinDCF =0.864
+SVM Poly | K = 0.0 | C = 0.5 | d = 3.0 | c = 0.0 | Raw | PCA = 9 | ActDCF =0.995 | MinDCF =0.868
+SVM Poly | K = 0.0 | C = 0.5 | d = 3.0 | c = 0.0 | Raw | PCA = 10 | ActDCF =0.967 | MinDCF =0.881
+SVM Poly | K = 0.0 | C = 0.5 | d = 3.0 | c = 0.0 | Raw | PCA = 11 | ActDCF =0.958 | MinDCF =0.854
+SVM Poly | K = 0.0 | C = 0.5 | d = 3.0 | c = 1.0 | Raw | PCA = 5 | ActDCF =0.989 | MinDCF =0.854
+SVM Poly | K = 0.0 | C = 0.5 | d = 3.0 | c = 1.0 | Raw | PCA = 6 | ActDCF =0.944 | MinDCF =0.882
+SVM Poly | K = 0.0 | C = 0.5 | d = 3.0 | c = 1.0 | Raw | PCA = 7 | ActDCF =0.985 | MinDCF =0.908
+SVM Poly | K = 0.0 | C = 0.5 | d = 3.0 | c = 1.0 | Raw | PCA = 8 | ActDCF =0.944 | MinDCF =0.850
+SVM Poly | K = 0.0 | C = 0.5 | d = 3.0 | c = 1.0 | Raw | PCA = 9 | ActDCF =0.983 | MinDCF =0.873
+SVM Poly | K = 0.0 | C = 0.5 | d = 3.0 | c = 1.0 | Raw | PCA = 10 | ActDCF =0.970 | MinDCF =0.837
+SVM Poly | K = 0.0 | C = 0.5 | d = 3.0 | c = 1.0 | Raw | PCA = 11 | ActDCF =0.992 | MinDCF =0.814
+SVM Poly | K = 0.0 | C = 1.0 | d = 2.0 | c = 0.0 | Raw | PCA = 5 | ActDCF =0.985 | MinDCF =0.958
+SVM Poly | K = 0.0 | C = 1.0 | d = 2.0 | c = 0.0 | Raw | PCA = 6 | ActDCF =0.871 | MinDCF =0.862
+SVM Poly | K = 0.0 | C = 1.0 | d = 2.0 | c = 0.0 | Raw | PCA = 7 | ActDCF =0.958 | MinDCF =0.913
+SVM Poly | K = 0.0 | C = 1.0 | d = 2.0 | c = 0.0 | Raw | PCA = 8 | ActDCF =0.982 | MinDCF =0.909
+SVM Poly | K = 0.0 | C = 1.0 | d = 2.0 | c = 0.0 | Raw | PCA = 9 | ActDCF =1.019 | MinDCF =0.900
+SVM Poly | K = 0.0 | C = 1.0 | d = 2.0 | c = 0.0 | Raw | PCA = 10 | ActDCF =1.024 | MinDCF =0.909
+SVM Poly | K = 0.0 | C = 1.0 | d = 2.0 | c = 0.0 | Raw | PCA = 11 | ActDCF =0.925 | MinDCF =0.916
+SVM Poly | K = 0.0 | C = 1.0 | d = 2.0 | c = 1.0 | Raw | PCA = 5 | ActDCF =1.011 | MinDCF =0.958
+SVM Poly | K = 0.0 | C = 1.0 | d = 2.0 | c = 1.0 | Raw | PCA = 6 | ActDCF =0.997 | MinDCF =0.944
+SVM Poly | K = 0.0 | C = 1.0 | d = 2.0 | c = 1.0 | Raw | PCA = 7 | ActDCF =1.012 | MinDCF =0.935
+SVM Poly | K = 0.0 | C = 1.0 | d = 2.0 | c = 1.0 | Raw | PCA = 8 | ActDCF =0.928 | MinDCF =0.876
+SVM Poly | K = 0.0 | C = 1.0 | d = 2.0 | c = 1.0 | Raw | PCA = 9 | ActDCF =0.942 | MinDCF =0.876
+SVM Poly | K = 0.0 | C = 1.0 | d = 2.0 | c = 1.0 | Raw | PCA = 10 | ActDCF =0.954 | MinDCF =0.892
+SVM Poly | K = 0.0 | C = 1.0 | d = 2.0 | c = 1.0 | Raw | PCA = 11 | ActDCF =0.975 | MinDCF =0.906
+SVM Poly | K = 0.0 | C = 1.0 | d = 3.0 | c = 0.0 | Raw | PCA = 5 | ActDCF =0.984 | MinDCF =0.886
+SVM Poly | K = 0.0 | C = 1.0 | d = 3.0 | c = 0.0 | Raw | PCA = 6 | ActDCF =0.989 | MinDCF =0.909
+SVM Poly | K = 0.0 | C = 1.0 | d = 3.0 | c = 0.0 | Raw | PCA = 7 | ActDCF =0.891 | MinDCF =0.878
+SVM Poly | K = 0.0 | C = 1.0 | d = 3.0 | c = 0.0 | Raw | PCA = 8 | ActDCF =0.905 | MinDCF =0.834
+SVM Poly | K = 0.0 | C = 1.0 | d = 3.0 | c = 0.0 | Raw | PCA = 9 | ActDCF =0.967 | MinDCF =0.865
+SVM Poly | K = 0.0 | C = 1.0 | d = 3.0 | c = 0.0 | Raw | PCA = 10 | ActDCF =0.892 | MinDCF =0.881
+SVM Poly | K = 0.0 | C = 1.0 | d = 3.0 | c = 0.0 | Raw | PCA = 11 | ActDCF =0.941 | MinDCF =0.852
+SVM Poly | K = 0.0 | C = 1.0 | d = 3.0 | c = 1.0 | Raw | PCA = 5 | ActDCF =1.020 | MinDCF =0.812
+SVM Poly | K = 0.0 | C = 1.0 | d = 3.0 | c = 1.0 | Raw | PCA = 6 | ActDCF =0.995 | MinDCF =0.943
+SVM Poly | K = 0.0 | C = 1.0 | d = 3.0 | c = 1.0 | Raw | PCA = 7 | ActDCF =0.956 | MinDCF =0.890
+SVM Poly | K = 0.0 | C = 1.0 | d = 3.0 | c = 1.0 | Raw | PCA = 8 | ActDCF =0.955 | MinDCF =0.868
+SVM Poly | K = 0.0 | C = 1.0 | d = 3.0 | c = 1.0 | Raw | PCA = 9 | ActDCF =0.985 | MinDCF =0.889
+SVM Poly | K = 0.0 | C = 1.0 | d = 3.0 | c = 1.0 | Raw | PCA = 10 | ActDCF =0.976 | MinDCF =0.847
+SVM Poly | K = 0.0 | C = 1.0 | d = 3.0 | c = 1.0 | Raw | PCA = 11 | ActDCF =0.974 | MinDCF =0.838
+SVM Poly | K = 1.0 | C = 0.5 | d = 2.0 | c = 0.0 | Raw | PCA = 5 | ActDCF =0.917 | MinDCF =0.886
+SVM Poly | K = 1.0 | C = 0.5 | d = 2.0 | c = 0.0 | Raw | PCA = 6 | ActDCF =0.968 | MinDCF =0.967
+SVM Poly | K = 1.0 | C = 0.5 | d = 2.0 | c = 0.0 | Raw | PCA = 7 | ActDCF =0.977 | MinDCF =0.936
+SVM Poly | K = 1.0 | C = 0.5 | d = 2.0 | c = 0.0 | Raw | PCA = 8 | ActDCF =0.913 | MinDCF =0.907
+SVM Poly | K = 1.0 | C = 0.5 | d = 2.0 | c = 0.0 | Raw | PCA = 9 | ActDCF =0.976 | MinDCF =0.927
+SVM Poly | K = 1.0 | C = 0.5 | d = 2.0 | c = 0.0 | Raw | PCA = 10 | ActDCF =0.982 | MinDCF =0.904
+SVM Poly | K = 1.0 | C = 0.5 | d = 2.0 | c = 0.0 | Raw | PCA = 11 | ActDCF =0.996 | MinDCF =0.892
+SVM Poly | K = 1.0 | C = 0.5 | d = 2.0 | c = 1.0 | Raw | PCA = 5 | ActDCF =0.938 | MinDCF =0.912
+SVM Poly | K = 1.0 | C = 0.5 | d = 2.0 | c = 1.0 | Raw | PCA = 6 | ActDCF =0.904 | MinDCF =0.883
+SVM Poly | K = 1.0 | C = 0.5 | d = 2.0 | c = 1.0 | Raw | PCA = 7 | ActDCF =1.020 | MinDCF =0.898
+SVM Poly | K = 1.0 | C = 0.5 | d = 2.0 | c = 1.0 | Raw | PCA = 8 | ActDCF =0.951 | MinDCF =0.920
+SVM Poly | K = 1.0 | C = 0.5 | d = 2.0 | c = 1.0 | Raw | PCA = 9 | ActDCF =1.004 | MinDCF =0.898
+SVM Poly | K = 1.0 | C = 0.5 | d = 2.0 | c = 1.0 | Raw | PCA = 10 | ActDCF =0.980 | MinDCF =0.899
+SVM Poly | K = 1.0 | C = 0.5 | d = 2.0 | c = 1.0 | Raw | PCA = 11 | ActDCF =1.020 | MinDCF =0.914
+SVM Poly | K = 1.0 | C = 0.5 | d = 3.0 | c = 0.0 | Raw | PCA = 5 | ActDCF =1.051 | MinDCF =0.922
+SVM Poly | K = 1.0 | C = 0.5 | d = 3.0 | c = 0.0 | Raw | PCA = 6 | ActDCF =0.996 | MinDCF =0.858
+SVM Poly | K = 1.0 | C = 0.5 | d = 3.0 | c = 0.0 | Raw | PCA = 7 | ActDCF =0.957 | MinDCF =0.876
+SVM Poly | K = 1.0 | C = 0.5 | d = 3.0 | c = 0.0 | Raw | PCA = 8 | ActDCF =0.919 | MinDCF =0.888
+SVM Poly | K = 1.0 | C = 0.5 | d = 3.0 | c = 0.0 | Raw | PCA = 9 | ActDCF =0.923 | MinDCF =0.895
+SVM Poly | K = 1.0 | C = 0.5 | d = 3.0 | c = 0.0 | Raw | PCA = 10 | ActDCF =0.992 | MinDCF =0.900
+SVM Poly | K = 1.0 | C = 0.5 | d = 3.0 | c = 0.0 | Raw | PCA = 11 | ActDCF =0.986 | MinDCF =0.879
+SVM Poly | K = 1.0 | C = 0.5 | d = 3.0 | c = 1.0 | Raw | PCA = 5 | ActDCF =0.934 | MinDCF =0.878
+SVM Poly | K = 1.0 | C = 0.5 | d = 3.0 | c = 1.0 | Raw | PCA = 6 | ActDCF =0.962 | MinDCF =0.852
+SVM Poly | K = 1.0 | C = 0.5 | d = 3.0 | c = 1.0 | Raw | PCA = 7 | ActDCF =0.839 | MinDCF =0.830
+SVM Poly | K = 1.0 | C = 0.5 | d = 3.0 | c = 1.0 | Raw | PCA = 8 | ActDCF =0.943 | MinDCF =0.918
+SVM Poly | K = 1.0 | C = 0.5 | d = 3.0 | c = 1.0 | Raw | PCA = 9 | ActDCF =0.981 | MinDCF =0.900
+SVM Poly | K = 1.0 | C = 0.5 | d = 3.0 | c = 1.0 | Raw | PCA = 10 | ActDCF =0.985 | MinDCF =0.882
+SVM Poly | K = 1.0 | C = 0.5 | d = 3.0 | c = 1.0 | Raw | PCA = 11 | ActDCF =0.978 | MinDCF =0.821
+SVM Poly | K = 1.0 | C = 1.0 | d = 2.0 | c = 0.0 | Raw | PCA = 5 | ActDCF =1.023 | MinDCF =0.966
+SVM Poly | K = 1.0 | C = 1.0 | d = 2.0 | c = 0.0 | Raw | PCA = 6 | ActDCF =0.985 | MinDCF =0.929
+SVM Poly | K = 1.0 | C = 1.0 | d = 2.0 | c = 0.0 | Raw | PCA = 7 | ActDCF =0.959 | MinDCF =0.908
+SVM Poly | K = 1.0 | C = 1.0 | d = 2.0 | c = 0.0 | Raw | PCA = 8 | ActDCF =0.991 | MinDCF =0.912
+SVM Poly | K = 1.0 | C = 1.0 | d = 2.0 | c = 0.0 | Raw | PCA = 9 | ActDCF =0.903 | MinDCF =0.898
+SVM Poly | K = 1.0 | C = 1.0 | d = 2.0 | c = 0.0 | Raw | PCA = 10 | ActDCF =0.989 | MinDCF =0.894
+SVM Poly | K = 1.0 | C = 1.0 | d = 2.0 | c = 0.0 | Raw | PCA = 11 | ActDCF =1.005 | MinDCF =0.940
+SVM Poly | K = 1.0 | C = 1.0 | d = 2.0 | c = 1.0 | Raw | PCA = 5 | ActDCF =0.987 | MinDCF =0.932
+SVM Poly | K = 1.0 | C = 1.0 | d = 2.0 | c = 1.0 | Raw | PCA = 6 | ActDCF =0.998 | MinDCF =0.949
+SVM Poly | K = 1.0 | C = 1.0 | d = 2.0 | c = 1.0 | Raw | PCA = 7 | ActDCF =0.949 | MinDCF =0.931
+SVM Poly | K = 1.0 | C = 1.0 | d = 2.0 | c = 1.0 | Raw | PCA = 8 | ActDCF =0.993 | MinDCF =0.945
+SVM Poly | K = 1.0 | C = 1.0 | d = 2.0 | c = 1.0 | Raw | PCA = 9 | ActDCF =1.024 | MinDCF =0.878
+SVM Poly | K = 1.0 | C = 1.0 | d = 2.0 | c = 1.0 | Raw | PCA = 10 | ActDCF =0.947 | MinDCF =0.900
+SVM Poly | K = 1.0 | C = 1.0 | d = 2.0 | c = 1.0 | Raw | PCA = 11 | ActDCF =0.967 | MinDCF =0.933
+SVM Poly | K = 1.0 | C = 1.0 | d = 3.0 | c = 0.0 | Raw | PCA = 5 | ActDCF =0.967 | MinDCF =0.922
+SVM Poly | K = 1.0 | C = 1.0 | d = 3.0 | c = 0.0 | Raw | PCA = 6 | ActDCF =0.955 | MinDCF =0.934
+SVM Poly | K = 1.0 | C = 1.0 | d = 3.0 | c = 0.0 | Raw | PCA = 7 | ActDCF =0.946 | MinDCF =0.898
+SVM Poly | K = 1.0 | C = 1.0 | d = 3.0 | c = 0.0 | Raw | PCA = 8 | ActDCF =0.979 | MinDCF =0.848
+SVM Poly | K = 1.0 | C = 1.0 | d = 3.0 | c = 0.0 | Raw | PCA = 9 | ActDCF =1.022 | MinDCF =0.878
+SVM Poly | K = 1.0 | C = 1.0 | d = 3.0 | c = 0.0 | Raw | PCA = 10 | ActDCF =0.968 | MinDCF =0.881
+SVM Poly | K = 1.0 | C = 1.0 | d = 3.0 | c = 0.0 | Raw | PCA = 11 | ActDCF =0.882 | MinDCF =0.866
+SVM Poly | K = 1.0 | C = 1.0 | d = 3.0 | c = 1.0 | Raw | PCA = 5 | ActDCF =0.959 | MinDCF =0.827
+SVM Poly | K = 1.0 | C = 1.0 | d = 3.0 | c = 1.0 | Raw | PCA = 6 | ActDCF =0.934 | MinDCF =0.878
+SVM Poly | K = 1.0 | C = 1.0 | d = 3.0 | c = 1.0 | Raw | PCA = 7 | ActDCF =0.899 | MinDCF =0.843
+SVM Poly | K = 1.0 | C = 1.0 | d = 3.0 | c = 1.0 | Raw | PCA = 8 | ActDCF =0.927 | MinDCF =0.902
+SVM Poly | K = 1.0 | C = 1.0 | d = 3.0 | c = 1.0 | Raw | PCA = 9 | ActDCF =0.927 | MinDCF =0.842
+SVM Poly | K = 1.0 | C = 1.0 | d = 3.0 | c = 1.0 | Raw | PCA = 10 | ActDCF =0.899 | MinDCF =0.885
+SVM Poly | K = 1.0 | C = 1.0 | d = 3.0 | c = 1.0 | Raw | PCA = 11 | ActDCF =0.993 | MinDCF =0.818
+SVM Poly | K = 10.0 | C = 0.5 | d = 2.0 | c = 0.0 | Raw | PCA = 5 | ActDCF =0.983 | MinDCF =0.965
+SVM Poly | K = 10.0 | C = 0.5 | d = 2.0 | c = 0.0 | Raw | PCA = 6 | ActDCF =0.989 | MinDCF =0.957
+SVM Poly | K = 10.0 | C = 0.5 | d = 2.0 | c = 0.0 | Raw | PCA = 7 | ActDCF =0.920 | MinDCF =0.862
+SVM Poly | K = 10.0 | C = 0.5 | d = 2.0 | c = 0.0 | Raw | PCA = 8 | ActDCF =1.010 | MinDCF =0.883
+SVM Poly | K = 10.0 | C = 0.5 | d = 2.0 | c = 0.0 | Raw | PCA = 9 | ActDCF =0.994 | MinDCF =0.926
+SVM Poly | K = 10.0 | C = 0.5 | d = 2.0 | c = 0.0 | Raw | PCA = 10 | ActDCF =0.985 | MinDCF =0.914
+SVM Poly | K = 10.0 | C = 0.5 | d = 2.0 | c = 0.0 | Raw | PCA = 11 | ActDCF =1.005 | MinDCF =0.887
+SVM Poly | K = 10.0 | C = 0.5 | d = 2.0 | c = 1.0 | Raw | PCA = 5 | ActDCF =1.028 | MinDCF =0.890
+SVM Poly | K = 10.0 | C = 0.5 | d = 2.0 | c = 1.0 | Raw | PCA = 6 | ActDCF =0.936 | MinDCF =0.923
+SVM Poly | K = 10.0 | C = 0.5 | d = 2.0 | c = 1.0 | Raw | PCA = 7 | ActDCF =0.905 | MinDCF =0.892
+SVM Poly | K = 10.0 | C = 0.5 | d = 2.0 | c = 1.0 | Raw | PCA = 8 | ActDCF =0.910 | MinDCF =0.869
+SVM Poly | K = 10.0 | C = 0.5 | d = 2.0 | c = 1.0 | Raw | PCA = 9 | ActDCF =0.878 | MinDCF =0.840
+SVM Poly | K = 10.0 | C = 0.5 | d = 2.0 | c = 1.0 | Raw | PCA = 10 | ActDCF =1.002 | MinDCF =0.927
+SVM Poly | K = 10.0 | C = 0.5 | d = 2.0 | c = 1.0 | Raw | PCA = 11 | ActDCF =0.972 | MinDCF =0.927
+SVM Poly | K = 10.0 | C = 0.5 | d = 3.0 | c = 0.0 | Raw | PCA = 5 | ActDCF =0.956 | MinDCF =0.920
+SVM Poly | K = 10.0 | C = 0.5 | d = 3.0 | c = 0.0 | Raw | PCA = 6 | ActDCF =0.940 | MinDCF =0.854
+SVM Poly | K = 10.0 | C = 0.5 | d = 3.0 | c = 0.0 | Raw | PCA = 7 | ActDCF =0.979 | MinDCF =0.911
+SVM Poly | K = 10.0 | C = 0.5 | d = 3.0 | c = 0.0 | Raw | PCA = 8 | ActDCF =0.948 | MinDCF =0.931
+SVM Poly | K = 10.0 | C = 0.5 | d = 3.0 | c = 0.0 | Raw | PCA = 9 | ActDCF =0.956 | MinDCF =0.858
+SVM Poly | K = 10.0 | C = 0.5 | d = 3.0 | c = 0.0 | Raw | PCA = 10 | ActDCF =0.920 | MinDCF =0.899
+SVM Poly | K = 10.0 | C = 0.5 | d = 3.0 | c = 0.0 | Raw | PCA = 11 | ActDCF =1.019 | MinDCF =0.927
+SVM Poly | K = 10.0 | C = 0.5 | d = 3.0 | c = 1.0 | Raw | PCA = 5 | ActDCF =0.904 | MinDCF =0.856
+SVM Poly | K = 10.0 | C = 0.5 | d = 3.0 | c = 1.0 | Raw | PCA = 6 | ActDCF =1.003 | MinDCF =0.900
+SVM Poly | K = 10.0 | C = 0.5 | d = 3.0 | c = 1.0 | Raw | PCA = 7 | ActDCF =0.909 | MinDCF =0.865
+SVM Poly | K = 10.0 | C = 0.5 | d = 3.0 | c = 1.0 | Raw | PCA = 8 | ActDCF =0.972 | MinDCF =0.862
+SVM Poly | K = 10.0 | C = 0.5 | d = 3.0 | c = 1.0 | Raw | PCA = 9 | ActDCF =1.007 | MinDCF =0.923
+SVM Poly | K = 10.0 | C = 0.5 | d = 3.0 | c = 1.0 | Raw | PCA = 10 | ActDCF =0.892 | MinDCF =0.865
+SVM Poly | K = 10.0 | C = 0.5 | d = 3.0 | c = 1.0 | Raw | PCA = 11 | ActDCF =0.980 | MinDCF =0.892
+SVM Poly | K = 10.0 | C = 1.0 | d = 2.0 | c = 0.0 | Raw | PCA = 5 | ActDCF =1.004 | MinDCF =0.910
+SVM Poly | K = 10.0 | C = 1.0 | d = 2.0 | c = 0.0 | Raw | PCA = 6 | ActDCF =0.891 | MinDCF =0.852
+SVM Poly | K = 10.0 | C = 1.0 | d = 2.0 | c = 0.0 | Raw | PCA = 7 | ActDCF =1.029 | MinDCF =0.912
+SVM Poly | K = 10.0 | C = 1.0 | d = 2.0 | c = 0.0 | Raw | PCA = 8 | ActDCF =0.962 | MinDCF =0.900
+SVM Poly | K = 10.0 | C = 1.0 | d = 2.0 | c = 0.0 | Raw | PCA = 9 | ActDCF =0.984 | MinDCF =0.870
+SVM Poly | K = 10.0 | C = 1.0 | d = 2.0 | c = 0.0 | Raw | PCA = 10 | ActDCF =0.973 | MinDCF =0.861
+SVM Poly | K = 10.0 | C = 1.0 | d = 2.0 | c = 0.0 | Raw | PCA = 11 | ActDCF =0.962 | MinDCF =0.931
+SVM Poly | K = 10.0 | C = 1.0 | d = 2.0 | c = 1.0 | Raw | PCA = 5 | ActDCF =1.019 | MinDCF =0.884
+SVM Poly | K = 10.0 | C = 1.0 | d = 2.0 | c = 1.0 | Raw | PCA = 6 | ActDCF =0.977 | MinDCF =0.941
+SVM Poly | K = 10.0 | C = 1.0 | d = 2.0 | c = 1.0 | Raw | PCA = 7 | ActDCF =0.918 | MinDCF =0.882
+SVM Poly | K = 10.0 | C = 1.0 | d = 2.0 | c = 1.0 | Raw | PCA = 8 | ActDCF =0.969 | MinDCF =0.943
+SVM Poly | K = 10.0 | C = 1.0 | d = 2.0 | c = 1.0 | Raw | PCA = 9 | ActDCF =0.966 | MinDCF =0.894
+SVM Poly | K = 10.0 | C = 1.0 | d = 2.0 | c = 1.0 | Raw | PCA = 10 | ActDCF =0.955 | MinDCF =0.941
+SVM Poly | K = 10.0 | C = 1.0 | d = 2.0 | c = 1.0 | Raw | PCA = 11 | ActDCF =0.954 | MinDCF =0.923
+SVM Poly | K = 10.0 | C = 1.0 | d = 3.0 | c = 0.0 | Raw | PCA = 5 | ActDCF =0.997 | MinDCF =0.911
+SVM Poly | K = 10.0 | C = 1.0 | d = 3.0 | c = 0.0 | Raw | PCA = 6 | ActDCF =0.957 | MinDCF =0.843
+SVM Poly | K = 10.0 | C = 1.0 | d = 3.0 | c = 0.0 | Raw | PCA = 7 | ActDCF =0.926 | MinDCF =0.879
+SVM Poly | K = 10.0 | C = 1.0 | d = 3.0 | c = 0.0 | Raw | PCA = 8 | ActDCF =0.979 | MinDCF =0.874
+SVM Poly | K = 10.0 | C = 1.0 | d = 3.0 | c = 0.0 | Raw | PCA = 9 | ActDCF =0.857 | MinDCF =0.828
+SVM Poly | K = 10.0 | C = 1.0 | d = 3.0 | c = 0.0 | Raw | PCA = 10 | ActDCF =0.974 | MinDCF =0.899
+SVM Poly | K = 10.0 | C = 1.0 | d = 3.0 | c = 0.0 | Raw | PCA = 11 | ActDCF =0.997 | MinDCF =0.890
+SVM Poly | K = 10.0 | C = 1.0 | d = 3.0 | c = 1.0 | Raw | PCA = 5 | ActDCF =0.958 | MinDCF =0.896
+SVM Poly | K = 10.0 | C = 1.0 | d = 3.0 | c = 1.0 | Raw | PCA = 6 | ActDCF =0.973 | MinDCF =0.941
+SVM Poly | K = 10.0 | C = 1.0 | d = 3.0 | c = 1.0 | Raw | PCA = 7 | ActDCF =0.911 | MinDCF =0.871
+SVM Poly | K = 10.0 | C = 1.0 | d = 3.0 | c = 1.0 | Raw | PCA = 8 | ActDCF =0.959 | MinDCF =0.834
+SVM Poly | K = 10.0 | C = 1.0 | d = 3.0 | c = 1.0 | Raw | PCA = 9 | ActDCF =0.978 | MinDCF =0.902
+SVM Poly | K = 10.0 | C = 1.0 | d = 3.0 | c = 1.0 | Raw | PCA = 10 | ActDCF =0.962 | MinDCF =0.887
+SVM Poly | K = 10.0 | C = 1.0 | d = 3.0 | c = 1.0 | Raw | PCA = 11 | ActDCF =0.978 | MinDCF =0.867
+SVM Poly | K = 0.0 | C = 0.5 | d = 2.0 | c = 0.0 | Normalized | PCA = 5 | ActDCF =0.648 | MinDCF =0.634
+SVM Poly | K = 0.0 | C = 0.5 | d = 2.0 | c = 0.0 | Normalized | PCA = 6 | ActDCF =0.652 | MinDCF =0.617
+SVM Poly | K = 0.0 | C = 0.5 | d = 2.0 | c = 0.0 | Normalized | PCA = 7 | ActDCF =0.601 | MinDCF =0.581
+SVM Poly | K = 0.0 | C = 0.5 | d = 2.0 | c = 0.0 | Normalized | PCA = 8 | ActDCF =0.568 | MinDCF =0.539
+SVM Poly | K = 0.0 | C = 0.5 | d = 2.0 | c = 0.0 | Normalized | PCA = 9 | ActDCF =0.578 | MinDCF =0.561
+SVM Poly | K = 0.0 | C = 0.5 | d = 2.0 | c = 0.0 | Normalized | PCA = 10 | ActDCF =0.555 | MinDCF =0.520
+SVM Poly | K = 0.0 | C = 0.5 | d = 2.0 | c = 0.0 | Normalized | PCA = 11 | ActDCF =0.508 | MinDCF =0.497
+SVM Poly | K = 0.0 | C = 0.5 | d = 2.0 | c = 1.0 | Normalized | PCA = 5 | ActDCF =0.403 | MinDCF =0.334
+SVM Poly | K = 0.0 | C = 0.5 | d = 2.0 | c = 1.0 | Normalized | PCA = 6 | ActDCF =0.374 | MinDCF =0.342
+SVM Poly | K = 0.0 | C = 0.5 | d = 2.0 | c = 1.0 | Normalized | PCA = 7 | ActDCF =0.343 | MinDCF =0.321
+SVM Poly | K = 0.0 | C = 0.5 | d = 2.0 | c = 1.0 | Normalized | PCA = 8 | ActDCF =0.323 | MinDCF =0.313
+SVM Poly | K = 0.0 | C = 0.5 | d = 2.0 | c = 1.0 | Normalized | PCA = 9 | ActDCF =0.324 | MinDCF =0.302
+SVM Poly | K = 0.0 | C = 0.5 | d = 2.0 | c = 1.0 | Normalized | PCA = 10 | ActDCF =0.321 | MinDCF =0.304
+SVM Poly | K = 0.0 | C = 0.5 | d = 2.0 | c = 1.0 | Normalized | PCA = 11 | ActDCF =0.325 | MinDCF =0.299
+SVM Poly | K = 0.0 | C = 0.5 | d = 3.0 | c = 0.0 | Normalized | PCA = 5 | ActDCF =0.359 | MinDCF =0.356
+SVM Poly | K = 0.0 | C = 0.5 | d = 3.0 | c = 0.0 | Normalized | PCA = 6 | ActDCF =0.378 | MinDCF =0.370
+SVM Poly | K = 0.0 | C = 0.5 | d = 3.0 | c = 0.0 | Normalized | PCA = 7 | ActDCF =0.375 | MinDCF =0.372
+SVM Poly | K = 0.0 | C = 0.5 | d = 3.0 | c = 0.0 | Normalized | PCA = 8 | ActDCF =0.384 | MinDCF =0.366
+SVM Poly | K = 0.0 | C = 0.5 | d = 3.0 | c = 0.0 | Normalized | PCA = 9 | ActDCF =0.393 | MinDCF =0.381
+SVM Poly | K = 0.0 | C = 0.5 | d = 3.0 | c = 0.0 | Normalized | PCA = 10 | ActDCF =0.355 | MinDCF =0.352
+SVM Poly | K = 0.0 | C = 0.5 | d = 3.0 | c = 0.0 | Normalized | PCA = 11 | ActDCF =0.352 | MinDCF =0.348
+SVM Poly | K = 0.0 | C = 0.5 | d = 3.0 | c = 1.0 | Normalized | PCA = 5 | ActDCF =0.368 | MinDCF =0.340
+SVM Poly | K = 0.0 | C = 0.5 | d = 3.0 | c = 1.0 | Normalized | PCA = 6 | ActDCF =0.354 | MinDCF =0.333
+SVM Poly | K = 0.0 | C = 0.5 | d = 3.0 | c = 1.0 | Normalized | PCA = 7 | ActDCF =0.341 | MinDCF =0.327
+SVM Poly | K = 0.0 | C = 0.5 | d = 3.0 | c = 1.0 | Normalized | PCA = 8 | ActDCF =0.330 | MinDCF =0.320
+SVM Poly | K = 0.0 | C = 0.5 | d = 3.0 | c = 1.0 | Normalized | PCA = 9 | ActDCF =0.312 | MinDCF =0.298
+SVM Poly | K = 0.0 | C = 0.5 | d = 3.0 | c = 1.0 | Normalized | PCA = 10 | ActDCF =0.318 | MinDCF =0.303
+SVM Poly | K = 0.0 | C = 0.5 | d = 3.0 | c = 1.0 | Normalized | PCA = 11 | ActDCF =0.332 | MinDCF =0.323
+SVM Poly | K = 0.0 | C = 1.0 | d = 2.0 | c = 0.0 | Normalized | PCA = 5 | ActDCF =0.648 | MinDCF =0.635
+SVM Poly | K = 0.0 | C = 1.0 | d = 2.0 | c = 0.0 | Normalized | PCA = 6 | ActDCF =0.648 | MinDCF =0.619
+SVM Poly | K = 0.0 | C = 1.0 | d = 2.0 | c = 0.0 | Normalized | PCA = 7 | ActDCF =0.600 | MinDCF =0.577
+SVM Poly | K = 0.0 | C = 1.0 | d = 2.0 | c = 0.0 | Normalized | PCA = 8 | ActDCF =0.570 | MinDCF =0.539
+SVM Poly | K = 0.0 | C = 1.0 | d = 2.0 | c = 0.0 | Normalized | PCA = 9 | ActDCF =0.588 | MinDCF =0.556
+SVM Poly | K = 0.0 | C = 1.0 | d = 2.0 | c = 0.0 | Normalized | PCA = 10 | ActDCF =0.558 | MinDCF =0.523
+SVM Poly | K = 0.0 | C = 1.0 | d = 2.0 | c = 0.0 | Normalized | PCA = 11 | ActDCF =0.514 | MinDCF =0.499
+SVM Poly | K = 0.0 | C = 1.0 | d = 2.0 | c = 1.0 | Normalized | PCA = 5 | ActDCF =0.401 | MinDCF =0.333
+SVM Poly | K = 0.0 | C = 1.0 | d = 2.0 | c = 1.0 | Normalized | PCA = 6 | ActDCF =0.377 | MinDCF =0.342
+SVM Poly | K = 0.0 | C = 1.0 | d = 2.0 | c = 1.0 | Normalized | PCA = 7 | ActDCF =0.343 | MinDCF =0.319
+SVM Poly | K = 0.0 | C = 1.0 | d = 2.0 | c = 1.0 | Normalized | PCA = 8 | ActDCF =0.321 | MinDCF =0.309
+SVM Poly | K = 0.0 | C = 1.0 | d = 2.0 | c = 1.0 | Normalized | PCA = 9 | ActDCF =0.325 | MinDCF =0.300
+SVM Poly | K = 0.0 | C = 1.0 | d = 2.0 | c = 1.0 | Normalized | PCA = 10 | ActDCF =0.320 | MinDCF =0.297
+SVM Poly | K = 0.0 | C = 1.0 | d = 2.0 | c = 1.0 | Normalized | PCA = 11 | ActDCF =0.326 | MinDCF =0.300
+SVM Poly | K = 0.0 | C = 1.0 | d = 3.0 | c = 0.0 | Normalized | PCA = 5 | ActDCF =0.361 | MinDCF =0.356
+SVM Poly | K = 0.0 | C = 1.0 | d = 3.0 | c = 0.0 | Normalized | PCA = 6 | ActDCF =0.378 | MinDCF =0.372
+SVM Poly | K = 0.0 | C = 1.0 | d = 3.0 | c = 0.0 | Normalized | PCA = 7 | ActDCF =0.373 | MinDCF =0.372
+SVM Poly | K = 0.0 | C = 1.0 | d = 3.0 | c = 0.0 | Normalized | PCA = 8 | ActDCF =0.384 | MinDCF =0.365
+SVM Poly | K = 0.0 | C = 1.0 | d = 3.0 | c = 0.0 | Normalized | PCA = 9 | ActDCF =0.396 | MinDCF =0.383
+SVM Poly | K = 0.0 | C = 1.0 | d = 3.0 | c = 0.0 | Normalized | PCA = 10 | ActDCF =0.368 | MinDCF =0.360
+SVM Poly | K = 0.0 | C = 1.0 | d = 3.0 | c = 0.0 | Normalized | PCA = 11 | ActDCF =0.340 | MinDCF =0.334
+SVM Poly | K = 0.0 | C = 1.0 | d = 3.0 | c = 1.0 | Normalized | PCA = 5 | ActDCF =0.365 | MinDCF =0.341
+SVM Poly | K = 0.0 | C = 1.0 | d = 3.0 | c = 1.0 | Normalized | PCA = 6 | ActDCF =0.354 | MinDCF =0.332
+SVM Poly | K = 0.0 | C = 1.0 | d = 3.0 | c = 1.0 | Normalized | PCA = 7 | ActDCF =0.338 | MinDCF =0.327
+SVM Poly | K = 0.0 | C = 1.0 | d = 3.0 | c = 1.0 | Normalized | PCA = 8 | ActDCF =0.326 | MinDCF =0.312
+SVM Poly | K = 0.0 | C = 1.0 | d = 3.0 | c = 1.0 | Normalized | PCA = 9 | ActDCF =0.323 | MinDCF =0.308
+SVM Poly | K = 0.0 | C = 1.0 | d = 3.0 | c = 1.0 | Normalized | PCA = 10 | ActDCF =0.324 | MinDCF =0.312
+SVM Poly | K = 0.0 | C = 1.0 | d = 3.0 | c = 1.0 | Normalized | PCA = 11 | ActDCF =0.338 | MinDCF =0.325
+SVM Poly | K = 1.0 | C = 0.5 | d = 2.0 | c = 0.0 | Normalized | PCA = 5 | ActDCF =0.729 | MinDCF =0.633
+SVM Poly | K = 1.0 | C = 0.5 | d = 2.0 | c = 0.0 | Normalized | PCA = 6 | ActDCF =0.714 | MinDCF =0.619
+SVM Poly | K = 1.0 | C = 0.5 | d = 2.0 | c = 0.0 | Normalized | PCA = 7 | ActDCF =0.694 | MinDCF =0.555
+SVM Poly | K = 1.0 | C = 0.5 | d = 2.0 | c = 0.0 | Normalized | PCA = 8 | ActDCF =0.670 | MinDCF =0.515
+SVM Poly | K = 1.0 | C = 0.5 | d = 2.0 | c = 0.0 | Normalized | PCA = 9 | ActDCF =0.635 | MinDCF =0.518
+SVM Poly | K = 1.0 | C = 0.5 | d = 2.0 | c = 0.0 | Normalized | PCA = 10 | ActDCF =0.596 | MinDCF =0.524
+SVM Poly | K = 1.0 | C = 0.5 | d = 2.0 | c = 0.0 | Normalized | PCA = 11 | ActDCF =0.551 | MinDCF =0.474
+SVM Poly | K = 1.0 | C = 0.5 | d = 2.0 | c = 1.0 | Normalized | PCA = 5 | ActDCF =0.410 | MinDCF =0.335
+SVM Poly | K = 1.0 | C = 0.5 | d = 2.0 | c = 1.0 | Normalized | PCA = 6 | ActDCF =0.374 | MinDCF =0.342
+SVM Poly | K = 1.0 | C = 0.5 | d = 2.0 | c = 1.0 | Normalized | PCA = 7 | ActDCF =0.343 | MinDCF =0.321
+SVM Poly | K = 1.0 | C = 0.5 | d = 2.0 | c = 1.0 | Normalized | PCA = 8 | ActDCF =0.319 | MinDCF =0.311
+SVM Poly | K = 1.0 | C = 0.5 | d = 2.0 | c = 1.0 | Normalized | PCA = 9 | ActDCF =0.318 | MinDCF =0.303
+SVM Poly | K = 1.0 | C = 0.5 | d = 2.0 | c = 1.0 | Normalized | PCA = 10 | ActDCF =0.321 | MinDCF =0.300
+SVM Poly | K = 1.0 | C = 0.5 | d = 2.0 | c = 1.0 | Normalized | PCA = 11 | ActDCF =0.323 | MinDCF =0.300
+SVM Poly | K = 1.0 | C = 0.5 | d = 3.0 | c = 0.0 | Normalized | PCA = 5 | ActDCF =0.485 | MinDCF =0.373
+SVM Poly | K = 1.0 | C = 0.5 | d = 3.0 | c = 0.0 | Normalized | PCA = 6 | ActDCF =0.478 | MinDCF =0.378
+SVM Poly | K = 1.0 | C = 0.5 | d = 3.0 | c = 0.0 | Normalized | PCA = 7 | ActDCF =0.416 | MinDCF =0.353
+SVM Poly | K = 1.0 | C = 0.5 | d = 3.0 | c = 0.0 | Normalized | PCA = 8 | ActDCF =0.408 | MinDCF =0.362
+SVM Poly | K = 1.0 | C = 0.5 | d = 3.0 | c = 0.0 | Normalized | PCA = 9 | ActDCF =0.405 | MinDCF =0.349
+SVM Poly | K = 1.0 | C = 0.5 | d = 3.0 | c = 0.0 | Normalized | PCA = 10 | ActDCF =0.384 | MinDCF =0.347
+SVM Poly | K = 1.0 | C = 0.5 | d = 3.0 | c = 0.0 | Normalized | PCA = 11 | ActDCF =0.353 | MinDCF =0.325
+SVM Poly | K = 1.0 | C = 0.5 | d = 3.0 | c = 1.0 | Normalized | PCA = 5 | ActDCF =0.369 | MinDCF =0.341
+SVM Poly | K = 1.0 | C = 0.5 | d = 3.0 | c = 1.0 | Normalized | PCA = 6 | ActDCF =0.352 | MinDCF =0.331
+SVM Poly | K = 1.0 | C = 0.5 | d = 3.0 | c = 1.0 | Normalized | PCA = 7 | ActDCF =0.343 | MinDCF =0.328
+SVM Poly | K = 1.0 | C = 0.5 | d = 3.0 | c = 1.0 | Normalized | PCA = 8 | ActDCF =0.334 | MinDCF =0.319
+SVM Poly | K = 1.0 | C = 0.5 | d = 3.0 | c = 1.0 | Normalized | PCA = 9 | ActDCF =0.322 | MinDCF =0.305
+SVM Poly | K = 1.0 | C = 0.5 | d = 3.0 | c = 1.0 | Normalized | PCA = 10 | ActDCF =0.315 | MinDCF =0.304
+SVM Poly | K = 1.0 | C = 0.5 | d = 3.0 | c = 1.0 | Normalized | PCA = 11 | ActDCF =0.338 | MinDCF =0.323
+SVM Poly | K = 1.0 | C = 1.0 | d = 2.0 | c = 0.0 | Normalized | PCA = 5 | ActDCF =0.729 | MinDCF =0.635
+SVM Poly | K = 1.0 | C = 1.0 | d = 2.0 | c = 0.0 | Normalized | PCA = 6 | ActDCF =0.714 | MinDCF =0.619
+SVM Poly | K = 1.0 | C = 1.0 | d = 2.0 | c = 0.0 | Normalized | PCA = 7 | ActDCF =0.688 | MinDCF =0.557
+SVM Poly | K = 1.0 | C = 1.0 | d = 2.0 | c = 0.0 | Normalized | PCA = 8 | ActDCF =0.667 | MinDCF =0.517
+SVM Poly | K = 1.0 | C = 1.0 | d = 2.0 | c = 0.0 | Normalized | PCA = 9 | ActDCF =0.637 | MinDCF =0.520
+SVM Poly | K = 1.0 | C = 1.0 | d = 2.0 | c = 0.0 | Normalized | PCA = 10 | ActDCF =0.599 | MinDCF =0.525
+SVM Poly | K = 1.0 | C = 1.0 | d = 2.0 | c = 0.0 | Normalized | PCA = 11 | ActDCF =0.547 | MinDCF =0.476
+SVM Poly | K = 1.0 | C = 1.0 | d = 2.0 | c = 1.0 | Normalized | PCA = 5 | ActDCF =0.409 | MinDCF =0.334
+SVM Poly | K = 1.0 | C = 1.0 | d = 2.0 | c = 1.0 | Normalized | PCA = 6 | ActDCF =0.377 | MinDCF =0.342
+SVM Poly | K = 1.0 | C = 1.0 | d = 2.0 | c = 1.0 | Normalized | PCA = 7 | ActDCF =0.343 | MinDCF =0.319
+SVM Poly | K = 1.0 | C = 1.0 | d = 2.0 | c = 1.0 | Normalized | PCA = 8 | ActDCF =0.321 | MinDCF =0.309
+SVM Poly | K = 1.0 | C = 1.0 | d = 2.0 | c = 1.0 | Normalized | PCA = 9 | ActDCF =0.321 | MinDCF =0.303
+SVM Poly | K = 1.0 | C = 1.0 | d = 2.0 | c = 1.0 | Normalized | PCA = 10 | ActDCF =0.323 | MinDCF =0.298
+SVM Poly | K = 1.0 | C = 1.0 | d = 2.0 | c = 1.0 | Normalized | PCA = 11 | ActDCF =0.325 | MinDCF =0.299
+SVM Poly | K = 1.0 | C = 1.0 | d = 3.0 | c = 0.0 | Normalized | PCA = 5 | ActDCF =0.485 | MinDCF =0.372
+SVM Poly | K = 1.0 | C = 1.0 | d = 3.0 | c = 0.0 | Normalized | PCA = 6 | ActDCF =0.480 | MinDCF =0.378
+SVM Poly | K = 1.0 | C = 1.0 | d = 3.0 | c = 0.0 | Normalized | PCA = 7 | ActDCF =0.417 | MinDCF =0.354
+SVM Poly | K = 1.0 | C = 1.0 | d = 3.0 | c = 0.0 | Normalized | PCA = 8 | ActDCF =0.409 | MinDCF =0.363
+SVM Poly | K = 1.0 | C = 1.0 | d = 3.0 | c = 0.0 | Normalized | PCA = 9 | ActDCF =0.404 | MinDCF =0.346
+SVM Poly | K = 1.0 | C = 1.0 | d = 3.0 | c = 0.0 | Normalized | PCA = 10 | ActDCF =0.383 | MinDCF =0.353
+SVM Poly | K = 1.0 | C = 1.0 | d = 3.0 | c = 0.0 | Normalized | PCA = 11 | ActDCF =0.358 | MinDCF =0.330
+SVM Poly | K = 1.0 | C = 1.0 | d = 3.0 | c = 1.0 | Normalized | PCA = 5 | ActDCF =0.370 | MinDCF =0.341
+SVM Poly | K = 1.0 | C = 1.0 | d = 3.0 | c = 1.0 | Normalized | PCA = 6 | ActDCF =0.359 | MinDCF =0.330
+SVM Poly | K = 1.0 | C = 1.0 | d = 3.0 | c = 1.0 | Normalized | PCA = 7 | ActDCF =0.343 | MinDCF =0.329
+SVM Poly | K = 1.0 | C = 1.0 | d = 3.0 | c = 1.0 | Normalized | PCA = 8 | ActDCF =0.330 | MinDCF =0.314
+SVM Poly | K = 1.0 | C = 1.0 | d = 3.0 | c = 1.0 | Normalized | PCA = 9 | ActDCF =0.323 | MinDCF =0.314
+SVM Poly | K = 1.0 | C = 1.0 | d = 3.0 | c = 1.0 | Normalized | PCA = 10 | ActDCF =0.322 | MinDCF =0.316
+SVM Poly | K = 1.0 | C = 1.0 | d = 3.0 | c = 1.0 | Normalized | PCA = 11 | ActDCF =0.338 | MinDCF =0.326
+SVM Poly | K = 10.0 | C = 0.5 | d = 2.0 | c = 0.0 | Normalized | PCA = 5 | ActDCF =0.730 | MinDCF =0.635
+SVM Poly | K = 10.0 | C = 0.5 | d = 2.0 | c = 0.0 | Normalized | PCA = 6 | ActDCF =0.714 | MinDCF =0.619
+SVM Poly | K = 10.0 | C = 0.5 | d = 2.0 | c = 0.0 | Normalized | PCA = 7 | ActDCF =0.688 | MinDCF =0.557
+SVM Poly | K = 10.0 | C = 0.5 | d = 2.0 | c = 0.0 | Normalized | PCA = 8 | ActDCF =0.673 | MinDCF =0.517
+SVM Poly | K = 10.0 | C = 0.5 | d = 2.0 | c = 0.0 | Normalized | PCA = 9 | ActDCF =0.636 | MinDCF =0.523
+SVM Poly | K = 10.0 | C = 0.5 | d = 2.0 | c = 0.0 | Normalized | PCA = 10 | ActDCF =0.595 | MinDCF =0.522
+SVM Poly | K = 10.0 | C = 0.5 | d = 2.0 | c = 0.0 | Normalized | PCA = 11 | ActDCF =0.555 | MinDCF =0.476
+SVM Poly | K = 10.0 | C = 0.5 | d = 2.0 | c = 1.0 | Normalized | PCA = 5 | ActDCF =0.411 | MinDCF =0.335
+SVM Poly | K = 10.0 | C = 0.5 | d = 2.0 | c = 1.0 | Normalized | PCA = 6 | ActDCF =0.375 | MinDCF =0.339
+SVM Poly | K = 10.0 | C = 0.5 | d = 2.0 | c = 1.0 | Normalized | PCA = 7 | ActDCF =0.343 | MinDCF =0.319
+SVM Poly | K = 10.0 | C = 0.5 | d = 2.0 | c = 1.0 | Normalized | PCA = 8 | ActDCF =0.325 | MinDCF =0.310
+SVM Poly | K = 10.0 | C = 0.5 | d = 2.0 | c = 1.0 | Normalized | PCA = 9 | ActDCF =0.321 | MinDCF =0.302
+SVM Poly | K = 10.0 | C = 0.5 | d = 2.0 | c = 1.0 | Normalized | PCA = 10 | ActDCF =0.318 | MinDCF =0.298
+SVM Poly | K = 10.0 | C = 0.5 | d = 2.0 | c = 1.0 | Normalized | PCA = 11 | ActDCF =0.323 | MinDCF =0.298
+SVM Poly | K = 10.0 | C = 0.5 | d = 3.0 | c = 0.0 | Normalized | PCA = 5 | ActDCF =0.485 | MinDCF =0.369
+SVM Poly | K = 10.0 | C = 0.5 | d = 3.0 | c = 0.0 | Normalized | PCA = 6 | ActDCF =0.480 | MinDCF =0.381
+SVM Poly | K = 10.0 | C = 0.5 | d = 3.0 | c = 0.0 | Normalized | PCA = 7 | ActDCF =0.417 | MinDCF =0.355
+SVM Poly | K = 10.0 | C = 0.5 | d = 3.0 | c = 0.0 | Normalized | PCA = 8 | ActDCF =0.412 | MinDCF =0.361
+SVM Poly | K = 10.0 | C = 0.5 | d = 3.0 | c = 0.0 | Normalized | PCA = 9 | ActDCF =0.406 | MinDCF =0.346
+SVM Poly | K = 10.0 | C = 0.5 | d = 3.0 | c = 0.0 | Normalized | PCA = 10 | ActDCF =0.388 | MinDCF =0.351
+SVM Poly | K = 10.0 | C = 0.5 | d = 3.0 | c = 0.0 | Normalized | PCA = 11 | ActDCF =0.355 | MinDCF =0.330
+SVM Poly | K = 10.0 | C = 0.5 | d = 3.0 | c = 1.0 | Normalized | PCA = 5 | ActDCF =0.372 | MinDCF =0.340
+SVM Poly | K = 10.0 | C = 0.5 | d = 3.0 | c = 1.0 | Normalized | PCA = 6 | ActDCF =0.357 | MinDCF =0.331
+SVM Poly | K = 10.0 | C = 0.5 | d = 3.0 | c = 1.0 | Normalized | PCA = 7 | ActDCF =0.343 | MinDCF =0.330
+SVM Poly | K = 10.0 | C = 0.5 | d = 3.0 | c = 1.0 | Normalized | PCA = 8 | ActDCF =0.330 | MinDCF =0.318
+SVM Poly | K = 10.0 | C = 0.5 | d = 3.0 | c = 1.0 | Normalized | PCA = 9 | ActDCF =0.314 | MinDCF =0.302
+SVM Poly | K = 10.0 | C = 0.5 | d = 3.0 | c = 1.0 | Normalized | PCA = 10 | ActDCF =0.317 | MinDCF =0.304
+SVM Poly | K = 10.0 | C = 0.5 | d = 3.0 | c = 1.0 | Normalized | PCA = 11 | ActDCF =0.340 | MinDCF =0.322
+SVM Poly | K = 10.0 | C = 1.0 | d = 2.0 | c = 0.0 | Normalized | PCA = 5 | ActDCF =0.729 | MinDCF =0.634
+SVM Poly | K = 10.0 | C = 1.0 | d = 2.0 | c = 0.0 | Normalized | PCA = 6 | ActDCF =0.714 | MinDCF =0.618
+SVM Poly | K = 10.0 | C = 1.0 | d = 2.0 | c = 0.0 | Normalized | PCA = 7 | ActDCF =0.688 | MinDCF =0.559
+SVM Poly | K = 10.0 | C = 1.0 | d = 2.0 | c = 0.0 | Normalized | PCA = 8 | ActDCF =0.670 | MinDCF =0.516
+SVM Poly | K = 10.0 | C = 1.0 | d = 2.0 | c = 0.0 | Normalized | PCA = 9 | ActDCF =0.639 | MinDCF =0.522
+SVM Poly | K = 10.0 | C = 1.0 | d = 2.0 | c = 0.0 | Normalized | PCA = 10 | ActDCF =0.600 | MinDCF =0.523
+SVM Poly | K = 10.0 | C = 1.0 | d = 2.0 | c = 0.0 | Normalized | PCA = 11 | ActDCF =0.552 | MinDCF =0.476
+SVM Poly | K = 10.0 | C = 1.0 | d = 2.0 | c = 1.0 | Normalized | PCA = 5 | ActDCF =0.409 | MinDCF =0.334
+SVM Poly | K = 10.0 | C = 1.0 | d = 2.0 | c = 1.0 | Normalized | PCA = 6 | ActDCF =0.377 | MinDCF =0.341
+SVM Poly | K = 10.0 | C = 1.0 | d = 2.0 | c = 1.0 | Normalized | PCA = 7 | ActDCF =0.343 | MinDCF =0.319
+SVM Poly | K = 10.0 | C = 1.0 | d = 2.0 | c = 1.0 | Normalized | PCA = 8 | ActDCF =0.323 | MinDCF =0.309
+SVM Poly | K = 10.0 | C = 1.0 | d = 2.0 | c = 1.0 | Normalized | PCA = 9 | ActDCF =0.323 | MinDCF =0.303
+SVM Poly | K = 10.0 | C = 1.0 | d = 2.0 | c = 1.0 | Normalized | PCA = 10 | ActDCF =0.322 | MinDCF =0.297
+SVM Poly | K = 10.0 | C = 1.0 | d = 2.0 | c = 1.0 | Normalized | PCA = 11 | ActDCF =0.321 | MinDCF =0.299
+SVM Poly | K = 10.0 | C = 1.0 | d = 3.0 | c = 0.0 | Normalized | PCA = 5 | ActDCF =0.485 | MinDCF =0.370
+SVM Poly | K = 10.0 | C = 1.0 | d = 3.0 | c = 0.0 | Normalized | PCA = 6 | ActDCF =0.480 | MinDCF =0.381
+SVM Poly | K = 10.0 | C = 1.0 | d = 3.0 | c = 0.0 | Normalized | PCA = 7 | ActDCF =0.417 | MinDCF =0.355
+SVM Poly | K = 10.0 | C = 1.0 | d = 3.0 | c = 0.0 | Normalized | PCA = 8 | ActDCF =0.409 | MinDCF =0.363
+SVM Poly | K = 10.0 | C = 1.0 | d = 3.0 | c = 0.0 | Normalized | PCA = 9 | ActDCF =0.405 | MinDCF =0.345
+SVM Poly | K = 10.0 | C = 1.0 | d = 3.0 | c = 0.0 | Normalized | PCA = 10 | ActDCF =0.383 | MinDCF =0.352
+SVM Poly | K = 10.0 | C = 1.0 | d = 3.0 | c = 0.0 | Normalized | PCA = 11 | ActDCF =0.363 | MinDCF =0.330
+SVM Poly | K = 10.0 | C = 1.0 | d = 3.0 | c = 1.0 | Normalized | PCA = 5 | ActDCF =0.372 | MinDCF =0.340
+SVM Poly | K = 10.0 | C = 1.0 | d = 3.0 | c = 1.0 | Normalized | PCA = 6 | ActDCF =0.357 | MinDCF =0.330
+SVM Poly | K = 10.0 | C = 1.0 | d = 3.0 | c = 1.0 | Normalized | PCA = 7 | ActDCF =0.343 | MinDCF =0.330
+SVM Poly | K = 10.0 | C = 1.0 | d = 3.0 | c = 1.0 | Normalized | PCA = 8 | ActDCF =0.325 | MinDCF =0.315
+SVM Poly | K = 10.0 | C = 1.0 | d = 3.0 | c = 1.0 | Normalized | PCA = 9 | ActDCF =0.323 | MinDCF =0.313
+SVM Poly | K = 10.0 | C = 1.0 | d = 3.0 | c = 1.0 | Normalized | PCA = 10 | ActDCF =0.326 | MinDCF =0.317
+SVM Poly | K = 10.0 | C = 1.0 | d = 3.0 | c = 1.0 | Normalized | PCA = 11 | ActDCF =0.338 | MinDCF =0.326
+SVM RBF | K = 0.0 | C = 0.5 | gamma = 1.0 | Raw | PCA = 5 | ActDCF =0.401 | MinDCF =0.400
+SVM RBF | K = 0.0 | C = 0.5 | gamma = 1.0 | Raw | PCA = 6 | ActDCF =0.399 | MinDCF =0.398
+SVM RBF | K = 0.0 | C = 0.5 | gamma = 1.0 | Raw | PCA = 7 | ActDCF =0.399 | MinDCF =0.398
+SVM RBF | K = 0.0 | C = 0.5 | gamma = 1.0 | Raw | PCA = 8 | ActDCF =0.399 | MinDCF =0.398
+SVM RBF | K = 0.0 | C = 0.5 | gamma = 1.0 | Raw | PCA = 9 | ActDCF =0.399 | MinDCF =0.398
+SVM RBF | K = 0.0 | C = 0.5 | gamma = 1.0 | Raw | PCA = 10 | ActDCF =0.399 | MinDCF =0.398
+SVM RBF | K = 0.0 | C = 0.5 | gamma = 1.0 | Raw | PCA = 11 | ActDCF =0.399 | MinDCF =0.398
+SVM RBF | K = 0.0 | C = 0.5 | gamma = 10.0 | Raw | PCA = 5 | ActDCF =0.424 | MinDCF =0.423
+SVM RBF | K = 0.0 | C = 0.5 | gamma = 10.0 | Raw | PCA = 6 | ActDCF =0.427 | MinDCF =0.426
+SVM RBF | K = 0.0 | C = 0.5 | gamma = 10.0 | Raw | PCA = 7 | ActDCF =0.423 | MinDCF =0.423
+SVM RBF | K = 0.0 | C = 0.5 | gamma = 10.0 | Raw | PCA = 8 | ActDCF =0.422 | MinDCF =0.421
+SVM RBF | K = 0.0 | C = 0.5 | gamma = 10.0 | Raw | PCA = 9 | ActDCF =0.420 | MinDCF =0.419
+SVM RBF | K = 0.0 | C = 0.5 | gamma = 10.0 | Raw | PCA = 10 | ActDCF =0.418 | MinDCF =0.418
+SVM RBF | K = 0.0 | C = 0.5 | gamma = 10.0 | Raw | PCA = 11 | ActDCF =0.418 | MinDCF =0.418
+SVM RBF | K = 0.0 | C = 1.0 | gamma = 1.0 | Raw | PCA = 5 | ActDCF =0.422 | MinDCF =0.421
+SVM RBF | K = 0.0 | C = 1.0 | gamma = 1.0 | Raw | PCA = 6 | ActDCF =0.416 | MinDCF =0.415
+SVM RBF | K = 0.0 | C = 1.0 | gamma = 1.0 | Raw | PCA = 7 | ActDCF =0.415 | MinDCF =0.414
+SVM RBF | K = 0.0 | C = 1.0 | gamma = 1.0 | Raw | PCA = 8 | ActDCF =0.415 | MinDCF =0.414
+SVM RBF | K = 0.0 | C = 1.0 | gamma = 1.0 | Raw | PCA = 9 | ActDCF =0.415 | MinDCF =0.414
+SVM RBF | K = 0.0 | C = 1.0 | gamma = 1.0 | Raw | PCA = 10 | ActDCF =0.414 | MinDCF =0.414
+SVM RBF | K = 0.0 | C = 1.0 | gamma = 1.0 | Raw | PCA = 11 | ActDCF =0.414 | MinDCF =0.414
+SVM RBF | K = 0.0 | C = 1.0 | gamma = 10.0 | Raw | PCA = 5 | ActDCF =0.423 | MinDCF =0.422
+SVM RBF | K = 0.0 | C = 1.0 | gamma = 10.0 | Raw | PCA = 6 | ActDCF =0.424 | MinDCF =0.423
+SVM RBF | K = 0.0 | C = 1.0 | gamma = 10.0 | Raw | PCA = 7 | ActDCF =0.423 | MinDCF =0.422
+SVM RBF | K = 0.0 | C = 1.0 | gamma = 10.0 | Raw | PCA = 8 | ActDCF =0.421 | MinDCF =0.420
+SVM RBF | K = 0.0 | C = 1.0 | gamma = 10.0 | Raw | PCA = 9 | ActDCF =0.419 | MinDCF =0.418
+SVM RBF | K = 0.0 | C = 1.0 | gamma = 10.0 | Raw | PCA = 10 | ActDCF =0.419 | MinDCF =0.418
+SVM RBF | K = 0.0 | C = 1.0 | gamma = 10.0 | Raw | PCA = 11 | ActDCF =0.419 | MinDCF =0.418
+SVM RBF | K = 1.0 | C = 0.5 | gamma = 1.0 | Raw | PCA = 5 | ActDCF =0.886 | MinDCF =0.397
+SVM RBF | K = 1.0 | C = 0.5 | gamma = 1.0 | Raw | PCA = 6 | ActDCF =0.886 | MinDCF =0.396
+SVM RBF | K = 1.0 | C = 0.5 | gamma = 1.0 | Raw | PCA = 7 | ActDCF =0.886 | MinDCF =0.394
+SVM RBF | K = 1.0 | C = 0.5 | gamma = 1.0 | Raw | PCA = 8 | ActDCF =0.886 | MinDCF =0.394
+SVM RBF | K = 1.0 | C = 0.5 | gamma = 1.0 | Raw | PCA = 9 | ActDCF =0.886 | MinDCF =0.393
+SVM RBF | K = 1.0 | C = 0.5 | gamma = 1.0 | Raw | PCA = 10 | ActDCF =0.886 | MinDCF =0.393
+SVM RBF | K = 1.0 | C = 0.5 | gamma = 1.0 | Raw | PCA = 11 | ActDCF =0.886 | MinDCF =0.393
+SVM RBF | K = 1.0 | C = 0.5 | gamma = 10.0 | Raw | PCA = 5 | ActDCF =0.907 | MinDCF =0.624
+SVM RBF | K = 1.0 | C = 0.5 | gamma = 10.0 | Raw | PCA = 6 | ActDCF =0.907 | MinDCF =0.625
+SVM RBF | K = 1.0 | C = 0.5 | gamma = 10.0 | Raw | PCA = 7 | ActDCF =0.907 | MinDCF =0.624
+SVM RBF | K = 1.0 | C = 0.5 | gamma = 10.0 | Raw | PCA = 8 | ActDCF =0.907 | MinDCF =0.624
+SVM RBF | K = 1.0 | C = 0.5 | gamma = 10.0 | Raw | PCA = 9 | ActDCF =0.907 | MinDCF =0.624
+SVM RBF | K = 1.0 | C = 0.5 | gamma = 10.0 | Raw | PCA = 10 | ActDCF =0.907 | MinDCF =0.626
+SVM RBF | K = 1.0 | C = 0.5 | gamma = 10.0 | Raw | PCA = 11 | ActDCF =0.907 | MinDCF =0.623
+SVM RBF | K = 1.0 | C = 1.0 | gamma = 1.0 | Raw | PCA = 5 | ActDCF =0.636 | MinDCF =0.392
+SVM RBF | K = 1.0 | C = 1.0 | gamma = 1.0 | Raw | PCA = 6 | ActDCF =0.635 | MinDCF =0.393
+SVM RBF | K = 1.0 | C = 1.0 | gamma = 1.0 | Raw | PCA = 7 | ActDCF =0.635 | MinDCF =0.393
+SVM RBF | K = 1.0 | C = 1.0 | gamma = 1.0 | Raw | PCA = 8 | ActDCF =0.635 | MinDCF =0.393
+SVM RBF | K = 1.0 | C = 1.0 | gamma = 1.0 | Raw | PCA = 9 | ActDCF =0.635 | MinDCF =0.392
+SVM RBF | K = 1.0 | C = 1.0 | gamma = 1.0 | Raw | PCA = 10 | ActDCF =0.635 | MinDCF =0.392
+SVM RBF | K = 1.0 | C = 1.0 | gamma = 1.0 | Raw | PCA = 11 | ActDCF =0.635 | MinDCF =0.392
+SVM RBF | K = 1.0 | C = 1.0 | gamma = 10.0 | Raw | PCA = 5 | ActDCF =0.679 | MinDCF =0.645
+SVM RBF | K = 1.0 | C = 1.0 | gamma = 10.0 | Raw | PCA = 6 | ActDCF =0.679 | MinDCF =0.644
+SVM RBF | K = 1.0 | C = 1.0 | gamma = 10.0 | Raw | PCA = 7 | ActDCF =0.679 | MinDCF =0.645
+SVM RBF | K = 1.0 | C = 1.0 | gamma = 10.0 | Raw | PCA = 8 | ActDCF =0.679 | MinDCF =0.645
+SVM RBF | K = 1.0 | C = 1.0 | gamma = 10.0 | Raw | PCA = 9 | ActDCF =0.679 | MinDCF =0.644
+SVM RBF | K = 1.0 | C = 1.0 | gamma = 10.0 | Raw | PCA = 10 | ActDCF =0.679 | MinDCF =0.645
+SVM RBF | K = 1.0 | C = 1.0 | gamma = 10.0 | Raw | PCA = 11 | ActDCF =0.679 | MinDCF =0.644
+SVM RBF | K = 10.0 | C = 0.5 | gamma = 1.0 | Raw | PCA = 5 | ActDCF =0.886 | MinDCF =0.397
+SVM RBF | K = 10.0 | C = 0.5 | gamma = 1.0 | Raw | PCA = 6 | ActDCF =0.886 | MinDCF =0.395
+SVM RBF | K = 10.0 | C = 0.5 | gamma = 1.0 | Raw | PCA = 7 | ActDCF =0.886 | MinDCF =0.394
+SVM RBF | K = 10.0 | C = 0.5 | gamma = 1.0 | Raw | PCA = 8 | ActDCF =0.886 | MinDCF =0.394
+SVM RBF | K = 10.0 | C = 0.5 | gamma = 1.0 | Raw | PCA = 9 | ActDCF =0.886 | MinDCF =0.393
+SVM RBF | K = 10.0 | C = 0.5 | gamma = 1.0 | Raw | PCA = 10 | ActDCF =0.886 | MinDCF =0.393
+SVM RBF | K = 10.0 | C = 0.5 | gamma = 1.0 | Raw | PCA = 11 | ActDCF =0.886 | MinDCF =0.393
+SVM RBF | K = 10.0 | C = 0.5 | gamma = 10.0 | Raw | PCA = 5 | ActDCF =0.907 | MinDCF =0.633
+SVM RBF | K = 10.0 | C = 0.5 | gamma = 10.0 | Raw | PCA = 6 | ActDCF =0.907 | MinDCF =0.636
+SVM RBF | K = 10.0 | C = 0.5 | gamma = 10.0 | Raw | PCA = 7 | ActDCF =0.907 | MinDCF =0.636
+SVM RBF | K = 10.0 | C = 0.5 | gamma = 10.0 | Raw | PCA = 8 | ActDCF =0.907 | MinDCF =0.638
+SVM RBF | K = 10.0 | C = 0.5 | gamma = 10.0 | Raw | PCA = 9 | ActDCF =0.907 | MinDCF =0.636
+SVM RBF | K = 10.0 | C = 0.5 | gamma = 10.0 | Raw | PCA = 10 | ActDCF =0.907 | MinDCF =0.636
+SVM RBF | K = 10.0 | C = 0.5 | gamma = 10.0 | Raw | PCA = 11 | ActDCF =0.907 | MinDCF =0.637
+SVM RBF | K = 10.0 | C = 1.0 | gamma = 1.0 | Raw | PCA = 5 | ActDCF =0.636 | MinDCF =0.392
+SVM RBF | K = 10.0 | C = 1.0 | gamma = 1.0 | Raw | PCA = 6 | ActDCF =0.635 | MinDCF =0.393
+SVM RBF | K = 10.0 | C = 1.0 | gamma = 1.0 | Raw | PCA = 7 | ActDCF =0.635 | MinDCF =0.393
+SVM RBF | K = 10.0 | C = 1.0 | gamma = 1.0 | Raw | PCA = 8 | ActDCF =0.635 | MinDCF =0.393
+SVM RBF | K = 10.0 | C = 1.0 | gamma = 1.0 | Raw | PCA = 9 | ActDCF =0.635 | MinDCF =0.392
+SVM RBF | K = 10.0 | C = 1.0 | gamma = 1.0 | Raw | PCA = 10 | ActDCF =0.635 | MinDCF =0.392
+SVM RBF | K = 10.0 | C = 1.0 | gamma = 1.0 | Raw | PCA = 11 | ActDCF =0.635 | MinDCF =0.392
+SVM RBF | K = 10.0 | C = 1.0 | gamma = 10.0 | Raw | PCA = 5 | ActDCF =0.679 | MinDCF =0.650
+SVM RBF | K = 10.0 | C = 1.0 | gamma = 10.0 | Raw | PCA = 6 | ActDCF =0.679 | MinDCF =0.650
+SVM RBF | K = 10.0 | C = 1.0 | gamma = 10.0 | Raw | PCA = 7 | ActDCF =0.679 | MinDCF =0.648
+SVM RBF | K = 10.0 | C = 1.0 | gamma = 10.0 | Raw | PCA = 8 | ActDCF =0.679 | MinDCF =0.648
+SVM RBF | K = 10.0 | C = 1.0 | gamma = 10.0 | Raw | PCA = 9 | ActDCF =0.679 | MinDCF =0.648
+SVM RBF | K = 10.0 | C = 1.0 | gamma = 10.0 | Raw | PCA = 10 | ActDCF =0.679 | MinDCF =0.648
+SVM RBF | K = 10.0 | C = 1.0 | gamma = 10.0 | Raw | PCA = 11 | ActDCF =0.679 | MinDCF =0.648
+SVM RBF | K = 0.0 | C = 0.5 | gamma = 1.0 | Normalized | PCA = 5 | ActDCF =0.546 | MinDCF =0.378
+SVM RBF | K = 0.0 | C = 0.5 | gamma = 1.0 | Normalized | PCA = 6 | ActDCF =0.577 | MinDCF =0.384
+SVM RBF | K = 0.0 | C = 0.5 | gamma = 1.0 | Normalized | PCA = 7 | ActDCF =0.581 | MinDCF =0.383
+SVM RBF | K = 0.0 | C = 0.5 | gamma = 1.0 | Normalized | PCA = 8 | ActDCF =0.592 | MinDCF =0.376
+SVM RBF | K = 0.0 | C = 0.5 | gamma = 1.0 | Normalized | PCA = 9 | ActDCF =0.591 | MinDCF =0.378
+SVM RBF | K = 0.0 | C = 0.5 | gamma = 1.0 | Normalized | PCA = 10 | ActDCF =0.597 | MinDCF =0.383
+SVM RBF | K = 0.0 | C = 0.5 | gamma = 1.0 | Normalized | PCA = 11 | ActDCF =0.596 | MinDCF =0.384
+SVM RBF | K = 0.0 | C = 0.5 | gamma = 10.0 | Normalized | PCA = 5 | ActDCF =0.277 | MinDCF =0.276
+SVM RBF | K = 0.0 | C = 0.5 | gamma = 10.0 | Normalized | PCA = 6 | ActDCF =0.272 | MinDCF =0.271
+SVM RBF | K = 0.0 | C = 0.5 | gamma = 10.0 | Normalized | PCA = 7 | ActDCF =0.273 | MinDCF =0.272
+SVM RBF | K = 0.0 | C = 0.5 | gamma = 10.0 | Normalized | PCA = 8 | ActDCF =0.282 | MinDCF =0.281
+SVM RBF | K = 0.0 | C = 0.5 | gamma = 10.0 | Normalized | PCA = 9 | ActDCF =0.288 | MinDCF =0.285
+SVM RBF | K = 0.0 | C = 0.5 | gamma = 10.0 | Normalized | PCA = 10 | ActDCF =0.289 | MinDCF =0.286
+SVM RBF | K = 0.0 | C = 0.5 | gamma = 10.0 | Normalized | PCA = 11 | ActDCF =0.281 | MinDCF =0.277
+SVM RBF | K = 0.0 | C = 1.0 | gamma = 1.0 | Normalized | PCA = 5 | ActDCF =0.533 | MinDCF =0.361
+SVM RBF | K = 0.0 | C = 1.0 | gamma = 1.0 | Normalized | PCA = 6 | ActDCF =0.579 | MinDCF =0.373
+SVM RBF | K = 0.0 | C = 1.0 | gamma = 1.0 | Normalized | PCA = 7 | ActDCF =0.586 | MinDCF =0.369
+SVM RBF | K = 0.0 | C = 1.0 | gamma = 1.0 | Normalized | PCA = 8 | ActDCF =0.596 | MinDCF =0.370
+SVM RBF | K = 0.0 | C = 1.0 | gamma = 1.0 | Normalized | PCA = 9 | ActDCF =0.601 | MinDCF =0.374
+SVM RBF | K = 0.0 | C = 1.0 | gamma = 1.0 | Normalized | PCA = 10 | ActDCF =0.610 | MinDCF =0.382
+SVM RBF | K = 0.0 | C = 1.0 | gamma = 1.0 | Normalized | PCA = 11 | ActDCF =0.612 | MinDCF =0.385
+SVM RBF | K = 0.0 | C = 1.0 | gamma = 10.0 | Normalized | PCA = 5 | ActDCF =0.274 | MinDCF =0.273
+SVM RBF | K = 0.0 | C = 1.0 | gamma = 10.0 | Normalized | PCA = 6 | ActDCF =0.271 | MinDCF =0.270
+SVM RBF | K = 0.0 | C = 1.0 | gamma = 10.0 | Normalized | PCA = 7 | ActDCF =0.278 | MinDCF =0.276
+SVM RBF | K = 0.0 | C = 1.0 | gamma = 10.0 | Normalized | PCA = 8 | ActDCF =0.277 | MinDCF =0.276
+SVM RBF | K = 0.0 | C = 1.0 | gamma = 10.0 | Normalized | PCA = 9 | ActDCF =0.283 | MinDCF =0.281
+SVM RBF | K = 0.0 | C = 1.0 | gamma = 10.0 | Normalized | PCA = 10 | ActDCF =0.285 | MinDCF =0.283
+SVM RBF | K = 0.0 | C = 1.0 | gamma = 10.0 | Normalized | PCA = 11 | ActDCF =0.282 | MinDCF =0.280
+SVM RBF | K = 1.0 | C = 0.5 | gamma = 1.0 | Normalized | PCA = 5 | ActDCF =0.364 | MinDCF =0.344
+SVM RBF | K = 1.0 | C = 0.5 | gamma = 1.0 | Normalized | PCA = 6 | ActDCF =0.361 | MinDCF =0.331
+SVM RBF | K = 1.0 | C = 0.5 | gamma = 1.0 | Normalized | PCA = 7 | ActDCF =0.325 | MinDCF =0.321
+SVM RBF | K = 1.0 | C = 0.5 | gamma = 1.0 | Normalized | PCA = 8 | ActDCF =0.327 | MinDCF =0.321
+SVM RBF | K = 1.0 | C = 0.5 | gamma = 1.0 | Normalized | PCA = 9 | ActDCF =0.320 | MinDCF =0.316
+SVM RBF | K = 1.0 | C = 0.5 | gamma = 1.0 | Normalized | PCA = 10 | ActDCF =0.323 | MinDCF =0.315
+SVM RBF | K = 1.0 | C = 0.5 | gamma = 1.0 | Normalized | PCA = 11 | ActDCF =0.325 | MinDCF =0.316
+SVM RBF | K = 1.0 | C = 0.5 | gamma = 10.0 | Normalized | PCA = 5 | ActDCF =0.907 | MinDCF =0.480
+SVM RBF | K = 1.0 | C = 0.5 | gamma = 10.0 | Normalized | PCA = 6 | ActDCF =0.907 | MinDCF =0.538
+SVM RBF | K = 1.0 | C = 0.5 | gamma = 10.0 | Normalized | PCA = 7 | ActDCF =0.907 | MinDCF =0.554
+SVM RBF | K = 1.0 | C = 0.5 | gamma = 10.0 | Normalized | PCA = 8 | ActDCF =0.907 | MinDCF =0.569
+SVM RBF | K = 1.0 | C = 0.5 | gamma = 10.0 | Normalized | PCA = 9 | ActDCF =0.907 | MinDCF =0.572
+SVM RBF | K = 1.0 | C = 0.5 | gamma = 10.0 | Normalized | PCA = 10 | ActDCF =0.907 | MinDCF =0.573
+SVM RBF | K = 1.0 | C = 0.5 | gamma = 10.0 | Normalized | PCA = 11 | ActDCF =0.907 | MinDCF =0.570
+SVM RBF | K = 1.0 | C = 1.0 | gamma = 1.0 | Normalized | PCA = 5 | ActDCF =0.340 | MinDCF =0.338
+SVM RBF | K = 1.0 | C = 1.0 | gamma = 1.0 | Normalized | PCA = 6 | ActDCF =0.338 | MinDCF =0.332
+SVM RBF | K = 1.0 | C = 1.0 | gamma = 1.0 | Normalized | PCA = 7 | ActDCF =0.338 | MinDCF =0.319
+SVM RBF | K = 1.0 | C = 1.0 | gamma = 1.0 | Normalized | PCA = 8 | ActDCF =0.346 | MinDCF =0.327
+SVM RBF | K = 1.0 | C = 1.0 | gamma = 1.0 | Normalized | PCA = 9 | ActDCF =0.352 | MinDCF =0.328
+SVM RBF | K = 1.0 | C = 1.0 | gamma = 1.0 | Normalized | PCA = 10 | ActDCF =0.347 | MinDCF =0.336
+SVM RBF | K = 1.0 | C = 1.0 | gamma = 1.0 | Normalized | PCA = 11 | ActDCF =0.343 | MinDCF =0.334
+SVM RBF | K = 1.0 | C = 1.0 | gamma = 10.0 | Normalized | PCA = 5 | ActDCF =0.675 | MinDCF =0.508
+SVM RBF | K = 1.0 | C = 1.0 | gamma = 10.0 | Normalized | PCA = 6 | ActDCF =0.675 | MinDCF =0.561
+SVM RBF | K = 1.0 | C = 1.0 | gamma = 10.0 | Normalized | PCA = 7 | ActDCF =0.675 | MinDCF =0.579
+SVM RBF | K = 1.0 | C = 1.0 | gamma = 10.0 | Normalized | PCA = 8 | ActDCF =0.675 | MinDCF =0.582
+SVM RBF | K = 1.0 | C = 1.0 | gamma = 10.0 | Normalized | PCA = 9 | ActDCF =0.675 | MinDCF =0.577
+SVM RBF | K = 1.0 | C = 1.0 | gamma = 10.0 | Normalized | PCA = 10 | ActDCF =0.675 | MinDCF =0.583
+SVM RBF | K = 1.0 | C = 1.0 | gamma = 10.0 | Normalized | PCA = 11 | ActDCF =0.675 | MinDCF =0.582
+SVM RBF | K = 10.0 | C = 0.5 | gamma = 1.0 | Normalized | PCA = 5 | ActDCF =0.364 | MinDCF =0.346
+SVM RBF | K = 10.0 | C = 0.5 | gamma = 1.0 | Normalized | PCA = 6 | ActDCF =0.360 | MinDCF =0.331
+SVM RBF | K = 10.0 | C = 0.5 | gamma = 1.0 | Normalized | PCA = 7 | ActDCF =0.323 | MinDCF =0.321
+SVM RBF | K = 10.0 | C = 0.5 | gamma = 1.0 | Normalized | PCA = 8 | ActDCF =0.328 | MinDCF =0.321
+SVM RBF | K = 10.0 | C = 0.5 | gamma = 1.0 | Normalized | PCA = 9 | ActDCF =0.321 | MinDCF =0.316
+SVM RBF | K = 10.0 | C = 0.5 | gamma = 1.0 | Normalized | PCA = 10 | ActDCF =0.322 | MinDCF =0.316
+SVM RBF | K = 10.0 | C = 0.5 | gamma = 1.0 | Normalized | PCA = 11 | ActDCF =0.323 | MinDCF =0.317
+SVM RBF | K = 10.0 | C = 0.5 | gamma = 10.0 | Normalized | PCA = 5 | ActDCF =0.907 | MinDCF =0.480
+SVM RBF | K = 10.0 | C = 0.5 | gamma = 10.0 | Normalized | PCA = 6 | ActDCF =0.907 | MinDCF =0.538
+SVM RBF | K = 10.0 | C = 0.5 | gamma = 10.0 | Normalized | PCA = 7 | ActDCF =0.907 | MinDCF =0.554
+SVM RBF | K = 10.0 | C = 0.5 | gamma = 10.0 | Normalized | PCA = 8 | ActDCF =0.907 | MinDCF =0.569
+SVM RBF | K = 10.0 | C = 0.5 | gamma = 10.0 | Normalized | PCA = 9 | ActDCF =0.907 | MinDCF =0.572
+SVM RBF | K = 10.0 | C = 0.5 | gamma = 10.0 | Normalized | PCA = 10 | ActDCF =0.907 | MinDCF =0.573
+SVM RBF | K = 10.0 | C = 0.5 | gamma = 10.0 | Normalized | PCA = 11 | ActDCF =0.907 | MinDCF =0.570
+SVM RBF | K = 10.0 | C = 1.0 | gamma = 1.0 | Normalized | PCA = 5 | ActDCF =0.340 | MinDCF =0.337
+SVM RBF | K = 10.0 | C = 1.0 | gamma = 1.0 | Normalized | PCA = 6 | ActDCF =0.338 | MinDCF =0.325
+SVM RBF | K = 10.0 | C = 1.0 | gamma = 1.0 | Normalized | PCA = 7 | ActDCF =0.341 | MinDCF =0.319
+SVM RBF | K = 10.0 | C = 1.0 | gamma = 1.0 | Normalized | PCA = 8 | ActDCF =0.346 | MinDCF =0.329
+SVM RBF | K = 10.0 | C = 1.0 | gamma = 1.0 | Normalized | PCA = 9 | ActDCF =0.352 | MinDCF =0.328
+SVM RBF | K = 10.0 | C = 1.0 | gamma = 1.0 | Normalized | PCA = 10 | ActDCF =0.348 | MinDCF =0.336
+SVM RBF | K = 10.0 | C = 1.0 | gamma = 1.0 | Normalized | PCA = 11 | ActDCF =0.345 | MinDCF =0.334
+SVM RBF | K = 10.0 | C = 1.0 | gamma = 10.0 | Normalized | PCA = 5 | ActDCF =0.675 | MinDCF =0.508
+SVM RBF | K = 10.0 | C = 1.0 | gamma = 10.0 | Normalized | PCA = 6 | ActDCF =0.675 | MinDCF =0.560
+SVM RBF | K = 10.0 | C = 1.0 | gamma = 10.0 | Normalized | PCA = 7 | ActDCF =0.675 | MinDCF =0.579
+SVM RBF | K = 10.0 | C = 1.0 | gamma = 10.0 | Normalized | PCA = 8 | ActDCF =0.675 | MinDCF =0.582
+SVM RBF | K = 10.0 | C = 1.0 | gamma = 10.0 | Normalized | PCA = 9 | ActDCF =0.675 | MinDCF =0.577
+SVM RBF | K = 10.0 | C = 1.0 | gamma = 10.0 | Normalized | PCA = 10 | ActDCF =0.675 | MinDCF =0.583
+SVM RBF | K = 10.0 | C = 1.0 | gamma = 10.0 | Normalized | PCA = 11 | ActDCF =0.675 | MinDCF =0.582
+Total time 53118.68253111839

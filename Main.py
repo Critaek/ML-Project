@@ -42,15 +42,15 @@ if __name__ == "__main__":
     #numpy.save("data/normalizedD.npy", NormD)
 
     #Full-Covariance MVG
-    mvg.trainMVG(mvg.MultiV, D, L, NormD, "Full")
+    #mvg.trainMVG(mvg.MultiV, D, L, NormD, "Full")
 
     #mvg.trainMVG(mvg.Bayes, D, L, NormD, "Bayes")
 
     #mvg.trainMVG(mvg.Tied, D, L, NormD, "Tied")
 
     lSet = numpy.logspace(-5,2, num = 20) #20 values between 1e-5 and 1e2
-    #lr.trainLinearRegression(D, L, NormD, lSet)
-    #qr.trainQuadraticRegression(D, L, NormD, lSet)
+    lr.trainLinearRegression(D, L, NormD, lSet)
+    qr.trainQuadraticRegression(D, L, NormD, lSet)
     
     K_Set = numpy.array([0.0, 1.0, 10.0])
     C_Set = numpy.array([0.1, 1.0, 10.0])
