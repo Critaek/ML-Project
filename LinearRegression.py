@@ -40,6 +40,13 @@ def LinearRegression(DTR, LTR, DTE, l, prior_t):
 
     return Predictions, scores
 
+def LinearRegression_w_b(DTR, LTR, l, prior_t):
+    x0 = numpy.zeros(DTR.shape[0] + 1)
+    x, f, d = scipy.optimize.fmin_l_bfgs_b(logreg_obj, x0, args=(DTR, LTR, l, prior_t), approx_grad = True)
+    w = x[0:DTR.shape[0]]
+    b = x[-1]
+
+    return w, b
 
 
 def kFold(D, L, K, l,prior_t):

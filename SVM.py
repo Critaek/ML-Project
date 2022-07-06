@@ -273,7 +273,7 @@ def trainSVMPoly(D, L, NormD, K_Set, C_Set, d_Set, c_Set, prior_t): #K relativo 
                     #Still called LLRs in the printDCFs function, but they are scores with no probabilistic interpretation
                     #We use the same function for every model
                     for prior_tilde in prior_tilde_set: 
-                        ActDCF, minDCF = me.printDCFs(D, L, Predictions, Scores)
+                        ActDCF, minDCF = me.printDCFs(D, L, Predictions, Scores, prior_tilde)
                         print(prior_t, "|" ,prior_tilde, "| SVM Poly | K =", K, "| C =", C, "| d =", d, "| c =", c, "| Raw | PCA =", 5+i,
                               "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF)) 
 
@@ -285,7 +285,7 @@ def trainSVMPoly(D, L, NormD, K_Set, C_Set, d_Set, c_Set, prior_t): #K relativo 
                     PCA = dr.PCA(NormD, L, 5+i)
                     Predictions, Scores = kFoldPoly(PCA, L, 5, K, C, d, c, prior_t)
                     for prior_tilde in prior_tilde_set: 
-                        ActDCF, minDCF = me.printDCFs(D, L, Predictions, Scores)
+                        ActDCF, minDCF = me.printDCFs(D, L, Predictions, Scores, prior_tilde)
                         print(prior_t, "|" ,prior_tilde, "| SVM Poly | K =", K, "| C =", C, "| d =", d, "| c =", c, "| Normalized | PCA =", 5+i,
                               "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF)) 
                         
