@@ -3,6 +3,7 @@ import scipy.optimize
 import DimReduction as dr
 import time
 import ModelEvaluation as me
+import ScoreCalibration as sc
 
 def mcol(vect):
     return vect.reshape(vect.size, 1)
@@ -218,8 +219,10 @@ def trainSVMLinear(D, L, NormD, K_Set, C_Set, prior_t): #K relativo al modello, 
             Predictions, Scores = kFoldLinear(PCA, L, 5, K, C, prior_t)
             #Still called LLRs in the printDCFs function, but they are scores with no probabilistic interpretation
             #We use the same function for every model
+            Scores = sc.calibrate_scores(vrow(Scores), L, prior_t)
+            Scores = Scores.reshape(Scores.shape[1])
             for prior_tilde in prior_tilde_set:
-                ActDCF, minDCF = me.printDCFs(D, L, Predictions, Scores, prior_tilde) 
+                ActDCF, minDCF = me.printDCFs(D, L, Scores > 0, Scores, prior_tilde) 
                 print(prior_t, "|" ,prior_tilde, "| SVM Linear | K =", K, "| C =", C, "| Raw | PCA =", 5+i,
                       "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF))            
 
@@ -227,8 +230,10 @@ def trainSVMLinear(D, L, NormD, K_Set, C_Set, prior_t): #K relativo al modello, 
         for C in C_Set:
             PCA = dr.PCA(NormD, L, 5+i)
             Predictions, Scores = kFoldLinear(PCA, L, 5, K, C, prior_t)
+            Scores = sc.calibrate_scores(vrow(Scores), L, prior_t)
+            Scores = Scores.reshape(Scores.shape[1])
             for prior_tilde in prior_tilde_set:
-                ActDCF, minDCF = me.printDCFs(D, L, Predictions, Scores, prior_tilde)
+                ActDCF, minDCF = me.printDCFs(D, L, Scores > 0, Scores, prior_tilde)
                 print(prior_t, "|" ,prior_tilde, "| SVM Linear | K =", K, "| C =", C, "| Normalized | PCA =", 5+i,
                       "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF)) 
             
