@@ -219,22 +219,29 @@ def trainSVMLinear(D, L, NormD, K_Set, C_Set, prior_t): #K relativo al modello, 
             Predictions, Scores = kFoldLinear(PCA, L, 5, K, C, prior_t)
             #Still called LLRs in the printDCFs function, but they are scores with no probabilistic interpretation
             #We use the same function for every model
-            Scores = sc.calibrate_scores(vrow(Scores), L, prior_t)
-            Scores = Scores.reshape(Scores.shape[1])
+            CalibratedScores = sc.calibrate_scores(vrow(Scores), L, prior_t)
+            CalibratedScores = CalibratedScores.reshape(Scores.shape[1])
             for prior_tilde in prior_tilde_set:
                 ActDCF, minDCF = me.printDCFs(D, L, Scores > 0, Scores, prior_tilde) 
-                print(prior_t, "|" ,prior_tilde, "| SVM Linear | K =", K, "| C =", C, "| Raw | PCA =", 5+i,
-                      "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF))            
+                print(prior_t, "|" ,prior_tilde, "| SVM Linear | K =", K, "| C =", C, "| Raw | Uncalibrated | PCA =", 5+i,
+                      "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF))
+                ActDCF, minDCF = me.printDCFs(D, L, CalibratedScores > 0, Scores, prior_tilde) 
+                print(prior_t, "|" ,prior_tilde, "| SVM Linear | K =", K, "| C =", C, "| Raw | Calibrated | PCA =", 5+i,
+                      "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF))
+                            
 
     for K in K_Set:
         for C in C_Set:
             PCA = dr.PCA(NormD, L, 5+i)
             Predictions, Scores = kFoldLinear(PCA, L, 5, K, C, prior_t)
-            Scores = sc.calibrate_scores(vrow(Scores), L, prior_t)
-            Scores = Scores.reshape(Scores.shape[1])
+            CalibratedScores = sc.calibrate_scores(vrow(Scores), L, prior_t)
+            CalibratedScores = CalibratedScores.reshape(Scores.shape[1])
             for prior_tilde in prior_tilde_set:
-                ActDCF, minDCF = me.printDCFs(D, L, Scores > 0, Scores, prior_tilde)
-                print(prior_t, "|" ,prior_tilde, "| SVM Linear | K =", K, "| C =", C, "| Normalized | PCA =", 5+i,
+                ActDCF, minDCF = me.printDCFs(D, L, Scores > 0, Scores, prior_tilde) 
+                print(prior_t, "|" ,prior_tilde, "| SVM Linear | K =", K, "| C =", C, "| Normalized | Uncalibrated | PCA =", 5+i,
+                      "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF))
+                ActDCF, minDCF = me.printDCFs(D, L, CalibratedScores > 0, Scores, prior_tilde) 
+                print(prior_t, "|" ,prior_tilde, "| SVM Linear | K =", K, "| C =", C, "| Normalized | Calibrated | PCA =", 5+i,
                       "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF)) 
             
 
@@ -277,9 +284,14 @@ def trainSVMPoly(D, L, NormD, K_Set, C_Set, d_Set, c_Set, prior_t): #K relativo 
                     Predictions, Scores = kFoldPoly(PCA, L, 5, K, C, d, c, prior_t)
                     #Still called LLRs in the printDCFs function, but they are scores with no probabilistic interpretation
                     #We use the same function for every model
+                    CalibratedScores = sc.calibrate_scores(vrow(Scores), L, prior_t)
+                    CalibratedScores = CalibratedScores.reshape(Scores.shape[1])
                     for prior_tilde in prior_tilde_set: 
-                        ActDCF, minDCF = me.printDCFs(D, L, Predictions, Scores, prior_tilde)
-                        print(prior_t, "|" ,prior_tilde, "| SVM Poly | K =", K, "| C =", C, "| d =", d, "| c =", c, "| Raw | PCA =", 5+i,
+                        ActDCF, minDCF = me.printDCFs(D, L, Scores > 0, Scores, prior_tilde)
+                        print(prior_t, "|" ,prior_tilde, "| SVM Poly | K =", K, "| C =", C, "| d =", d, "| c =", c, "| Raw | Uncalibrated | PCA =", 5+i,
+                              "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF))
+                        ActDCF, minDCF = me.printDCFs(D, L, CalibratedScores > 0, Scores, prior_tilde)
+                        print(prior_t, "|" ,prior_tilde, "| SVM Poly | K =", K, "| C =", C, "| d =", d, "| c =", c, "| Raw | Calibrated | PCA =", 5+i,
                               "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF)) 
 
     
@@ -289,10 +301,15 @@ def trainSVMPoly(D, L, NormD, K_Set, C_Set, d_Set, c_Set, prior_t): #K relativo 
                 for c in c_Set:
                     PCA = dr.PCA(NormD, L, 5+i)
                     Predictions, Scores = kFoldPoly(PCA, L, 5, K, C, d, c, prior_t)
+                    CalibratedScores = sc.calibrate_scores(vrow(Scores), L, prior_t)
+                    CalibratedScores = CalibratedScores.reshape(Scores.shape[1])
                     for prior_tilde in prior_tilde_set: 
-                        ActDCF, minDCF = me.printDCFs(D, L, Predictions, Scores, prior_tilde)
-                        print(prior_t, "|" ,prior_tilde, "| SVM Poly | K =", K, "| C =", C, "| d =", d, "| c =", c, "| Normalized | PCA =", 5+i,
-                              "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF)) 
+                        ActDCF, minDCF = me.printDCFs(D, L, Scores > 0, Scores, prior_tilde)
+                        print(prior_t, "|" ,prior_tilde, "| SVM Poly | K =", K, "| C =", C, "| d =", d, "| c =", c, "| Normalized | Uncalibrated | PCA =", 5+i,
+                              "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF))
+                        ActDCF, minDCF = me.printDCFs(D, L, CalibratedScores > 0, Scores, prior_tilde)
+                        print(prior_t, "|" ,prior_tilde, "| SVM Poly | K =", K, "| C =", C, "| d =", d, "| c =", c, "| Normalized | Calibrated | PCA =", 5+i,
+                              "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF))  
                         
 
 def kFold_RBF(D, L, K, KModel, C, gamma, prior_t): #KModel è il K relativo al modello
@@ -330,12 +347,17 @@ def trainSVM_RBF(D, L, NormD, K_Set, C_Set, gamma_Set, prior_t): #K relativo al 
             for gamma in gamma_Set:
                 PCA = dr.PCA(D, L, 5+i)
                 Predictions, Scores = kFold_RBF(PCA, L, 5, K, C, gamma, prior_t)
-                    #Still called LLRs in the printDCFs function, but they are scores with no probabilistic interpretation
-                    #We use the same function for every model
+                #Still called LLRs in the printDCFs function, but they are scores with no probabilistic interpretation
+                #We use the same function for every model
+                CalibratedScores = sc.calibrate_scores(vrow(Scores), L, prior_t)
+                CalibratedScores = CalibratedScores.reshape(Scores.shape[1])
                 for prior_tilde in prior_tilde_set: 
-                    ActDCF, minDCF = me.printDCFs(D, L, Predictions, Scores, prior_tilde)
-                    print(prior_t, "|", prior_tilde, "| SVM RBF | K =", K, "| C =", C, "| gamma =", gamma, "| Raw | PCA =", 5+i,
-                              "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF)) 
+                    ActDCF, minDCF = me.printDCFs(D, L, Scores > 0, Scores, prior_tilde)
+                    print(prior_t, "|", prior_tilde, "| SVM RBF | K =", K, "| C =", C, "| gamma =", gamma, "| Raw | Uncalibrated | PCA =", 5+i,
+                              "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF))
+                    ActDCF, minDCF = me.printDCFs(D, L, CalibratedScores > 0, Scores, prior_tilde)
+                    print(prior_t, "|", prior_tilde, "| SVM RBF | K =", K, "| C =", C, "| gamma =", gamma, "| Raw | Calibrated | PCA =", 5+i,
+                              "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF))  
 
    
     for K in K_Set:
@@ -343,7 +365,12 @@ def trainSVM_RBF(D, L, NormD, K_Set, C_Set, gamma_Set, prior_t): #K relativo al 
             for gamma in gamma_Set:
                 PCA = dr.PCA(NormD, L, 5+i)
                 Predictions, Scores = kFold_RBF(PCA, L, 5, K, C, gamma, prior_t)
+                CalibratedScores = sc.calibrate_scores(vrow(Scores), L, prior_t)
+                CalibratedScores = CalibratedScores.reshape(Scores.shape[1])
                 for prior_tilde in prior_tilde_set: 
-                    ActDCF, minDCF = me.printDCFs(D, L, Predictions, Scores, prior_tilde)
-                    print(prior_t, "|", prior_tilde, "| SVM RBF | K =", K, "| C =", C, "| gamma =", gamma, "| Normalized | PCA =", 5+i,
+                    ActDCF, minDCF = me.printDCFs(D, L, Scores > 0, Scores, prior_tilde)
+                    print(prior_t, "|", prior_tilde, "| SVM RBF | K =", K, "| C =", C, "| gamma =", gamma, "| Normalized | Uncalibrated | PCA =", 5+i,
+                              "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF))
+                    ActDCF, minDCF = me.printDCFs(D, L, CalibratedScores > 0, Scores, prior_tilde)
+                    print(prior_t, "|", prior_tilde, "| SVM RBF | K =", K, "| C =", C, "| gamma =", gamma, "| Normalized | Uncalibrated | PCA =", 5+i,
                               "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF))
