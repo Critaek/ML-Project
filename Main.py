@@ -51,12 +51,12 @@ if __name__ == "__main__":
         #mvg.trainMVG(mvg.Tied, D, L, NormD, "Tied", different_prior)
 
         lSet = numpy.logspace(-5,2, num = 20) #20 values between 1e-5 and 1e2
-        lr.trainLinearRegression(D, L, NormD, lSet, different_prior)
-        qr.trainQuadraticRegression(D, L, NormD, lSet, different_prior)
+        #lr.trainLinearRegression(D, L, NormD, lSet, different_prior)
+        #qr.trainQuadraticRegression(D, L, NormD, lSet, different_prior)
         
         K_Set = numpy.array([0.0, 1.0, 10.0])
         C_Set = numpy.logspace(-2,0, num = 10)
-        SVM.trainSVMLinear(D, L, NormD, K_Set, C_Set, different_prior)
+        #SVM.trainSVMLinear(D, L, NormD, K_Set, C_Set, different_prior)
 
         
         K_Set = numpy.array([0.0, 1.0, 10.0])
