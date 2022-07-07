@@ -82,7 +82,7 @@ def kFold(D, L, K, l, prior_t):
 
 
 def trainQuadraticRegression(D, L, NormD, lSet, prior_t):
-    prior_tilde_set = [0.33, 0.5, 0.66]
+    prior_tilde_set = [0.1, 0.5, 0.9]
 
     for l in lSet:
         i = 5

@@ -86,7 +86,7 @@ def kFold(D, L, K, l,prior_t):
 
 
 def trainLinearRegression(D, L, NormD, lSet, prior_t):
-    prior_tilde_set = [0.33, 0.5, 0.66]
+    prior_tilde_set = [0.1, 0.5, 0.9]
 
     print("result[0] = prior_t | result[1] = prior_tilde | result[2] = model_name | result[3] = pre-processing | result[4] = PCA | result[5] = ActDCF | result[6] = MinDCF")
 

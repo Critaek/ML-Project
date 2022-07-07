@@ -42,7 +42,7 @@ if __name__ == "__main__":
     #numpy.save("data/normalizedD.npy", NormD)
 
 
-    different_Application=[0.5,0.33,0.66]
+    different_Application=[0.5,0.1,0.9]
     for different_prior in different_Application:
         #mvg.trainMVG(mvg.MultiV, D, L, NormD, "Full", different_prior)
 

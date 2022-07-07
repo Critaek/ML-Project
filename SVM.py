@@ -211,7 +211,7 @@ def kFoldLinear(D, L, K, KModel, C, prior_t): #KModel è il K relativo al modell
 
 def trainSVMLinear(D, L, NormD, K_Set, C_Set, prior_t): #K relativo al modello, non k_fold
     i = 5
-    prior_tilde_set = [0.33, 0.5, 0.66]
+    prior_tilde_set = [0.1, 0.5, 0.9]
 
     for K in K_Set:
         for C in C_Set:
@@ -267,7 +267,7 @@ def kFoldPoly(D, L, K, KModel, C, d, c, prior_t): #KModel è il K relativo al mo
 
 def trainSVMPoly(D, L, NormD, K_Set, C_Set, d_Set, c_Set, prior_t): #K relativo al modello, non k_fold
     i = 5
-    prior_tilde_set = [0.33, 0.5, 0.66]
+    prior_tilde_set = [0.1, 0.5, 0.9]
 
     for K in K_Set:
         for C in C_Set:
@@ -322,7 +322,7 @@ def kFold_RBF(D, L, K, KModel, C, gamma, prior_t): #KModel è il K relativo al m
     return Predictions, Scores
 
 def trainSVM_RBF(D, L, NormD, K_Set, C_Set, gamma_Set, prior_t): #K relativo al modello, non k_fold
-    prior_tilde_set = [0.33, 0.5, 0.66]
+    prior_tilde_set = [0.1, 0.5, 0.9]
     i = 5
 
     for K in K_Set:
