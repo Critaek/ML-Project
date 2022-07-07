@@ -55,20 +55,20 @@ if __name__ == "__main__":
         qr.trainQuadraticRegression(D, L, NormD, lSet, different_prior)
         
         K_Set = numpy.array([0.0, 1.0, 10.0])
-        C_Set = numpy.array([0.1, 1.0, 10.0])
+        C_Set = numpy.logspace(-2,0, num = 10)
         SVM.trainSVMLinear(D, L, NormD, K_Set, C_Set, different_prior)
 
         
         K_Set = numpy.array([0.0, 1.0, 10.0])
-        C_Set = numpy.array([0.5, 1.0])
+        C_Set = numpy.logspace(-2,0, num = 10)
         d_Set = numpy.array([2.0, 3.0])
         c_Set = numpy.array([0.0, 1.0])
         SVM.trainSVMPoly(D, L, NormD, K_Set, C_Set, d_Set, c_Set, different_prior)
 
         
         K_Set = numpy.array([0.0, 1.0, 10.0])
-        C_Set = numpy.array([0.5, 1.0])
-        gamma_Set = numpy.array([1.0, 10.0])
+        C_Set = numpy.logspace(-2,0, num = 10)
+        gamma_Set = numpy.logspace(-3,-1, num = 3)
         SVM.trainSVM_RBF(D, L, NormD, K_Set, C_Set, gamma_Set, different_prior)
     
 
