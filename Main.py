@@ -11,6 +11,7 @@ import ModelEvaluation as me
 import LinearRegression as lr
 import SVM
 import QuadraticRegression as qr
+import GMM
 
 def mcol(v):
     return v.reshape(v.size, 1)
@@ -63,13 +64,20 @@ if __name__ == "__main__":
         C_Set = numpy.logspace(-2,0, num = 10)
         d_Set = numpy.array([2.0, 3.0])
         c_Set = numpy.array([0.0, 1.0])
-        SVM.trainSVMPoly(D, L, NormD, K_Set, C_Set, d_Set, c_Set, different_prior)
+        #SVM.trainSVMPoly(D, L, NormD, K_Set, C_Set, d_Set, c_Set, different_prior)
 
         
         K_Set = numpy.array([0.0, 1.0, 10.0])
         C_Set = numpy.logspace(-2,0, num = 10)
+        C_Set1 = C_Set[0:5]
+        C_Set2 = C_Set[5:]
         gamma_Set = numpy.logspace(-3,-1, num = 3)
-        SVM.trainSVM_RBF(D, L, NormD, K_Set, C_Set, gamma_Set, different_prior)
+        #SVM.trainSVM_RBF(D, L, NormD, K_Set, C_Set, gamma_Set, different_prior)
+    
+    nSet = numpy.array([0,1,2,3,4])
+    GMM.trainGMM_Full(D, L, NormD, nSet)
+    GMM.trainGMM_Diagonal(D, L, NormD, nSet)
+    GMM.trainGMM_Tied(D, L, NormD, nSet)
     
 
     end = time.time()
