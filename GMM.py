@@ -284,8 +284,8 @@ def kFold_GMM_Full(D, L, K, n): #K per fold
         LTR = L[idxTrain]
         DTE = D[:, idxTest]
         LTE = L[idxTest]
-        DTR0 = DTR[LTR == 0] # bad wines
-        DTR1 = DTR[LTR == 1] # good wines
+        DTR0 = DTR[:, LTR == 0] # bad wines
+        DTR1 = DTR[:, LTR == 1] # good wines
         gmm0 = GMM_LBG_Full(DTR0, n) #n number of components
         gmm1 = GMM_LBG_Full(DTR1, n) #n number of components
         PredRet, LLRsRet = GMM_Scores(DTE, gmm0, gmm1)
@@ -315,8 +315,8 @@ def kFold_GMM_Diagonal(D, L, K, n): #K per fold
         LTR = L[idxTrain]
         DTE = D[:, idxTest]
         LTE = L[idxTest]
-        DTR0 = DTR[LTR == 0] # bad wines
-        DTR1 = DTR[LTR == 1] # good wines
+        DTR0 = DTR[:, LTR == 0] # bad wines
+        DTR1 = DTR[:, LTR == 1] # good wines
         gmm0 = GMM_LBG_Diagonal(DTR0, n) #n number of components
         gmm1 = GMM_LBG_Diagonal(DTR1, n) #n number of components
         PredRet, LLRsRet = GMM_Scores(DTE, gmm0, gmm1)
@@ -346,8 +346,8 @@ def kFold_GMM_Tied(D, L, K, n): #K per fold
         LTR = L[idxTrain]
         DTE = D[:, idxTest]
         LTE = L[idxTest]
-        DTR0 = DTR[LTR == 0] # bad wines
-        DTR1 = DTR[LTR == 1] # good wines
+        DTR0 = DTR[:, LTR == 0] # bad wines
+        DTR1 = DTR[:, LTR == 1] # good wines
         gmm0 = GMM_LBG_Tied(DTR0, n) #n number of components
         gmm1 = GMM_LBG_Tied(DTR1, n) #n number of components
         PredRet, LLRsRet = GMM_Scores(DTE, gmm0, gmm1)
