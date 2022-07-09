@@ -1,4 +1,3 @@
-from lib2to3.pgen2.token import TILDE
 import numpy
 import Plot as plt 
 
@@ -10,7 +9,7 @@ if __name__ == "__main__":
 
     #prior_t|p_tilde|Linear Regression|Lambda =1.00e-5|Raw|PCA = 10|ActDCF =0.552|MinDCF =0.517
     #Sempre 0.5 | varia | fisso | varia | cambia
-
+   
     for line in f:
         elements = line.split("|")
         elements =[elem.strip() for elem in elements] 
@@ -19,12 +18,10 @@ if __name__ == "__main__":
         else:
             raw.append(( elements[1], float(elements[7][8:]) ))
 
-
     nor = numpy.array(normalized,dtype="float")
     raw = numpy.array(raw,dtype="float")
     
     #(pi_tilde, lambda, mindcf)
-    lambdaArray = []
     normalized05=[]
     normalized09 = []
     normalized01 = []
@@ -63,4 +60,5 @@ if __name__ == "__main__":
     raw09 = numpy.array(raw09)
 
     plt.plotThreeDCFs(lambdas, normalized05, normalized09, normalized01)
+    plt.plotThreeDCFs(lambdas, raw05, raw09, raw01)
     #plt.plotDCF(lambdas, raw05)        
