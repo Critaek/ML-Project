@@ -55,16 +55,16 @@ def plotDCF(x, y):
     #plt.savefig("Plot_LR.pdf")
     plt.show()
 
-def plotThreeDCFs(x, y1, y2, y3):
+def plotThreeDCFs(x, y1, y2, y3, variabile, type):
     plt.figure()
     plt.plot(x, y1, label = "0.5", color = "r")
     plt.plot(x, y2, label = "0.1", color = "b")
     plt.plot(x, y3, label = "0.9", color = "g")
     plt.xlim([min(x), max(x)])
     plt.xscale("log", base = 10)
-    plt.legend(["minDCF prior=0.5", "minDCF prior=0.1", "minDCF prior=0.9"])
+    plt.legend(["minDCF("r'$\tilde{\pi}$'" = 0.5)", "minDCF("r'$\tilde{\pi}$'" = 0.1)", "minDCF("r'$\tilde{\pi}$'" = 0.9)"])
     
-    plt.xlabel("lambda")
-    plt.ylabel("Min DCF")
+    plt.xlabel(variabile)
+    plt.ylabel("MinDCF " + type)
 
     plt.show()

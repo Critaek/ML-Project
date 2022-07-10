@@ -59,6 +59,6 @@ if __name__ == "__main__":
     raw01 = numpy.array(raw01)
     raw09 = numpy.array(raw09)
 
-    plt.plotThreeDCFs(lambdas, normalized05, normalized09, normalized01)
-    plt.plotThreeDCFs(lambdas, raw05, raw09, raw01)
+    plt.plotThreeDCFs(lambdas, normalized05, normalized09, normalized01, "λ")
+    plt.plotThreeDCFs(lambdas, raw05, raw09, raw01, "λ")
     #plt.plotDCF(lambdas, raw05)        
