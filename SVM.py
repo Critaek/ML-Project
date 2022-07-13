@@ -273,7 +273,7 @@ def kFoldPoly(D, L, K, KModel, C, d, c, prior_t): #KModel è il K relativo al mo
 
 
 def trainSVMPoly(D, L, NormD, K_Set, C_Set, d_Set, c_Set, prior_t): #K relativo al modello, non k_fold
-    i = 5
+    i = 6
     prior_tilde_set = [0.1, 0.5, 0.9]
 
     for K in K_Set:
