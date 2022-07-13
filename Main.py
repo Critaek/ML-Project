@@ -12,6 +12,7 @@ import LinearRegression as lr
 import SVM
 import QuadraticRegression as qr
 import GMM
+import ScoreCalibration as sc
 
 def mcol(v):
     return v.reshape(v.size, 1)
@@ -69,16 +70,43 @@ if __name__ == "__main__":
         
         K_Set = numpy.array([0.0, 1.0, 10.0])
         C_Set = numpy.logspace(-2,0, num = 10)
-        C_Set1 = C_Set[0:5]
-        C_Set2 = C_Set[5:]
         gamma_Set = numpy.logspace(-3,-1, num = 3)
         #SVM.trainSVM_RBF(D, L, NormD, K_Set, C_Set, gamma_Set, different_prior)
     
     nSet = numpy.array([0,1,2,3,4])
-    GMM.trainGMM_Full(D, L, NormD, nSet)
-    GMM.trainGMM_Diagonal(D, L, NormD, nSet)
-    GMM.trainGMM_Tied(D, L, NormD, nSet)
+    #GMM.trainGMM_Full(D, L, NormD, nSet)
+    #GMM.trainGMM_Diagonal(D, L, NormD, nSet)
+    #GMM.trainGMM_Tied(D, L, NormD, nSet)
+
+    #PredictionsPoly, scoresPoly = SVM.kFoldPoly(NormD, L, 5, 10.0, 0.01, 3.0, 1.0, 0.5)
+    #numpy.save("data/SVMPoly_10_01_3_1.npy", scoresPoly)
+
+    #PredictionsGMM, scoresGMM = GMM.kFold_GMM_Full(NormD, L, 5, 4)
+    #numpy.save("data/GMMFull_4_Norm.npy", scoresGMM)
+
+    scoresGMM = numpy.load("data/GMMFull_4_Norm.npy")
+    scoresPoly = numpy.load("data/SVMPoly_10_01_3_1.npy")
+    PredictionsPoly = scoresPoly > 0
+    PredictionsGMM = scoresGMM > 0
     
+    x, ActPoly, MinPoly = me.BiasErrorPlot(L, PredictionsPoly, scoresPoly, 0.5)
+    x, ActGMM, MinGMM = me.BiasErrorPlot(L, PredictionsGMM, scoresGMM, 0.5)
+    #plt.BiasErrorPlot(x, Act, Min)
+
+    CalibratedScoresPoly = sc.calibrate_scores(vrow(scoresPoly), L, 0.5)
+    CalibratedScoresGMM = sc.calibrate_scores(vrow(scoresGMM), L, 0.5)
+    CalibratedScoresPoly = CalibratedScoresPoly.reshape(CalibratedScoresPoly.shape[1])
+    CalibratedScoresGMM = CalibratedScoresGMM.reshape(CalibratedScoresGMM.shape[1])
+
+    legend = ["ActDCF Poly", "MinDCF Poly", "ActDCF GMM", "MinDCF GMM"]
+    plt.BiasErrorPlotCalUncal(x, ActPoly, MinPoly, ActGMM, MinGMM, legend)
+    x, ActPoly, MinPoly = me.BiasErrorPlot(L, CalibratedScoresPoly > 0, CalibratedScoresPoly, 0.5)
+    x, ActGMM, MinGMM = me.BiasErrorPlot(L, CalibratedScoresGMM > 0, CalibratedScoresGMM, 0.5)
+    legend = ["ActDCF Poly (Calibrated)", "MinDCF Poly", "ActDCF GMM (Calibrated)", "MinDCF GMM"]
+    plt.BiasErrorPlotCalUncal(x, ActPoly, MinPoly, ActGMM, MinGMM, legend)
+
+
+
 
     end = time.time()
     print("Total time", end - start)

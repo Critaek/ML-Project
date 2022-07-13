@@ -2,7 +2,7 @@ import numpy
 import Plot as plt 
 
 if __name__ == "__main__":
-    f = open("data/SVMLinPlot.txt", "r")
+    f = open("data/SVMLinear.txt", "r")
     normalized=[]
     raw=[]
 
@@ -20,11 +20,12 @@ if __name__ == "__main__":
     for line in f:
         elements = line.split("|")
         elements =[elem.strip() for elem in elements]
-        if(elements[5]=="Normalized" and elements[6]=="Uncalibrated"):
-            normalized.append(( float(elements[1]), float(elements[9][8:]), float(elements[3][4:]), float(elements[4][4:]) ))
+        if(float(elements[0]) == 0.5):
+            if(elements[5]=="Normalized" and elements[6]=="Uncalibrated"):
+                normalized.append(( float(elements[1]), float(elements[9][8:]), float(elements[3][4:]), float(elements[4][4:]) ))
 
-        elif(elements[5]=="Raw" and elements[6]=="Uncalibrated"):
-            raw.append(( float(elements[1]), float(elements[9][8:]), float(elements[3][4:]), float(elements[4][4:]) ))
+            elif(elements[5]=="Raw" and elements[6]=="Uncalibrated"):
+                raw.append(( float(elements[1]), float(elements[9][8:]), float(elements[3][4:]), float(elements[4][4:]) ))
 
     
     
@@ -75,6 +76,7 @@ if __name__ == "__main__":
 
     filtRaw05=filter(lambda x: x[0] == 0.5, raw)
     bestRaw05=min(raw, key=lambda x: x[1])
+    print(bestRaw05)
     filtRaw05=filter(lambda x: x[2] == bestRaw05[2], filtRaw05)
     for i in filtRaw05:
         if(i[2]==bestRaw05[2]):
@@ -83,6 +85,7 @@ if __name__ == "__main__":
 
     filtRaw01=filter(lambda x: x[0] == 0.1, raw)
     bestRaw01=min(raw, key=lambda x: x[1])
+    print(bestRaw01)
     filtRaw01=filter(lambda x: x[2] == bestRaw01[2], filtRaw01)
     for i in filtRaw01:
         if(i[2]==bestRaw01[2]):
@@ -91,6 +94,7 @@ if __name__ == "__main__":
 
     filtRaw09=filter(lambda x: x[0] == 0.9, raw)
     bestRaw09=min(raw, key=lambda x: x[1])
+    print(bestRaw09)
     filtRaw09=filter(lambda x: x[2] == bestRaw09[2], filtRaw09)
     for i in filtRaw09:
         if(i[2]==bestRaw09[2]):
@@ -98,5 +102,5 @@ if __name__ == "__main__":
     raw09=numpy.array(raw09)    
 
     plt.plotThreeDCFs(C_Set, normalized05, normalized09, normalized01,"C","Normalized")
-    #plt.plotThreeDCFs(C_Set,raw05,raw09,raw01,"C","Raw")
+    plt.plotThreeDCFs(C_Set,raw05,raw09,raw01,"C","Raw")
            

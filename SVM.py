@@ -372,5 +372,5 @@ def trainSVM_RBF(D, L, NormD, K_Set, C_Set, gamma_Set, prior_t): #K relativo al 
                     print(prior_t, "|", prior_tilde, "| SVM RBF | K =", K, "| C =", C, "| gamma =", gamma, "| Normalized | Uncalibrated | PCA =", 5+i,
                               "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF))
                     ActDCF, minDCF = me.printDCFs(D, L, CalibratedScores > 0, Scores, prior_tilde)
-                    print(prior_t, "|", prior_tilde, "| SVM RBF | K =", K, "| C =", C, "| gamma =", gamma, "| Normalized | Uncalibrated | PCA =", 5+i,
+                    print(prior_t, "|", prior_tilde, "| SVM RBF | K =", K, "| C =", C, "| gamma =", gamma, "| Normalized | Calibrated | PCA =", 5+i,
                               "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF))

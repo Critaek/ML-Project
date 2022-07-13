@@ -58,13 +58,44 @@ def plotDCF(x, y):
 def plotThreeDCFs(x, y1, y2, y3, variabile, type):
     plt.figure()
     plt.plot(x, y1, label = "0.5", color = "r")
-    plt.plot(x, y2, label = "0.1", color = "b")
-    plt.plot(x, y3, label = "0.9", color = "g")
+    plt.plot(x, y2, label = "0.1", color = "y")
+    plt.plot(x, y3, label = "0.9", color = "m")
     plt.xlim([min(x), max(x)])
     plt.xscale("log", base = 10)
     plt.legend(["minDCF("r'$\tilde{\pi}$'" = 0.5)", "minDCF("r'$\tilde{\pi}$'" = 0.1)", "minDCF("r'$\tilde{\pi}$'" = 0.9)"])
     
     plt.xlabel(variabile)
     plt.ylabel("MinDCF " + type)
+
+    plt.show()
+
+def plotThreeDCFsRBF(x, y1, y2, y3, variabile, type):
+    plt.figure()
+    plt.plot(x, y1, label = "0.5", color = "r")
+    plt.plot(x, y2, label = "0.1", color = "y")
+    plt.plot(x, y3, label = "0.9", color = "m")
+    plt.xlim([min(x), max(x)])
+    plt.xscale("log", base = 10)
+    plt.legend(["logγ = -3", "logγ = -2", "logγ = -1"])
+    
+    plt.xlabel(variabile)
+    plt.ylabel("MinDCF " + type)
+
+    plt.show()
+
+def plotHistGMM(x, y1, y2, type):
+    f, ax = plt.subplots()
+
+    width = 0.35
+
+    ax.bar(x - width/2, y1, width)
+    ax.bar(x + width/2, y2, width)
+    labels = 2**x
+    labels = numpy.insert(labels, 0, 0)
+    ax.set_xticklabels(labels)
+    ax.legend(["Raw", "Normalized"])
+
+    ax.set_xlabel("GMM Components")
+    ax.set_ylabel("Min DCF " + type)
 
     plt.show()

@@ -111,3 +111,103 @@ def printDCFs(D, L, pred, LLRs, pi_tilde):
 
     return ActDCF, minDCF
 #-------------------------------------------------------------------------------------------------#
+
+def printDCFsNoShuffle(D, L, pred, LLRs, pi_tilde):
+
+    pi1 = pi_tilde
+    pi0 = 1- pi_tilde
+    Cfn = 1
+    Cfp = 1
+    classPriors = numpy.array([pi1,pi0]) #[0.5, 0.5]
+    minDCF = []
+
+    #normalizedDCF
+    
+    confusionMatrix = numpy.zeros((2, 2))
+
+    for i in range(0,len(classPriors)):
+        for j in range(0,len(classPriors)):
+            confusionMatrix[i,j] = ((L == j) * (pred == i)).sum()
+
+    (DCFu,FPRi,TPRi) = BiasRisk(pi1,Cfn,Cfp,confusionMatrix)
+        
+    minDummy = MinDummy(pi1,Cfn,Cfp)
+    ActDCF = DCFu/minDummy
+
+    #minDCF
+    comm = sorted(LLRs) #aggiungere -inf, inf
+
+    for score in comm:
+        
+        Predicions_By_Score = PredicionsByScore(score, LLRs)
+        wine_labels = L
+        
+        confusionMatrix = numpy.zeros((2, 2))
+
+        for i in range(0,len(classPriors)):
+            for j in range(0,len(classPriors)):
+                confusionMatrix[i,j] = ((wine_labels == j) * (Predicions_By_Score == i)).sum()
+
+        (DCFu,FPRi,TPRi) = BiasRisk(pi1,Cfn,Cfp,confusionMatrix)
+        
+        minDummy = MinDummy(pi1,Cfn,Cfp)
+        normalizedDCF = DCFu/minDummy
+        minDCF.append(normalizedDCF)
+
+    minDCF=min(minDCF)
+
+    return ActDCF, minDCF
+#-------------------------------------------------------------------------------------------------#
+
+def BiasErrorPlot(L, pred, scores, pi):
+    piList = numpy.linspace(-4, 4, 51)
+    Cfn = 1
+    Cfp = 1
+    pi1 = 1 - pi
+    classPriors = numpy.array([pi,pi1])
+
+    numpy.random.seed(0)
+    idx = numpy.random.permutation(L.size)
+
+    L = L[idx]
+
+    ActDCF_List = []
+    MinDCF_List = []
+
+    for p in piList:
+        pi_tilde = 1/(1+ numpy.exp(-p))
+        confusionMatrix = numpy.zeros((2, 2))
+
+        for i in range(0,len(classPriors)):
+            for j in range(0,len(classPriors)):
+                confusionMatrix[i,j] = ((L == j) * (pred == i)).sum()
+
+        (DCFu,FPRi,TPRi) = BiasRisk(pi_tilde,Cfn,Cfp,confusionMatrix)
+        
+        minDummy = MinDummy(pi_tilde,Cfn,Cfp)
+        ActDCF = DCFu/minDummy
+
+        ActDCF_List.append(ActDCF)
+
+    sort = sorted(scores)
+
+    for p in piList:
+        minDCF2 = []
+        for score in sort:
+            pi_tilde = 1/(1+ numpy.exp(-p))
+            confusionMatrix = numpy.zeros((2, 2))
+            Predicions_By_Score = PredicionsByScore(score, scores)
+
+            for i in range(0,len(classPriors)):
+                for j in range(0,len(classPriors)):
+                    confusionMatrix[i,j] = ((L == j) * (Predicions_By_Score == i)).sum()
+
+            (DCFu,FPRi,TPRi) = BiasRisk(pi_tilde,Cfn,Cfp,confusionMatrix)
+        
+            minDummy = MinDummy(pi_tilde,Cfn,Cfp)
+            NormalizedDCF = DCFu/minDummy
+            minDCF2.append(NormalizedDCF)
+    
+        MinDCF_List.append(min(minDCF2))
+
+    return piList, ActDCF_List, MinDCF_List

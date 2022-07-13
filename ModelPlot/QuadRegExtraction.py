@@ -2,7 +2,7 @@ import numpy
 import Plot as plt 
 
 if __name__ == "__main__":
-    f = open("data/LinearRegression.txt", "r")
+    f = open("data/QuadraticRegression.txt", "r")
     normalized=[]
     raw=[]
     lambdas = numpy.logspace(-5, 2, num = 20)
@@ -48,13 +48,7 @@ if __name__ == "__main__":
         if (float(n[0]) == 0.9):
             raw09.append(n[1])
             
-     #Saving results       
-    numpy.save("data_to_plot/LinRegnormalized05",normalized05)
-    numpy.save("data_to_plot/LinRegnormalized01",normalized01)
-    numpy.save("data_to_plot/LinRegnormalized09",normalized09)
-    numpy.save("data_to_plot/LinRegraw05",raw05)
-    numpy.save("data_to_plot/LinRegraw01",raw01)
-    numpy.save("data_to_plot/LinRegraw09",raw09)
+     #Saving results
 
     raw05 = numpy.array(raw05)
     raw01 = numpy.array(raw01)
