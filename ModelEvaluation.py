@@ -7,11 +7,8 @@ def PredicionsByScore(score, LLRs):
     # HERE WE TRY TO OPTIMIZE THE THRESHOLD USING DIFFERENT VALUES FROM A SET OF TEST SCORES
     
     threshold=score
-    for i in range(LLRs.size):
-            if(LLRs[i]>threshold):
-                pred[i] = 1
-            else:
-                pred[i] = 0
+    pred = LLRs > threshold
+    
     return pred
 
 #-------------------------------------------------------------------------------------------------#
@@ -33,14 +30,14 @@ def Predictions(pi1,Cfn,Cfp, LLRs):
 def ConfusionMatrix(pi1,Cfn,Cfp):
     pi0=1-pi1
     commediaLLRs = numpy.load('data/commedia_llr_infpar.npy')
-    predMatrix = numpy.zeros(commediaLLRs.shape)
-    threshold=-numpy.log((pi1*Cfn)/((pi0*Cfp)))
+    pred = numpy.zeros(commediaLLRs.shape)
+    threshold = -numpy.log( (pi1*Cfn) / ( (pi0*Cfp) ) )
     for i in range(commediaLLRs.size):
             if(commediaLLRs[i]>threshold):
-                predMatrix[i] = 1
+                pred[i] = 1
             else:
-                predMatrix[i] = 0
-    return predMatrix
+                pred[i] = 0
+    return pred
 
 #-------------------------------------------------------------------------------------------------#
 
@@ -61,9 +58,17 @@ def MinDummy(pi1,Cfn,Cfp):
 
 #-------------------------------------------------------------------------------------------------#
 
-def printDCFs(D, L, pred, LLRs, pi_tilde):
+def assign_labels(scores, pi, Cfn, Cfp):
+    threshold = - numpy.log( (pi*Cfn) / ( (pi*Cfp) ) )
+    P = scores > threshold
+
+    return numpy.int32(P)
+
+#-------------------------------------------------------------------------------------------------#
+
+def printDCFs(D, L, LLRs, pi_tilde):
     numpy.random.seed(0)
-    idx = numpy.random.permutation(D.shape[1])
+    idx = numpy.random.permutation(LLRs.shape[0])
 
     L = L[idx]
 
@@ -75,7 +80,8 @@ def printDCFs(D, L, pred, LLRs, pi_tilde):
     minDCF = []
 
     #normalizedDCF
-    
+
+    pred = assign_labels(LLRs, pi_tilde, Cfn, Cfp)
     confusionMatrix = numpy.zeros((2, 2))
 
     for i in range(0,len(classPriors)):
@@ -112,7 +118,7 @@ def printDCFs(D, L, pred, LLRs, pi_tilde):
     return ActDCF, minDCF
 #-------------------------------------------------------------------------------------------------#
 
-def printDCFsNoShuffle(D, L, pred, LLRs, pi_tilde):
+def printDCFsNoShuffle(D, L, LLRs, pi_tilde):
 
     pi1 = pi_tilde
     pi0 = 1- pi_tilde
@@ -123,6 +129,7 @@ def printDCFsNoShuffle(D, L, pred, LLRs, pi_tilde):
 
     #normalizedDCF
     
+    pred = assign_labels(LLRs, pi_tilde, Cfn, Cfp)
     confusionMatrix = numpy.zeros((2, 2))
 
     for i in range(0,len(classPriors)):

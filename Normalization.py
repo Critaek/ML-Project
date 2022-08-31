@@ -19,8 +19,6 @@ def Normalization(D):
 
 
 def NormDTE(DTR, DTE):
-    #Normalizing DTE with ranking computed from DTR, for some reasons, it doesn't work, returns
-    #very bad DCF on every model
     N = DTR.shape[1]
 
     ranks = []
@@ -34,7 +32,7 @@ def NormDTE(DTR, DTE):
     
     mat = numpy.vstack(ranks)
 
-    return mat
+    return mat #sarebbe il DTE trasformato
 
 def rank(x, D, N, i): #Sample rank
     accum = 0

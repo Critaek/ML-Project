@@ -12,6 +12,7 @@ import QuadraticRegression as qr
 import GMM
 import ScoreCalibration as sc
 import K_Fold
+import ray
 
 def mcol(v):
     return v.reshape(v.size, 1)
@@ -33,8 +34,12 @@ def split_db_2to1(D, L, seed = 0):
     
     return (DTR, LTR), (DTE, LTE)
 
+test = ray.remote(GMM.trainGMM_Full)
+
 if __name__ == "__main__":
-    start = time.time()
+    #ray.init()
+
+    #start = time.time()
 
     D, L = l.load()
 
@@ -43,7 +48,7 @@ if __name__ == "__main__":
     #K_Fold.saveRawFolds(D, L, 5)
     #K_Fold.saveNormFolds(D, L, 5)
 
-    print(time.time() - start)
+    #print(time.time() - start)
     
     different_Application=[0.1, 0.5 ,0.9]
     for different_prior in different_Application:
@@ -74,10 +79,15 @@ if __name__ == "__main__":
         gamma_Set = numpy.logspace(-3,-1, num = 3)
         #SVM.trainSVM_RBF(D, L, K_Set, C_Set, gamma_Set, different_prior)
     
-    nSet = numpy.array([0,1,2,3,4])
+    start = time.time()
+
+    nSet = numpy.array([0,1,2])
+    #test.remote(D, L, nSet)
     GMM.trainGMM_Full(D, L, nSet)
-    GMM.trainGMM_Diagonal(D, L, nSet)
-    GMM.trainGMM_Tied(D, L, nSet)
+
+    print("Tempo GMM Full", time.time() - start)
+    #GMM.trainGMM_Diagonal(D, L, nSet)
+    #GMM.trainGMM_Tied(D, L, nSet)
 
     #PredictionsPoly, scoresPoly = SVM.kFoldPoly(NormD, L, 5, 10.0, 0.01, 3.0, 1.0, 0.5)
     #numpy.save("data/SVMPoly_10_01_3_1.npy", scoresPoly)

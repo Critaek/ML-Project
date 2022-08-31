@@ -3,6 +3,7 @@ import math
 import time
 import DimReduction as dr
 import ModelEvaluation as me
+import K_Fold
 
 def mcol(v):
     return v.reshape(v.size, 1)
@@ -36,17 +37,8 @@ def MultiV(DTR, LTR, DTE, prior):
     S0 = logpdf_GAU_ND(DTE, mu0, C0)
     S1 = logpdf_GAU_ND(DTE, mu1, C1)
     LLRs = S1 - S0
-
-    SJoint = numpy.zeros((2, DTE.shape[1]))
     
-    SJoint[0, :] = numpy.exp(S0) * (1-prior)        #Product Between Densities LS0 and PriorProb
-    SJoint[1, :] = numpy.exp(S1) * (prior)          #Product Between Densities LS1 and PriorProb
-
-    SMarginal = vrow(SJoint.sum(0))
-    SPost = SJoint/SMarginal
-    Predictions = SPost.argmax(0)
-    
-    return Predictions, LLRs
+    return LLRs
 
 def Bayes(DTR, LTR, DTE, prior):
     mu0, C0 = meanAndCovMat(DTR[:, LTR == 0]) #Calcolo media e matrice delle covarianze per ogni classe
@@ -59,16 +51,7 @@ def Bayes(DTR, LTR, DTE, prior):
      
     LLRs = S1 - S0
 
-    SJoint = numpy.zeros((2, DTE.shape[1]))
-    
-    SJoint[0, :] = numpy.exp(S0) * (1-prior)        #Product Between Densities LS0 and PriorProb
-    SJoint[1, :] = numpy.exp(S1) * (prior)          #Product Between Densities LS1 and PriorProb
-
-    SMarginal = vrow(SJoint.sum(0))
-    SPost = SJoint/SMarginal
-    Predictions = SPost.argmax(0)
-    
-    return Predictions, LLRs
+    return LLRs
 
 def Tied(DTR, LTR, DTE, prior):
     mu0, C0 = meanAndCovMat(DTR[:, LTR == 0]) #Calcolo media e matrice delle covarianze per ogni classe
@@ -85,16 +68,7 @@ def Tied(DTR, LTR, DTE, prior):
     S1 = logpdf_GAU_ND(DTE, mu1, C)
     LLRs = S1 - S0
 
-    SJoint = numpy.zeros((2, DTE.shape[1]))
-    
-    SJoint[0, :] = numpy.exp(S0) * (1-prior)        #Product Between Densities LS0 and PriorProb
-    SJoint[1, :] = numpy.exp(S1) * (prior)          #Product Between Densities LS1 and PriorProb
-
-    SMarginal = vrow(SJoint.sum(0))
-    SPost = SJoint/SMarginal
-    Predictions = SPost.argmax(0)
-    
-    return Predictions, LLRs
+    return LLRs
 
 def meanAndCovMat(X):
     N = X.shape[1]
@@ -104,6 +78,7 @@ def meanAndCovMat(X):
     C = (1/N) * numpy.dot( (XC), (XC).T )
     return mu, C
 
+'''
 def kFold(D, L, K, model, prior_t):
     numpy.random.seed(0)
     idx = numpy.random.permutation(D.shape[1])
@@ -130,20 +105,42 @@ def kFold(D, L, K, model, prior_t):
 
     return Predictions, LLRs
 
-def trainMVG(model, D, L, NormD, type, prior_t):
+'''
+
+def kFold(model, prior_t, loadFunction, pca):
+    folds = loadFunction()
+
+    LLRs = []
+    Predictions = []
+
+    for f in folds:
+        DTR = f[0]
+        LTR = f[1]
+        DTE = f[2]
+        LTE = f[3]
+        P = dr.PCA_P(DTR, pca)
+        DTR = numpy.dot(P.T, DTR)
+        DTE = numpy.dot(P.T, DTE)
+        LLRsRet = model(DTR, LTR, DTE, prior_t)
+        LLRs.append(LLRsRet)
+    
+    LLRs = numpy.hstack(LLRs)
+
+    return LLRs
+
+def trainMVG(model, D, L, type, prior_t):
     prior_tilde_set = [0.1, 0.5, 0.9]
 
-    print("result[0] = prior_t | result[1] = prior_tilde | result[2] = model_name | result[3] = pre-processing | result[4] = PCA | result[5] = ActDCF | result[6] = MinDCF")
-    for i in range(7):
-        PCA = dr.PCA(D, L, 5+i)
-        Predictions, LLRs = kFold(PCA, L, 5, model, prior_t)
+    for i in range(4):
+        pca = 5+i
+        LLRs = kFold(model, prior_t, K_Fold.loadRawFolds, pca)
         for prior_tilde in prior_tilde_set:
-            ActDCF, minDCF = me.printDCFs(D, L, Predictions, LLRs, prior_tilde)  
-            print(prior_t, "|", prior_tilde, "|", type, "| Raw | PCA =", 5+i, "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF))
+            ActDCF, minDCF = me.printDCFs(D, L, LLRs, prior_tilde)  
+            print(prior_t, "|", prior_tilde, "|", type, "| Raw | PCA =", pca, "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF))
     
-    for i in range(7):
-        PCA = dr.PCA(NormD, L, 5+i)
-        Predictions, LLRs = kFold(PCA, L, 5, model, prior_t)   
+    for i in range(4):
+        pca = 5+i
+        LLRs = kFold(model, prior_t, K_Fold.loadNormFolds, pca) 
         for prior_tilde in prior_tilde_set:
-            ActDCF, minDCF = me.printDCFs(D, L, Predictions, LLRs, prior_tilde)  
-            print(prior_t, "|", prior_tilde, "|", type, "| Normalized | PCA =", 5+i, "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF))
+            ActDCF, minDCF = me.printDCFs(D, L, LLRs, prior_tilde)   
+            print(prior_t, "|", prior_tilde, "|", type, "| Normalized | PCA =", pca, "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF))

@@ -4,6 +4,7 @@ import ScoreCalibration as sc
 import math
 import scipy.special
 import ModelEvaluation as me
+import K_Fold
 
 from ModelEvaluation import PredicionsByScore
 
@@ -260,207 +261,171 @@ def GMM_Scores(DTE, gmm0, gmm1):
     Scores1 = GMM_ll_perSample(DTE, gmm1)
     
     Scores = Scores1 - Scores0
-    Predictions = Scores > 0
 
-    return Predictions, Scores
+    return Scores
 
 #-----------------------------------------------------------------------------------#
 
-
-def kFold_GMM_Full(D, L, K, n): #K per fold
-    numpy.random.seed(0)
-    idx = numpy.random.permutation(D.shape[1])
-
-    N = D.shape[1]
-    M = round(N/K)
+def kFold_GMM_Full(loadFunction, n, pca): #KModel è il K relativo al modello
+    folds = loadFunction()
 
     LLRs = []
-    Predictions = []
 
-    for i in range(K): #K=3 -> 0,1,2
-        idxTrain = numpy.concatenate([idx[0:i*M], idx[(i+1)*M:N]])
-        idxTest = idx[i*M:(i+1)*M]
-        DTR = D[:, idxTrain]
-        LTR = L[idxTrain]
-        DTE = D[:, idxTest]
-        LTE = L[idxTest]
+    for f in folds:
+        DTR = f[0]
+        LTR = f[1]
+        DTE = f[2]
+        LTE = f[3]
+        P = dr.PCA_P(DTR, pca)
+        DTR = numpy.dot(P.T, DTR)
+        DTE = numpy.dot(P.T, DTE)
         DTR0 = DTR[:, LTR == 0] # bad wines
         DTR1 = DTR[:, LTR == 1] # good wines
         gmm0 = GMM_LBG_Full(DTR0, n) #n number of components
         gmm1 = GMM_LBG_Full(DTR1, n) #n number of components
-        PredRet, LLRsRet = GMM_Scores(DTE, gmm0, gmm1)
- 
+        LLRsRet = GMM_Scores(DTE, gmm0, gmm1)
         LLRs.append(LLRsRet)
-        Predictions.append(PredRet)
-
+    
     LLRs = numpy.hstack(LLRs)
-    Predictions = numpy.hstack(Predictions)
 
-    return Predictions, LLRs
+    return LLRs
 
-def kFold_GMM_Diagonal(D, L, K, n): #K per fold
-    numpy.random.seed(0)
-    idx = numpy.random.permutation(D.shape[1])
-
-    N = D.shape[1]
-    M = round(N/K)
+def kFold_GMM_Diagonal(loadFunction, n, pca): #KModel è il K relativo al modello
+    folds = loadFunction()
 
     LLRs = []
-    Predictions = []
 
-    for i in range(K): #K=3 -> 0,1,2
-        idxTrain = numpy.concatenate([idx[0:i*M], idx[(i+1)*M:N]])
-        idxTest = idx[i*M:(i+1)*M]
-        DTR = D[:, idxTrain]
-        LTR = L[idxTrain]
-        DTE = D[:, idxTest]
-        LTE = L[idxTest]
+    for f in folds:
+        DTR = f[0]
+        LTR = f[1]
+        DTE = f[2]
+        LTE = f[3]
+        P = dr.PCA_P(DTR, pca)
+        DTR = numpy.dot(P.T, DTR)
+        DTE = numpy.dot(P.T, DTE)
         DTR0 = DTR[:, LTR == 0] # bad wines
         DTR1 = DTR[:, LTR == 1] # good wines
         gmm0 = GMM_LBG_Diagonal(DTR0, n) #n number of components
         gmm1 = GMM_LBG_Diagonal(DTR1, n) #n number of components
-        PredRet, LLRsRet = GMM_Scores(DTE, gmm0, gmm1)
- 
+        LLRsRet = GMM_Scores(DTE, gmm0, gmm1)
         LLRs.append(LLRsRet)
-        Predictions.append(PredRet)
-
+    
     LLRs = numpy.hstack(LLRs)
-    Predictions = numpy.hstack(Predictions)
 
-    return Predictions, LLRs
+    return LLRs
 
-def kFold_GMM_Tied(D, L, K, n): #K per fold
-    numpy.random.seed(0)
-    idx = numpy.random.permutation(D.shape[1])
-
-    N = D.shape[1]
-    M = round(N/K)
+def kFold_GMM_Tied(loadFunction, n, pca): #KModel è il K relativo al modello
+    folds = loadFunction()
 
     LLRs = []
-    Predictions = []
 
-    for i in range(K): #K=3 -> 0,1,2
-        idxTrain = numpy.concatenate([idx[0:i*M], idx[(i+1)*M:N]])
-        idxTest = idx[i*M:(i+1)*M]
-        DTR = D[:, idxTrain]
-        LTR = L[idxTrain]
-        DTE = D[:, idxTest]
-        LTE = L[idxTest]
+    for f in folds:
+        DTR = f[0]
+        LTR = f[1]
+        DTE = f[2]
+        LTE = f[3]
+        P = dr.PCA_P(DTR, pca)
+        DTR = numpy.dot(P.T, DTR)
+        DTE = numpy.dot(P.T, DTE)
         DTR0 = DTR[:, LTR == 0] # bad wines
         DTR1 = DTR[:, LTR == 1] # good wines
         gmm0 = GMM_LBG_Tied(DTR0, n) #n number of components
         gmm1 = GMM_LBG_Tied(DTR1, n) #n number of components
-        PredRet, LLRsRet = GMM_Scores(DTE, gmm0, gmm1)
- 
+        LLRsRet = GMM_Scores(DTE, gmm0, gmm1)
         LLRs.append(LLRsRet)
-        Predictions.append(PredRet)
-
+    
     LLRs = numpy.hstack(LLRs)
-    Predictions = numpy.hstack(Predictions)
 
-    return Predictions, LLRs
-
+    return LLRs
 
 
-def trainGMM_Full(D, L, NormD, nSet):
+def trainGMM_Full(D, L, nSet):
     prior_tilde_set = [0.1, 0.5, 0.9]
-    i = 5
+    pca = 8
 
     for nComponents in nSet:
-        PCA = dr.PCA(D, L, 5+i)
-        Predictions, Scores = kFold_GMM_Full(PCA, L, 5, nComponents)
+        Scores = kFold_GMM_Full(K_Fold.loadRawFolds, nComponents, pca)
         #Still called LLRs in the printDCFs function, but they are scores with no probabilistic interpretation
         #We use the same function for every model
         for prior_tilde in prior_tilde_set: 
-            CalibratedScores = sc.calibrate_scores(vrow(Scores), L, prior_tilde)
-            CalibratedScores = CalibratedScores.reshape(CalibratedScores.shape[1])
-            ActDCF, minDCF = me.printDCFs(D, L, Scores > 0, Scores, prior_tilde)
-            print(prior_tilde, "| GMM Full | nComponents =", 2**nComponents, "| Raw | Uncalibrated | PCA =", 5+i,
+            CalibratedScores, labels = sc.calibrate_scores(Scores, L, prior_tilde)
+            ActDCF, minDCF = me.printDCFs(D, L, Scores, prior_tilde)
+            print(prior_tilde, "| GMM Full | nComponents =", 2**nComponents, "| Raw | Uncalibrated | PCA =", pca,
                         "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF))
-            ActDCF, minDCF = me.printDCFs(D, L, CalibratedScores > 0, Scores, prior_tilde)
-            print(prior_tilde, "| GMM Full | nComponents =", 2**nComponents, "| Raw | Calibrated | PCA =", 5+i,
+            ActDCF, minDCF = me.printDCFsNoShuffle(D, labels, CalibratedScores, prior_tilde)
+            print(prior_tilde, "| GMM Full | nComponents =", 2**nComponents, "| Raw | Calibrated | PCA =", pca,
                         "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF))
 
     for nComponents in nSet:
-        PCA = dr.PCA(NormD, L, 5+i)
-        Predictions, Scores = kFold_GMM_Full(PCA, L, 5, nComponents)
+        Scores = kFold_GMM_Full(K_Fold.loadNormFolds, nComponents, pca)
         #Still called LLRs in the printDCFs function, but they are scores with no probabilistic interpretation
         #We use the same function for every model
         for prior_tilde in prior_tilde_set: 
-            CalibratedScores = sc.calibrate_scores(vrow(Scores), L, prior_tilde)
-            CalibratedScores = CalibratedScores.reshape(CalibratedScores.shape[1])
-            ActDCF, minDCF = me.printDCFs(D, L, Scores > 0, Scores, prior_tilde)
-            print(prior_tilde, "| GMM Full | nComponents =", 2**nComponents, "| Normalized | Uncalibrated | PCA =", 5+i,
+            CalibratedScores, labels = sc.calibrate_scores(Scores, L, prior_tilde)
+            ActDCF, minDCF = me.printDCFs(D, L, Scores, prior_tilde)
+            print(prior_tilde, "| GMM Full | nComponents =", 2**nComponents, "| Normalized | Uncalibrated | PCA =", pca,
                         "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF))
-            ActDCF, minDCF = me.printDCFs(D, L, CalibratedScores > 0, Scores, prior_tilde)
-            print(prior_tilde, "| GMM Full | nComponents =", 2**nComponents, "| Normalized | Calibrated | PCA =", 5+i,
+            ActDCF, minDCF = me.printDCFsNoShuffle(D, labels, CalibratedScores, prior_tilde)
+            print(prior_tilde, "| GMM Full | nComponents =", 2**nComponents, "| Normalized | Calibrated | PCA =", pca,
                         "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF))
 
 
-def trainGMM_Diagonal(D, L, NormD, nSet):
+def trainGMM_Diagonal(D, L, nSet):
     prior_tilde_set = [0.1, 0.5, 0.9]
-    i = 5
+    pca = 8
 
     for nComponents in nSet:
-        PCA = dr.PCA(D, L, 5+i)
-        Predictions, Scores = kFold_GMM_Diagonal(PCA, L, 5, nComponents)
+        Scores = kFold_GMM_Diagonal(K_Fold.loadRawFolds, nComponents, pca)
         #Still called LLRs in the printDCFs function, but they are scores with no probabilistic interpretation
         #We use the same function for every model
         for prior_tilde in prior_tilde_set: 
-            CalibratedScores = sc.calibrate_scores(vrow(Scores), L, prior_tilde)
-            CalibratedScores = CalibratedScores.reshape(CalibratedScores.shape[1])
-            ActDCF, minDCF = me.printDCFs(D, L, Scores > 0, Scores, prior_tilde)
-            print(prior_tilde, "| GMM Diagonal | nComponents =", 2**nComponents, "| Raw | Uncalibrated | PCA =", 5+i,
+            CalibratedScores, labels = sc.calibrate_scores(Scores, L, prior_tilde)
+            ActDCF, minDCF = me.printDCFs(D, L, Scores, prior_tilde)
+            print(prior_tilde, "| GMM Diagonal | nComponents =", 2**nComponents, "| Raw | Uncalibrated | PCA =", pca,
                         "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF))
-            ActDCF, minDCF = me.printDCFs(D, L, CalibratedScores > 0, Scores, prior_tilde)
-            print(prior_tilde, "| GMM Diagonal | nComponents =", 2**nComponents, "| Raw | Calibrated | PCA =", 5+i,
+            ActDCF, minDCF = me.printDCFsNoShuffle(D, labels, CalibratedScores, prior_tilde)
+            print(prior_tilde, "| GMM Diagonal | nComponents =", 2**nComponents, "| Raw | Calibrated | PCA =", pca,
                         "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF))
 
     for nComponents in nSet:
-        PCA = dr.PCA(NormD, L, 5+i)
-        Predictions, Scores = kFold_GMM_Diagonal(PCA, L, 5, nComponents)
+        Scores = kFold_GMM_Diagonal(K_Fold.loadNormFolds, nComponents, pca)
         #Still called LLRs in the printDCFs function, but they are scores with no probabilistic interpretation
         #We use the same function for every model
         for prior_tilde in prior_tilde_set: 
-            CalibratedScores = sc.calibrate_scores(vrow(Scores), L, prior_tilde)
-            CalibratedScores = CalibratedScores.reshape(CalibratedScores.shape[1])
-            ActDCF, minDCF = me.printDCFs(D, L, Scores > 0, Scores, prior_tilde)
-            print(prior_tilde, "| GMM Diagonal | nComponents =", 2**nComponents, "| Normalized | Uncalibrated | PCA =", 5+i,
+            CalibratedScores, labels = sc.calibrate_scores(Scores, L, prior_tilde)
+            ActDCF, minDCF = me.printDCFs(D, L, Scores, prior_tilde)
+            print(prior_tilde, "| GMM Diagonal | nComponents =", 2**nComponents, "| Normalized | Uncalibrated | PCA =", pca,
                         "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF))
-            ActDCF, minDCF = me.printDCFs(D, L, CalibratedScores > 0, Scores, prior_tilde)
-            print(prior_tilde, "| GMM Diagonal | nComponents =", 2**nComponents, "| Normalized | Calibrated | PCA =", 5+i,
+            ActDCF, minDCF = me.printDCFsNoShuffle(D, labels, CalibratedScores, prior_tilde)
+            print(prior_tilde, "| GMM Diagonal | nComponents =", 2**nComponents, "| Normalized | Calibrated | PCA =", pca,
                         "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF))
 
-def trainGMM_Tied(D, L, NormD, nSet):
+def trainGMM_Tied(D, L, nSet):
     prior_tilde_set = [0.1, 0.5, 0.9]
-    i = 5
+    pca = 8
 
     for nComponents in nSet:
-        PCA = dr.PCA(D, L, 5+i)
-        Predictions, Scores = kFold_GMM_Tied(PCA, L, 5, nComponents)
+        Scores = kFold_GMM_Tied(K_Fold.loadRawFolds, nComponents, pca)
         #Still called LLRs in the printDCFs function, but they are scores with no probabilistic interpretation
         #We use the same function for every model
         for prior_tilde in prior_tilde_set: 
-            CalibratedScores = sc.calibrate_scores(vrow(Scores), L, prior_tilde)
-            CalibratedScores = CalibratedScores.reshape(CalibratedScores.shape[1])
-            ActDCF, minDCF = me.printDCFs(D, L, Scores > 0, Scores, prior_tilde)
-            print(prior_tilde, "| GMM Tied | nComponents =", 2**nComponents, "| Raw | Uncalibrated | PCA =", 5+i,
+            CalibratedScores, labels = sc.calibrate_scores(Scores, L, prior_tilde)
+            ActDCF, minDCF = me.printDCFs(D, L, Scores, prior_tilde)
+            print(prior_tilde, "| GMM Tied | nComponents =", 2**nComponents, "| Raw | Uncalibrated | PCA =", pca,
                         "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF))
-            ActDCF, minDCF = me.printDCFs(D, L, CalibratedScores > 0, Scores, prior_tilde)
-            print(prior_tilde, "| GMM Tied | nComponents =", 2**nComponents, "| Raw | Calibrated | PCA =", 5+i,
+            ActDCF, minDCF = me.printDCFsNoShuffle(D, labels, CalibratedScores, prior_tilde)
+            print(prior_tilde, "| GMM Tied | nComponents =", 2**nComponents, "| Raw | Calibrated | PCA =", pca,
                         "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF))
 
     for nComponents in nSet:
-        PCA = dr.PCA(NormD, L, 5+i)
-        Predictions, Scores = kFold_GMM_Tied(PCA, L, 5, nComponents)
+        Scores = kFold_GMM_Tied(K_Fold.loadRawFolds, nComponents, pca)
         #Still called LLRs in the printDCFs function, but they are scores with no probabilistic interpretation
         #We use the same function for every model
         for prior_tilde in prior_tilde_set: 
-            CalibratedScores = sc.calibrate_scores(vrow(Scores), L, prior_tilde)
-            CalibratedScores = CalibratedScores.reshape(CalibratedScores.shape[1])
-            ActDCF, minDCF = me.printDCFs(D, L, Scores > 0, Scores, prior_tilde)
-            print(prior_tilde, "| GMM Tied | nComponents =", 2**nComponents, "| Normalized | Uncalibrated | PCA =", 5+i,
+            CalibratedScores, labels = sc.calibrate_scores(Scores, L, prior_tilde)
+            ActDCF, minDCF = me.printDCFs(D, L, Scores, prior_tilde)
+            print(prior_tilde, "| GMM Tied | nComponents =", 2**nComponents, "| Normalized | Uncalibrated | PCA =", pca,
                         "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF))
-            ActDCF, minDCF = me.printDCFs(D, L, CalibratedScores > 0, Scores, prior_tilde)
-            print(prior_tilde, "| GMM Tied | nComponents =", 2**nComponents, "| Normalized | Calibrated | PCA =", 5+i,
+            ActDCF, minDCF = me.printDCFsNoShuffle(D, labels, CalibratedScores, prior_tilde)
+            print(prior_tilde, "| GMM Tied | nComponents =", 2**nComponents, "| Normalized | Calibrated | PCA =", pca,
                         "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF))

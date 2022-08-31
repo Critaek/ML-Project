@@ -5,6 +5,7 @@ import time
 import DimReduction as dr
 import ModelEvaluation as me
 import Plot
+import K_Fold
 
 def mcol(v):
     return v.reshape(v.size, 1)
@@ -47,53 +48,44 @@ def QuadraticRegression(DTR, LTR, DTE, l, prior_t):
     b = x[-1]
     scores = numpy.dot(w.T, DTE) + b
 
-    Predictions = scores > 0
-
-    return Predictions, scores
+    return scores
 
 
 
-def kFold(D, L, K, l, prior_t):
-    numpy.random.seed(0)
-    idx = numpy.random.permutation(D.shape[1])
-
-    N = D.shape[1]
-    M = round(N/K)
+def kFold(prior_t, loadFunction, l, pca):
+    folds = loadFunction()
 
     LLRs = []
     Predictions = []
 
-    for i in range(K): #K=3 -> 0,1,2
-        idxTrain = numpy.concatenate([idx[0:i*M], idx[(i+1)*M:N]])
-        idxTest = idx[i*M:(i+1)*M]
-        DTR = expandFeature(D[:, idxTrain])
-        LTR = L[idxTrain]
-        DTE = expandFeature(D[:, idxTest])
-        LTE = L[idxTest]
-        PredRet, LLRsRet = QuadraticRegression(DTR, LTR, DTE, l, prior_t)
+    for f in folds:
+        DTR = f[0]
+        LTR = f[1]
+        DTE = f[2]
+        LTE = f[3]
+        P = dr.PCA_P(DTR, pca)
+        DTR = numpy.dot(P.T, DTR)
+        DTE = numpy.dot(P.T, DTE)
+        LLRsRet = QuadraticRegression(DTR, LTR, DTE, l, prior_t)
         LLRs.append(LLRsRet)
-        Predictions.append(PredRet)
-
+    
     LLRs = numpy.hstack(LLRs)
-    Predictions = numpy.hstack(Predictions)
 
-    return Predictions, LLRs
-
+    return LLRs
 
 
-def trainQuadraticRegression(D, L, NormD, lSet, prior_t):
+
+def trainQuadraticRegression(D, L, lSet, prior_t):
     prior_tilde_set = [0.1, 0.5, 0.9]
 
     for l in lSet:
-        i = 5
-        PCA = dr.PCA(D, L, 5+i)
-        Predictions, LLRs = kFold(PCA, L, 5, l, prior_t)
+        pca = 7
+        LLRs = kFold(prior_t, K_Fold.loadRawFolds, l, pca)
         for prior_tilde in prior_tilde_set:
-            ActDCF, minDCF = me.printDCFs(D, L, Predictions, LLRs, prior_tilde)
-            print(prior_t, "|" ,prior_tilde, "| Quadratic Regression | Lambda ={:.2e}".format(l), "| Raw | PCA =", 5+i, "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF)) 
+            ActDCF, minDCF = me.printDCFs(D, L, LLRs, prior_tilde)
+            print(prior_t, "|" ,prior_tilde, "| Quadratic Regression | Lambda ={:.2e}".format(l), "| Raw | PCA =", pca, "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF)) 
         
-        PCA = dr.PCA(NormD, L, 5+i)
-        Predictions, LLRs = kFold(PCA, L, 5, l, prior_t)
+        LLRs = kFold(prior_t, K_Fold.loadRawFolds, l, pca)
         for prior_tilde in prior_tilde_set:    
-            ActDCF, minDCF = me.printDCFs(D, L, Predictions, LLRs, prior_tilde)
-            print(prior_t, "|" ,prior_tilde, "| Quadratic Regression | Lambda ={:.2e}".format(l), "| Normalized | PCA =", 5+i, "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF))
+            ActDCF, minDCF = me.printDCFs(D, L, LLRs, prior_tilde)
+            print(prior_t, "|" ,prior_tilde, "| Quadratic Regression | Lambda ={:.2e}".format(l), "| Normalized | PCA =", pca, "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF))

@@ -3,8 +3,10 @@ import numpy
 import scipy.optimize
 import time
 import DimReduction as dr
+from Main import vrow
 import ModelEvaluation as me
 import ScoreCalibration as sc
+import K_Fold
 
 def mcol(v):
     return v.reshape(v.size, 1)
@@ -36,13 +38,12 @@ def LinearRegression(DTR, LTR, DTE, l, prior_t):
     b = x[-1]
     scores = numpy.dot(w.T, DTE) + b
 
-    Predictions = scores > 0
-
-    return Predictions, scores
+    return scores
 
 def logreg_obj_w_b(v, score, labels, l):
     w, b = mcol(v[0:-1]), v[-1]
     Z = labels * 2.0 - 1.0
+    score = vrow(score)
     S = numpy.dot(w.T, score) + b
     cxe = numpy.logaddexp(0, -Z*S).mean()
     return l/2 * numpy.linalg.norm(w)**2 + cxe
@@ -56,54 +57,52 @@ def LinearRegression_w_b(score, labels, l, prior_t):
 
     return w, b
 
-
-def kFold(D, L, K, l,prior_t):
-    numpy.random.seed(0)
-    idx = numpy.random.permutation(D.shape[1])
-
-    N = D.shape[1]
-    M = round(N/K)
+def kFold(prior_t, loadFunction, l, pca):
+    folds = loadFunction()
 
     LLRs = []
     Predictions = []
 
-    for i in range(K): #K=3 -> 0,1,2
-        idxTrain = numpy.concatenate([idx[0:i*M], idx[(i+1)*M:N]])
-        idxTest = idx[i*M:(i+1)*M]
-        DTR = D[:, idxTrain]
-        LTR = L[idxTrain]
-        DTE = D[:, idxTest]
-        LTE = L[idxTest]
-        PredRet, LLRsRet = LinearRegression(DTR, LTR, DTE, l, prior_t)
+    for f in folds:
+        DTR = f[0]
+        LTR = f[1]
+        DTE = f[2]
+        LTE = f[3]
+        P = dr.PCA_P(DTR, pca)
+        DTR = numpy.dot(P.T, DTR)
+        DTE = numpy.dot(P.T, DTE)
+        LLRsRet = LinearRegression(DTR, LTR, DTE, l, prior_t)
         LLRs.append(LLRsRet)
-        Predictions.append(PredRet)
-
+    
     LLRs = numpy.hstack(LLRs)
-    Predictions = numpy.hstack(Predictions)
 
-    return Predictions, LLRs
-
+    return LLRs
 
 
-def trainLinearRegression(D, L, NormD, lSet, prior_t):
+
+def trainLinearRegression(D, L, lSet, prior_t):
     prior_tilde_set = [0.1, 0.5, 0.9]
 
-    print("result[0] = prior_t | result[1] = prior_tilde | result[2] = model_name | result[3] = pre-processing | result[4] = PCA | result[5] = ActDCF | result[6] = MinDCF")
+    #print("result[0] = prior_t | result[1] = prior_tilde | result[2] = model_name | result[3] = pre-processing | result[4] = PCA | result[5] = ActDCF | result[6] = MinDCF")
 
     for l in lSet:
-        i = 5
-        PCA = dr.PCA(D, L, 5+i)
-        Predictions, LLRs = kFold(PCA, L, 5, l, prior_t)
+        pca = 8
+        LLRs = kFold(prior_t, K_Fold.loadRawFolds, l, pca)
         #Score Calibration before estimating DCFs
-        #LLRs = sc.calibrate_scores(LLRs, L, prior_t)
+        #CalibratedLLRs = sc.calibrate_scores(LLRs, L, prior_t)
+
         for prior_tilde in prior_tilde_set:
-            ActDCF, minDCF = me.printDCFs(D, L, LLRs > 0, LLRs, prior_tilde)
-            print(prior_t, "|", prior_tilde, "| Linear Regression | Lambda ={:.2e}".format(l), "| Raw | PCA =", 5+i, "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF)) 
+            ActDCF, minDCF = me.printDCFs(D, L, LLRs, prior_tilde)
+            print(prior_t, "|", prior_tilde, "| Linear Regression | Lambda ={:.2e}".format(l), "| Raw | Uncalibrated | PCA =", pca, "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF))
+            #ActDCF, minDCF = me.printDCFs(D, L, CalibratedLLRs, prior_tilde)
+            #print(prior_t, "|", prior_tilde, "| Linear Regression | Lambda ={:.2e}".format(l), "| Raw | Calibrated | PCA =", pca, "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF))  
         
-        PCA = dr.PCA(NormD, L, 5+i)
-        Predictions, LLRs = kFold(PCA, L, 5, l, prior_t)
+
+        LLRs = kFold(prior_t, K_Fold.loadNormFolds, l, pca)
         #Score Calibration before estimating DCFs
-        #LLRs = sc.calibrate_scores(LLRs, L, prior_t)
+        #CalibratedLLRs = sc.calibrate_scores(LLRs, L, prior_t)
         for prior_tilde in prior_tilde_set:    
-            ActDCF, minDCF = me.printDCFs(D, L, LLRs > 0, LLRs, prior_tilde)
-            print(prior_t, "|" ,prior_tilde, "| Linear Regression | Lambda ={:.2e}".format(l), "| Normalized | PCA =", 5+i, "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF))
+            ActDCF, minDCF = me.printDCFs(D, L, LLRs, prior_tilde)
+            print(prior_t, "|", prior_tilde, "| Linear Regression | Lambda ={:.2e}".format(l), "| Normalized | Uncalibrated | PCA =", pca, "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF))
+            #ActDCF, minDCF = me.printDCFs(D, L, CalibratedLLRs, prior_tilde)
+            #print(prior_t, "|", prior_tilde, "| Linear Regression | Lambda ={:.2e}".format(l), "| Normalized | Calibrated | PCA =", pca, "| ActDCF ={0:.3f}".format(ActDCF), "| MinDCF ={0:.3f}".format(minDCF))  
