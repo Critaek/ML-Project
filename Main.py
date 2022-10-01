@@ -74,7 +74,7 @@ if __name__ == "__main__":
         gamma_Set = numpy.logspace(-3,-1, num = 3)
         #SVM.trainSVM_RBF(D, L, K_Set, C_Set, gamma_Set, different_prior)
     
-    nSet = numpy.array([0,1,2,3,4])
+    nSet = numpy.array([6])
     GMM.trainGMM_Full(D, L, nSet)
     GMM.trainGMM_Diagonal(D, L, nSet)
     GMM.trainGMM_Tied(D, L, nSet)
