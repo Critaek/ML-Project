@@ -75,10 +75,11 @@ if __name__ == "__main__":
         #SVM.trainSVM_RBF(D, L, K_Set, C_Set, gamma_Set, different_prior)
     
     nSet = numpy.array([6])
-    GMM.trainGMM_Full(D, L, nSet)
-    GMM.trainGMM_Diagonal(D, L, nSet)
-    GMM.trainGMM_Tied(D, L, nSet)
+    #GMM.trainGMM_Full(D, L, nSet)
+    #GMM.trainGMM_Diagonal(D, L, nSet)
+    #GMM.trainGMM_Tied(D, L, nSet)
 
+    
     #PredictionsPoly, scoresPoly = SVM.kFoldPoly(NormD, L, 5, 10.0, 0.01, 3.0, 1.0, 0.5)
     #numpy.save("data/SVMPoly_10_01_3_1.npy", scoresPoly)
 
